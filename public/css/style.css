@@ -71,6 +71,12 @@ hr {
   border: 0;
 }
 /* Navigation */
+
+.logo {
+  height: 64px;
+  width: 64px;
+  margin-top: -15px;
+}
 #menu {
   padding: 15px;
   transition: all 0.8s;
