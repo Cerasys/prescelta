@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Header = (props) => {
+export const Header = () => {
   return (
     <header id="header">
       <div className="intro">
@@ -8,16 +8,20 @@ export const Header = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
+                <h4>Private practice therapists</h4>
                 <h1>
-                  {props.data ? props.data.title : "Loading"}
+                  DO YOU WANT MORE CLIENTS?
                   <span></span>
                 </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
+                <p>
+                  Book a call to learn how we can help fill your practice, teach
+                  you how to keep it full, and do it all hassle-free.
+                </p>
                 <a
-                  href="#features"
+                  href="#contact"
                   className="btn btn-custom btn-lg page-scroll"
                 >
-                  Learn More
+                  Yes, Show me How!
                 </a>{" "}
               </div>
             </div>
