@@ -430,10 +430,11 @@ header .intro-text {
 }
 .testimonial-image,
 .testimonial-image img {
-  display: block;
+  display: flex;
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .testimonial-content {
   position: relative;
