@@ -1,15 +1,6 @@
 import React from "react";
 import "./testimonials.css";
 
-var testimonials = [
-  {
-    img: "img/testimonials/02.jpg",
-    text: "Nathan and his team were incredibly knowledgable. They met me where I was at, and taught me things I hadn't known even after 30 years in private practice. The process was educational and affirming.",
-    name: "Larry Mark",
-    link: "https://www.psychologytoday.com/us/therapists/larry-mark-bellevue-wa/199594",
-  },
-];
-
 export const Testimonials = (props) => {
   return (
     <div id="testimonials">
@@ -51,26 +42,30 @@ export const Testimonials = (props) => {
               </div>
             </div>
           </div>
-          {testimonials
-            ? testimonials.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
-                  <div className="testimonial">
-                    <div className="testimonial-image">
-                      {" "}
-                      <a href={d.link}>
-                        <img src={d.img} alt="" />
-                      </a>{" "}
-                    </div>
-                    <div className="testimonial-content">
-                      <p>"{d.text}"</p>
-                      <a href={d.link}>
-                        <div className="testimonial-meta"> - {d.name} </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))
-            : "loading"}
+          <div key={`larrymark`} className="col-md-4">
+            <div className="testimonial">
+              <div className="testimonial-image">
+                {" "}
+                <a href="https://www.psychologytoday.com/us/therapists/larry-mark-bellevue-wa/199594">
+                  <img src="/img/testimonials/02.jpg" alt="Jessica Wong" />
+                </a>{" "}
+              </div>
+              <div className="testimonial-content">
+                <p>
+                  "Nathan and his team were incredibly knowledgable. They{" "}
+                  <b>
+                    taught me things I hadn't known even after 30 years in
+                    private practice
+                  </b>
+                  . The process was educational and affirming.
+                </p>
+
+                <a href="https://www.psychologytoday.com/us/therapists/larry-mark-bellevue-wa/199594">
+                  <div className="testimonial-meta"> - Larry Mark </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
