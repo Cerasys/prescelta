@@ -13,6 +13,8 @@ export const Header = () => {
                   DO YOU WANT MORE CLIENTS?
                   <span></span>
                 </h1>
+                <br />
+                <br />
                 <p>
                   Book a call to learn how we can help fill your practice, teach
                   you how to keep it full, and do it all hassle-free.
