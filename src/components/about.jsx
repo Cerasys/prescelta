@@ -20,9 +20,12 @@ export const About = () => {
                 operate your own business.
               </p>
               <p>
-                Well we want to change that. We'll teach you everything you need
-                to know to run your practice without worrying about money ever
-                again, forever. So that you can do what you do best -{" "}
+                Well we want to change that. During our 6 week therapist
+                bootcamp, we'll teach you everything you need to know to run
+                your practice without worrying about money ever again, forever.
+              </p>
+              <p>
+                That way, you're freed up to do what you do best -{" "}
                 <b>helping people</b>.
               </p>
               <h3>The Things We'll Do Together</h3>
