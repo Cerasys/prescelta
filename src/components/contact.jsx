@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const initialState = {
   name: "",
@@ -9,6 +10,8 @@ const initialState = {
 };
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
+  const [button, setButton] = useState("Send Message");
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,6 +22,7 @@ export const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
+    setIsSending(true);
 
     emailjs
       .sendForm(
@@ -31,9 +35,13 @@ export const Contact = (props) => {
         (result) => {
           console.log(result.text);
           clearState();
+          setIsSending(false);
+          setButton("Message sent");
         },
         (error) => {
           console.log(error.text);
+          setIsSending(false);
+          setButton("Something went Wrong");
         }
       );
   };
@@ -95,8 +103,13 @@ export const Contact = (props) => {
                 </div>
                 <div id="success"></div>
                 <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+                  {isSending ? "Sending..." : button}
                 </button>
+                <Link to="/contact">
+                  <button className="btn btn-custom btn-lg">
+                    OR book a call!
+                  </button>
+                </Link>
               </form>
             </div>
           </div>

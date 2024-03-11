@@ -497,7 +497,7 @@ header .intro-text {
   text-align: left;
 }
 #contact .btn-custom {
-  margin: 30px 0;
+  margin: 30px 10px;
   background: transparent;
   border: 2px solid #fff;
 }
