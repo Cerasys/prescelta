@@ -6,7 +6,7 @@ const Calendly = () => {
       <div
         class="calendly-inline-widget"
         data-url="https://calendly.com/prescelta/private-practice-goal-setting"
-        style="min-width:320px;height:700px;"
+        style={{ minWidth: "320px", height: "700px" }}
       ></div>
       <script
         type="text/javascript"
