@@ -1,9 +1,10 @@
 import React from "react";
+import "./testimonials.css";
 
 var testimonials = [
   {
     img: "img/testimonials/02.jpg",
-    text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."',
+    text: "Nathan and his team were incredibly knowledgable. They met me where I was at, and taught me things I hadn't known even after 30 years in private practice. The process was educational and affirming.",
     name: "Larry Mark",
     link: "https://www.psychologytoday.com/us/therapists/larry-mark-bellevue-wa/199594",
   },
@@ -44,7 +45,9 @@ export const Testimonials = (props) => {
                   </b>
                   ."
                 </p>
-                <div className="testimonial-meta"> - Jessica Wong </div>
+                <a href="https://www.psychologytoday.com/us/therapists/jessica-wong-life-healing-therapy-and-counseling-edmonds-wa/886387">
+                  <div className="testimonial-meta"> - Jessica Wong </div>
+                </a>
               </div>
             </div>
           </div>
@@ -60,7 +63,9 @@ export const Testimonials = (props) => {
                     </div>
                     <div className="testimonial-content">
                       <p>"{d.text}"</p>
-                      <div className="testimonial-meta"> - {d.name} </div>
+                      <a href={d.link}>
+                        <div className="testimonial-meta"> - {d.name} </div>
+                      </a>
                     </div>
                   </div>
                 </div>

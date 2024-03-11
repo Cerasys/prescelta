@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { About } from "../about";
 import { Services } from "../services";
 // import { Gallery } from "./components/gallery";
-import { Testimonials } from "../testimonials";
-import { Team } from "../Team/Team";
+import { Testimonials } from "../testimonials/testimonials";
+// import { Team } from "../Team/Team";
 import JsonData from "../../data/data.json";
 import { Contact } from "../contact";
 import { Header } from "../header";
@@ -20,9 +20,9 @@ const Home = () => {
       <Header />
       {/* <Features data={landingPageData.Features} /> */}
       <About data={landingPageData.About} />
+      <Testimonials data={landingPageData.Testimonials} />
       <Services data={landingPageData.Services} />
       {/* <Gallery data={landingPageData.Gallery} /> */}
-      <Testimonials data={landingPageData.Testimonials} />
       {/* <Team data={landingPageData.Team} /> */}
       <Contact data={landingPageData.Contact} />
     </React.Fragment>
