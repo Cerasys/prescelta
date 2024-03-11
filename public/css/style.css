@@ -83,6 +83,7 @@ hr {
   height: 64px;
   width: 64px;
   margin-top: -15px;
+  color: var(--orange-dark);
 }
 #menu {
   padding: 15px;
