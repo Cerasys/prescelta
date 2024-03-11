@@ -1,7 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const initialState = {
   name: "",
@@ -105,11 +104,9 @@ export const Contact = (props) => {
                 <button type="submit" className="btn btn-custom btn-lg">
                   {isSending ? "Sending..." : button}
                 </button>
-                <Link to="/contact">
-                  <button className="btn btn-custom btn-lg">
-                    OR book a call!
-                  </button>
-                </Link>
+                <a href="/contact">
+                  <div className="btn btn-custom btn-lg">OR book a call!</div>
+                </a>
               </form>
             </div>
           </div>

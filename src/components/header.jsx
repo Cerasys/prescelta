@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -20,12 +19,12 @@ export const Header = () => {
                   Book a call to learn how we can help fill your practice, teach
                   you how to keep it full, and do it all hassle-free.
                 </p>
-                <Link
-                  to="/contact"
+                <a
+                  href="/contact"
                   className="btn btn-custom btn-lg page-scroll"
                 >
                   Yes, Show me How!
-                </Link>{" "}
+                </a>{" "}
               </div>
             </div>
           </div>
