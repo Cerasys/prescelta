@@ -45,7 +45,7 @@
     href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
     rel="stylesheet"
   />
-  <title>A React Landing Page Template</title>
+  <title>Prescelta</title>
   <meta name="description" content="" />
   <meta name="author" content="@Issaafalkattan" />
 </head>
@@ -54,4 +54,26 @@
   <div id="root"></div>
   <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- Calendly badge widget begin -->
+  <link
+    href="https://assets.calendly.com/assets/external/widget.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    type="text/javascript"
+    async
+  ></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      Calendly.initBadgeWidget({
+        url: "https://calendly.com/prescelta/private-practice-goal-setting",
+        text: "Grow your Practice!",
+        color: "#155263",
+        textColor: "#ffffff",
+        branding: true,
+      });
+    };
+  </script>
+  <!-- Calendly badge widget end -->
 </body>
