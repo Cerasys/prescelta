@@ -52,12 +52,19 @@ export const Testimonials = (props) => {
               </div>
               <div className="testimonial-content">
                 <p>
-                  "Nathan and his team were incredibly knowledgable. They{" "}
+                  Consulting with Nathan helped me to clarify the most strategic
+                  options for my marketing situation.
+                  <br />
+                  He was very patient, intentional and knowledgeable about best
+                  practices. I appreciated how he took the time to listen well
+                  to me about my business, and he put in the work to generate
+                  solutions. He was very prompt in his responses, kept his word
+                  and took the effort to communicate well. Nathan was
+                  encouraging, empathetic and professional!
                   <b>
-                    taught me things I hadn't known even after 30 years in
-                    private practice
+                    I heartily recommend his help to other therapists in private
+                    practice!
                   </b>
-                  . The process was educational and affirming.
                 </p>
 
                 <a href="https://www.psychologytoday.com/us/therapists/larry-mark-bellevue-wa/199594">
