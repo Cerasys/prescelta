@@ -3,7 +3,7 @@ import { Navigation } from "./components/navigation";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Calendly from "./components/calendly/calendly";
+
 import Home from "./components/home/home";
 import ScrollToAnchor from "./components/util/scroll";
 
@@ -20,7 +20,7 @@ const App = () => {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/contact" element={<Calendly />}></Route>
+          {/* <Route exact path="/contact" element={<Calendly />}></Route> */}
         </Routes>
       </div>
     </BrowserRouter>

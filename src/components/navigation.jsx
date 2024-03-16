@@ -44,7 +44,12 @@ export const Navigation = (props) => {
               </Link>
             </li>
             <li>
-              <a href="/contact" className="page-scroll">
+              <a
+                href="https://calendly.com/prescelta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="page-scroll"
+              >
                 Contact
               </a>
             </li>
