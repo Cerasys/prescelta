@@ -20,7 +20,9 @@ export const Header = () => {
                   you how to keep it full, and do it all hassle-free.
                 </p>
                 <a
-                  href="/contact"
+                  href="https://calendly.com/prescelta"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"
                 >
                   Yes, Show me How!

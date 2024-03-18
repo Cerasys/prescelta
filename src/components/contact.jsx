@@ -104,7 +104,11 @@ export const Contact = (props) => {
                 <button type="submit" className="btn btn-custom btn-lg">
                   {isSending ? "Sending..." : button}
                 </button>
-                <a href="/contact">
+                <a
+                  href="https://calendly.com/prescelta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="btn btn-custom btn-lg">OR book a call!</div>
                 </a>
               </form>

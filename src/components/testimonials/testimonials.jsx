@@ -62,6 +62,7 @@ export const Testimonials = (props) => {
                   and took the effort to communicate well. Nathan was
                   encouraging, empathetic and professional!
                   <b>
+                    {" "}
                     I heartily recommend his help to other therapists in private
                     practice!
                   </b>
