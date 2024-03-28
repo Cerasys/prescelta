@@ -108,7 +108,7 @@ export const Testimonials = (props) => {
               </div>
               <div className="testimonial-content">
                 <p>
-                  Nathan hsa a really strong business and tech background. He
+                  Nathan has a really strong business and tech background. He
                   was able to communicate things in ways that I could easily
                   understand and was never taught about in school.
                 </p>
