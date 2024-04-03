@@ -50,6 +50,35 @@ export const Testimonials = (props) => {
               </div>
             </div>
           </div>
+
+          <div key={`preetishah`} className="col-md-4">
+            <div className="testimonial">
+              <div className="testimonial-image">
+                {" "}
+                <a href="https://www.psychologytoday.com/us/therapists/preeti-shah-snohomish-wa/81305">
+                  <img
+                    src="/img/testimonials/04.jpg"
+                    alt="headshot of Preeti Shah"
+                  />
+                </a>{" "}
+              </div>
+              <div className="testimonial-content">
+                <p>
+                  "Nathan, I've been in private practice for 20 years,
+                  <b> and I wish I had met you 20 years ago!"</b>
+                </p>
+
+                <a href="https://www.psychologytoday.com/us/therapists/preeti-shah-snohomish-wa/81305">
+                  <div className="testimonial-meta">
+                    {" "}
+                    <b>Preeti Shah</b>
+                    <br /> Addiction & Recovery <br />
+                    Current Client
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
           <div key={`larrymark`} className="col-md-4">
             <div className="testimonial">
               <div className="testimonial-image">
@@ -90,6 +119,48 @@ export const Testimonials = (props) => {
                     <b>Larry Mark</b> <br />
                     Marriage and Family <br />
                     Practice filled in 3 Weeks
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div key={`nitishmatthew`} className="col-md-4">
+            <div className="testimonial">
+              <div className="testimonial-image">
+                {" "}
+                <a href="https://www.psychologytoday.com/us/therapists/nitish-matthew-bothell-wa/316725">
+                  <img
+                    src="/img/testimonials/05.jpg"
+                    alt="headshot of Nitish Matthew"
+                  />
+                </a>{" "}
+              </div>
+              <div className="testimonial-content">
+                <p>
+                  It is so nice that these things are accessible and{" "}
+                  <b>
+                    I do not have to be tied to an SCC like firm and pay them a
+                    significant part of my revenue.
+                  </b>
+                </p>
+                <p>
+                  It will{" "}
+                  <b>
+                    allow me more scope and freedom in reaching patients I like
+                    working with.
+                  </b>{" "}
+                  Thanks again.
+                </p>
+
+                <a href="https://www.psychologytoday.com/us/therapists/nitish-matthew-bothell-wa/316725">
+                  <div className="testimonial-meta">
+                    {" "}
+                    <b>Nitish Matthew </b>
+                    <br /> Christian Counseling and EMDR <br />
+                    Current Client
                   </div>
                 </a>
               </div>
