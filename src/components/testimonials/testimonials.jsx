@@ -142,7 +142,7 @@ export const Testimonials = (props) => {
                 <p>
                   It is so nice that these things are accessible and{" "}
                   <b>
-                    I do not have to be tied to an SCC like firm and pay them a
+                    I do not have to be tied to an group practice and pay them a
                     significant part of my revenue.
                   </b>
                 </p>
