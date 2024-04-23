@@ -204,6 +204,35 @@ export const Testimonials = (props) => {
               </div>
             </div>
           </div>
+          <div key={`anon1`} className="col-md-4">
+            <div className="testimonial">
+              <div className="testimonial-image">
+                {" "}
+                <img src="/img/testimonials/anon.png" alt="anonymous" />
+              </div>
+              <div className="testimonial-content">
+                <p>
+                  The value add is <b>really</b> good. There are programs out
+                  there that kind of do false advertising— like once you get
+                  into it you realize it's not what you paid for. And it becomes
+                  this program you paid for but you don't get the results.
+                </p>
+                <p>
+                  <b>
+                    But I'm already seeing results and that comes from Nathan's
+                    expertise and how well he supports my practice.
+                  </b>
+                </p>
+
+                <div className="testimonial-meta">
+                  {" "}
+                  <b>Anonymous</b>
+                  <br />
+                  Current Client
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
