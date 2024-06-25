@@ -50,31 +50,37 @@
       "smallImage": "img/portfolio/09-small.jpg"
     }
   ],
+
   "Services": [
     {
-      "icon": "fa fa-group",
-      "name": "A Full Caseload",
-      "text": "...and maybe even a waitlist!"
-    },
-    {
-      "icon": "fa fa-mortar-board",
-      "name": "Better than a 4-Year Degree",
-      "text": "Education and ideas tailored for private practice."
+      "icon": "fa fa-home",
+      "name": "Ads, Ads, and More Ads",
+      "text": "We’ll test new ads for you on a week by week basis, so your audience never gets ad fatigue"
     },
     {
       "icon": "fa fa-desktop",
-      "name": "A Professionally Designed Website",
-      "text": "Pretty, fast, and good for both mobile and desktop."
-    },
-    {
-      "icon": "fa fa-lightbulb-o",
-      "name": "Marketing and Sales Gameplans",
-      "text": "Knowledge on how to help people find you, and then how to help them make the best decision for their mental health journey."
+      "name": "A Killer Landing Page",
+      "text": "Build you custom landing pages and sales funnels that help you scale like CRAZY."
     },
     {
       "icon": "fa fa-map-marker",
-      "name": "A Roadmap and Tax Strategy for your Business",
-      "text": "Learn growth, metrics, and tax strats all in one."
+      "name": "A CRM to Rule Them All",
+      "text": "Get you on our award winning CRM, set up and customized just for your needs."
+    },
+    {
+      "icon": "fa fa-lightbulb-o",
+      "name": "Lead Automation",
+      "text": "Automate your lead nurture, so you can be sure knowing your leads are getting hit as soon as they interact with your business at all times during the day (and night!)."
+    },
+    {
+      "icon": "fa fa-group",
+      "name": "Dedicated Marketing Professionals",
+      "text": " A team of copywriters and media buyers who will write, shoot, and edit your ads for you."
+    },
+    {
+      "icon": "fa fa-mortar-board",
+      "name": "Dedicated Marketing Professionals",
+      "text": "Build long term marketing strategies to continue working your leads who aren't ready to sell just yet"
     }
   ],
   "Team": [

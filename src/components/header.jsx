@@ -8,19 +8,19 @@ export const Header = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-                <h4>Private practice therapists</h4>
+                <h4>Real Estate Investors</h4>
                 <h1>
-                  DO YOU WANT MORE CLIENTS?
+                  DO YOU WANT MORE MOTIVATED SELLERS?
                   <span></span>
                 </h1>
                 <br />
                 <br />
                 <p>
-                  Book a call to learn how we can help fill your practice, teach
-                  you how to keep it full, and do it all hassle-free.
+                  Book a call to learn how we can help your do more deals,
+                  hassle-free.
                 </p>
                 <a
-                  href="https://calendly.com/prescelta"
+                  href="https://calendly.com/nathanblee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"

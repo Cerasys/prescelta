@@ -7,67 +7,64 @@ export const About = () => {
         <div className="row">
           <div className="col-xs-12 col-md-6">
             {" "}
-            <img src="img/about.jpg" className="img-responsive" alt="" />{" "}
+            <img
+              src="img/team/nathan.jpg"
+              className="img-responsive"
+              alt=""
+            />{" "}
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
-              <h2>About Us</h2>
+              <h2>About The Founder</h2>
               <p>
-                <b>Formal education has failed therapists.</b>
+                Covid is over, and REI has changed forever. <br />
+                Unfortunately for us REIs, houses are no longer on firesale and
+                there's a LOT more competition. Your REI business won't survive
+                (let alone scale!) without a way to consistently get you deals
+                that other investors aren't seeing.
+              </p>
+              <p>
+                {" "}
+                I'm Nathan, a third-generation real estate investor. I did deals
+                all across Washington before realizing that I SUCKED at getting
+                leads. So I set about to fix that.{" "}
+              </p>
+              <p>
+                I now specialize in tapping YouTube, Google, and Facebook to
+                bring go-getters just like you motivated seller leads. <br />{" "}
+                <b>
+                  We're getting leads for anywhere from $20-150, and they're
+                  HIGH QUALITY AS HECK
+                </b>
+                .
+              </p>
+              <p>
+                {" "}
+                And me and my team want to partner with you to bring you more
+                deals and experience more freedom in your life.
+              </p>
+              <p>
+                <b>So stop paying $1000s for leads.</b>
                 <br />
-                It's charged you an arm (and maybe a leg!) to teach you how to
-                be a therapist, but utterly failed to teach you how to own and
-                operate your own business.
+                <b>
+                  Stop waiting for wholesalers to drip feed you your freedom.
+                </b>
+                <br />
+                <b>Get consistent leads to sustainably scale your business</b>
+                <br />
               </p>
-              <p>
-                Well we want to change that. During our 6 week therapist
-                bootcamp, we'll teach you everything you need to know to run
-                your practice without worrying about money ever again, forever.
-              </p>
-              <p>
-                That way, you're freed up to do what you do best -{" "}
-                <b>helping people</b>.
-              </p>
-              <h3>The Things We'll Do Together</h3>
-              <div className="list-style">
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    <li>
-                      Learn the 3 ways you'll <b>ever</b> grow your business
-                    </li>
-                    <li>
-                      Square your digital marketing to fill your practice in{" "}
-                      <u>two months (guaranteed!)</u>
-                    </li>
-                    <li>
-                      Don't have a website? We'll build and optimize one for you
-                    </li>
-                    <li>
-                      Learn how to give your prospective client the best
-                      experience by creating early wins
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    <li>
-                      Learn why your clients leave you early-and how to fix it.
-                    </li>
-                    <li>
-                      Build long term marketing strategies to keep your practice
-                      full (never worry about clients again!)
-                    </li>
-                    <li>
-                      Learn how to save minimum $5000 in taxes a year, every
-                      year 😲
-                    </li>
-                    <li>
-                      Personalized coaching to grow your strengths and fill any
-                      gaps
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <h3>
+                So if you want to build a consistent deal acquisition pipeline
+                and experience true freedom in real estate investing...
+              </h3>
+              <a
+                href="https://calendly.com/nathanblee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-custom btn-lg page-scroll"
+              >
+                Book a Call Now
+              </a>{" "}
             </div>
           </div>
         </div>
