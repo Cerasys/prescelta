@@ -1,49 +1,49 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
+// import { useState } from "react";
+//import emailjs from "emailjs-com";
 import React from "react";
 
-const initialState = {
-  name: "",
-  email: "",
-  message: "",
-};
+// const initialState = {
+//   name: "",
+//   email: "",
+//   message: "",
+// };
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
-  const [button, setButton] = useState("Send Message");
-  const [isSending, setIsSending] = useState(false);
+  //const [{ name, email, message }, setState] = useState(initialState);
+  // const [button, setButton] = useState("Send Message");
+  // const [isSending, setIsSending] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-  const clearState = () => setState({ ...initialState });
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setState((prevState) => ({ ...prevState, [name]: value }));
+  // };
+  // const clearState = () => setState({ ...initialState });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(name, email, message);
-    setIsSending(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(name, email, message);
+  //   setIsSending(true);
 
-    emailjs
-      .sendForm(
-        "service_0o9gqfd",
-        "template_mfm8eam",
-        e.target,
-        "mDnwL7ATmhWms9Hv3"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-          setIsSending(false);
-          setButton("Message sent");
-        },
-        (error) => {
-          console.log(error.text);
-          setIsSending(false);
-          setButton("Something went Wrong");
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_0o9gqfd",
+  //       "template_mfm8eam",
+  //       e.target,
+  //       "mDnwL7ATmhWms9Hv3"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         clearState();
+  //         setIsSending(false);
+  //         setButton("Message sent");
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //         setIsSending(false);
+  //         setButton("Something went Wrong");
+  //       }
+  //     );
+  // };
   return (
     <div>
       <div id="contact">
