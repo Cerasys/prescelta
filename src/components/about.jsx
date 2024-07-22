@@ -58,7 +58,7 @@ export const About = () => {
                 and experience true freedom in real estate investing...
               </h3>
               <a
-                href="https://calendly.com/nathanblee"
+                href="https://.com/nathanblee/rei"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-custom btn-lg page-scroll"

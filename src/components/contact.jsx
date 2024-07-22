@@ -107,7 +107,7 @@ export const Contact = (props) => {
                   {isSending ? "Sending..." : button}
                 </button> */}
               <a
-                href="https://calendly.com/nathanblee"
+                href="https://calendly.com/nathanblee/rei"
                 target="_blank"
                 rel="noopener noreferrer"
               >

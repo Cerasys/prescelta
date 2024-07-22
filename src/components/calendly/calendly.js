@@ -9,7 +9,7 @@ const Calendly = () => {
           <div>
             <div
               class="calendly-inline-widget"
-              data-url="https://calendly.com/prescelta/private-practice-goal-setting"
+              data-url="https://calendly.com/nathanblee/rei"
               style={{ minWidth: "320px", height: "100%" }}
             ></div>
             <script
