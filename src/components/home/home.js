@@ -8,7 +8,6 @@ import { Testimonials } from "../testimonials/testimonials";
 import JsonData from "../../data/data.json";
 import { Contact } from "../contact";
 import { Header } from "../header";
-import { LeadConnector } from "../leadconnector";
 
 const Home = () => {
   const [landingPageData, setLandingPageData] = useState({});
@@ -26,7 +25,6 @@ const Home = () => {
       {/* <Gallery data={landingPageData.Gallery} /> */}
       {/* <Team data={landingPageData.Team} /> */}
       <Contact data={landingPageData.Contact} />
-      <LeadConnector />
     </React.Fragment>
   );
 };
