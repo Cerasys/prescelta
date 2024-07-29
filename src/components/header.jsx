@@ -8,7 +8,7 @@ export const Header = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-                <h4>Real Estate Investors</h4>
+                <h4>Real Estate Investors...</h4>
                 <h1>
                   DO YOU WANT MORE MOTIVATED SELLERS?
                   <span></span>

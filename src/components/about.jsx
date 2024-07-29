@@ -17,11 +17,12 @@ export const About = () => {
             <div className="about-text">
               <h2>About The Founder</h2>
               <p>
-                Covid is over, and REI has changed forever. <br />
-                Unfortunately for us REIs, houses are no longer on firesale and
-                there's a LOT more competition. Your REI business won't survive
-                (let alone scale!) without a way to consistently get you deals
-                that other investors aren't seeing.
+                Covid is over, and Real Estate Investing has changed forever.{" "}
+                <br />
+                Unfortunately for most investors, houses are no longer on
+                firesale and there's a LOT more competition. Your REI business
+                won't survive (let alone scale!) without a way to consistently
+                get you deals that other investors aren't seeing.
               </p>
               <p>
                 {" "}
