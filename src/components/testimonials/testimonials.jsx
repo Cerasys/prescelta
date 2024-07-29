@@ -155,7 +155,7 @@ export const Testimonials = (props) => {
           </div>
         </div>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="section-title text-center">
           <h2>Some stats</h2>
         </div>
@@ -176,7 +176,7 @@ export const Testimonials = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
