@@ -30,6 +30,8 @@ const App = () => {
                 url={
                   "https://calendly.com/nathanblee/rei?background_color=1a1a1a&text_color=ffffff&primary_color=f48948"
                 }
+                minWidth={"400px"}
+                height={"100vh"}
               />
             }
           ></Route>

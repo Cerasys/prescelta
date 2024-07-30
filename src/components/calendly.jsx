@@ -12,12 +12,16 @@ export const Calendly = ({ minWidth, height, url }) => {
   }, []);
 
   return (
-    <React.Fragment>
-      <div
-        className="calendly-inline-widget"
-        data-url={url}
-        style={{ minWidth, height }}
-      ></div>
-    </React.Fragment>
+    <header id="header">
+      <div className="intro">
+        <div className="overlay">
+          <div
+            className="calendly-inline-widget"
+            data-url={url}
+            style={{ minWidth, height }}
+          ></div>
+        </div>
+      </div>
+    </header>
   );
 };
