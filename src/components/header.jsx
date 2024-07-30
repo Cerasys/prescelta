@@ -20,7 +20,7 @@ export const Header = () => {
                   hassle-free.
                 </p>
                 <a
-                  href="https://calendly.com/nathanblee"
+                  href="/book"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"

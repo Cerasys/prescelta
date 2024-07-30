@@ -59,7 +59,7 @@ export const About = () => {
                 and experience true freedom in real estate investing...
               </h3>
               <a
-                href="https://.com/nathanblee/rei"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-custom btn-lg page-scroll"

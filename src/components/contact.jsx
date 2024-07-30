@@ -106,11 +106,7 @@ export const Contact = (props) => {
                 <button type="submit" className="btn btn-custom btn-lg">
                   {isSending ? "Sending..." : button}
                 </button> */}
-              <a
-                href="https://calendly.com/nathanblee/rei"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/book" target="_blank" rel="noopener noreferrer">
                 <div className="btn btn-custom btn-lg">book a call!</div>
               </a>
               {/* </form> */}
@@ -128,12 +124,12 @@ export const Contact = (props) => {
               </p>} */}
             </div>
             <div className="contact-item">
-              <p>
+              {/* <p>
                 <span>
                   <i className="fa fa-phone"></i> Phone
                 </span>{" "}
                 {props.data ? props.data.phone : "loading"}
-              </p>
+              </p> */}
             </div>
             <div className="contact-item">
               <p>
