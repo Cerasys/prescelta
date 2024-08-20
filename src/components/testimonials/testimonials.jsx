@@ -13,7 +13,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/05.jpg" alt="headshot of N M." />
+                <img src="/img/testimonials/07.jpg" alt="headshot of N M." />
               </div>
               <div className="testimonial-content">
                 <p>
@@ -25,13 +25,13 @@ export const Testimonials = (props) => {
                 <p>
                   <b>
                     But I'm already seeing results and that comes from Nathan's
-                    expertise and how well he supports my practice.
+                    expertise and how well he supports my work.
                   </b>
                 </p>
 
                 <div className="testimonial-meta">
                   {" "}
-                  <b>N. Matthews </b>
+                  <b>Nicholas M. </b>
                   <br /> $120,000 in deals done <br />
                   Current Client
                 </div>
@@ -43,7 +43,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/04.jpg" alt="headshot of PS" />
+                <img src="/img/testimonials/08.jpg" alt="headshot of PS" />
               </div>
               <div className="testimonial-content">
                 <p>
@@ -53,7 +53,7 @@ export const Testimonials = (props) => {
 
                 <div className="testimonial-meta">
                   {" "}
-                  <b>P. Shah</b>
+                  <b>Maria S.</b>
                   <br /> $35,000 in deals done <br />
                   Current Client
                 </div>
@@ -64,7 +64,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/02.jpg" alt="headshot of LM" />
+                <img src="/img/testimonials/09.jpg" alt="headshot of LM" />
               </div>
               <div className="testimonial-content">
                 <p>
@@ -86,7 +86,7 @@ export const Testimonials = (props) => {
                 </p>
                 <div className="testimonial-meta">
                   {" "}
-                  <b>L. Mark</b> <br />
+                  <b>Matthew G.</b> <br />
                   $50,000 in deals done
                 </div>
               </div>
@@ -99,7 +99,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/01.jpg" alt="headshot of JW" />
+                <img src="/img/testimonials/10.jpg" alt="headshot of JW" />
               </div>
               <div className="testimonial-content">
                 <p>
@@ -117,7 +117,7 @@ export const Testimonials = (props) => {
                 </p>
                 <div className="testimonial-meta">
                   {" "}
-                  <b>J. W.</b> <br />
+                  <b>Jessica B.</b> <br />
                   $84,000 in deals done <br />
                 </div>
               </div>
@@ -127,7 +127,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/03.jpg" alt="headshot of L T" />
+                <img src="/img/testimonials/11.jpg" alt="headshot of L T" />
               </div>
               <div className="testimonial-content">
                 <p>
@@ -147,7 +147,7 @@ export const Testimonials = (props) => {
 
                 <div className="testimonial-meta">
                   {" "}
-                  <b>L. T. </b>
+                  <b>Lindsay R. </b>
                   <br /> $20,000 in deals done <br />
                 </div>
               </div>

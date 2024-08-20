@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/home/home";
 import ScrollToAnchor from "./components/util/scroll";
 import { Calendly } from "./components/calendly";
+// import { Audit } from "./components/audit";
+import { Navigation } from "./components/navigation";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -18,7 +20,7 @@ const App = () => {
     <BrowserRouter>
       <div>
         <ScrollToAnchor />
-        {/* <Navigation /> */}
+        <Navigation />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           {/* <Route exact path="/contact" element={}></Route> */}
@@ -32,9 +34,11 @@ const App = () => {
                 }
                 minWidth={"400px"}
                 height={"100vh"}
+                margin-top={"7vh"}
               />
             }
           ></Route>
+          {/* <Route exact path="/free-audit" element={<Audit />}></Route> */}
         </Routes>
       </div>
     </BrowserRouter>

@@ -19,7 +19,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <Link className="navbar-brand page-scroll" to="/#page-top">
-            <span className="logo">Prescelta</span>
+            <span className="logo">500 Flips</span>
           </Link>{" "}
         </div>
 
@@ -44,14 +44,14 @@ export const Navigation = (props) => {
               </Link>
             </li>
             <li>
-              <a
-                href="https://calendly.com/nathanblee/rei"
+              <Link
+                to="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="page-scroll"
               >
-                Contact
-              </a>
+                Book a Call
+              </Link>
             </li>
           </ul>
         </div>

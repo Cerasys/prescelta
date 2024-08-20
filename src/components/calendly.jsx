@@ -15,11 +15,13 @@ export const Calendly = ({ minWidth, height, url }) => {
     <header id="header">
       <div className="intro">
         <div className="overlay">
-          <div
-            className="calendly-inline-widget"
-            data-url={url}
-            style={{ minWidth, height }}
-          ></div>
+          <div className="buffer">
+            <div
+              className="calendly-inline-widget"
+              data-url={url}
+              style={{ minWidth, height }}
+            ></div>
+          </div>
         </div>
       </div>
     </header>

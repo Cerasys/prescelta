@@ -1,8 +1,13 @@
+.buffer {
+  margin-top: 7vh;
+}
+
 @media screen and (max-width: 400px) {
   #features {
     padding: 20px;
     width: 111%;
   }
+
   #about,
   #services,
   #testimonials,
