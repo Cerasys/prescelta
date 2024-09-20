@@ -165,11 +165,6 @@ export const Contact = (props) => {
           </div>
         </div>
       </div>
-      <div id="footer">
-        <div className="container text-center">
-          <p>&copy; 2024 Prescelta LLC DBA 500Flips.com</p>
-        </div>
-      </div>
     </div>
   );
 };
