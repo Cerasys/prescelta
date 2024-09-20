@@ -53,6 +53,16 @@ export const Navigation = (props) => {
                 Book a Call
               </Link>
             </li>
+            <li>
+              <Link
+                to="/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="page-scroll"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
