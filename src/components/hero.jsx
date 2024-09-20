@@ -17,8 +17,8 @@ export const Hero = () => {
                 <br />
                 <br />
                 <p>
-                  Book a call to learn about our one-click system that fills up
-                  your schedule every week with cleanings, hassle-free.
+                  Use our one-click system that fills up your schedule every
+                  week with cleanings, hassle-free. No setup fee, no paid ads.
                 </p>
                 <a
                   href="/book"
