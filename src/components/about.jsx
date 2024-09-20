@@ -17,38 +17,47 @@ export const About = () => {
             <div className="about-text">
               <h2>About The Founder</h2>
               <p>
-                Covid is over, and Real Estate Investing has changed forever.{" "}
+                Finding jobs has changed FOREVER. <br />
+                There is an all-time high for cleaners entering the market.{" "}
                 <br />
-                Unfortunately for most investors, houses are no longer on
-                firesale and there's a LOT more competition. Your REI business
-                won't survive (let alone scale!) without a way to consistently
-                get you deals that other investors aren't seeing.
+                Word of mouth alone won't help you scale <br />
+                Without a reliable system to consistently bring you high-value
+                clients that your competitors are missing, you're leaving money
+                on the table.
               </p>
               <p>
-                {" "}
-                I'm Nathan, a third-generation real estate investor. I did deals
-                all across Washington before realizing that I SUCKED at getting
-                leads. So I set about to fix that.{" "}
+                I'm Nathan, your <b>marketing wizard</b>. Me and my partner have
+                <u>
+                  {" "}
+                  spent over 6 figures in ads, sent 600,000 texts, sent over 1
+                  MILLION emails
+                </u>
+                , and I'm here to help you next.
               </p>
               <p>
-                I now specialize in tapping YouTube, Google, and Facebook to
-                bring go-getters just like you motivated seller leads. <br />{" "}
+                I now specialize in lead generation for getting people
+                appointments (not just sales calls) with local businesses.
+                leaning businesses like yours stand out, book more clients, and
+                scale faster than ever before. Let us bring you the leads while
+                you focus on what you do best—delivering spotless service.{" "}
+                <br />{" "}
                 <b>
-                  We're getting leads for anywhere from $20-150, and they're
-                  HIGH QUALITY AS HECK
+                  The best part? You don't pay me in advanced, we partner
+                  together and you pay me on commission.
                 </b>
                 .
               </p>
               <p>
                 {" "}
                 And me and my team want to partner with you to bring you more
-                deals and experience more freedom in your life.
+                appointments and experience more freedom in your life.
               </p>
               <p>
-                <b>So stop paying $1000s for leads.</b>
+                <b>So stop paying $100s for angieleads.</b>
                 <br />
                 <b>
-                  Stop waiting for wholesalers to drip feed you your freedom.
+                  Stop waiting for other business owners to drip feed you your
+                  freedom.
                 </b>
                 <br />
                 <b>Get consistent leads to sustainably scale your business</b>
@@ -56,7 +65,7 @@ export const About = () => {
               </p>
               <h3>
                 So if you want to build a consistent deal acquisition pipeline
-                and experience true freedom in real estate investing...
+                and experience true freedom in business...
               </h3>
               <a
                 href="/book"

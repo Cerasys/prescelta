@@ -32,7 +32,6 @@ export const Testimonials = (props) => {
                 <div className="testimonial-meta">
                   {" "}
                   <b>Nicholas M. </b>
-                  <br /> $120,000 in deals done <br />
                   Current Client
                 </div>
               </div>
@@ -54,7 +53,6 @@ export const Testimonials = (props) => {
                 <div className="testimonial-meta">
                   {" "}
                   <b>Maria S.</b>
-                  <br /> $35,000 in deals done <br />
                   Current Client
                 </div>
               </div>
@@ -86,8 +84,7 @@ export const Testimonials = (props) => {
                 </p>
                 <div className="testimonial-meta">
                   {" "}
-                  <b>Matthew G.</b> <br />
-                  $50,000 in deals done
+                  <b>Matthew G.</b>
                 </div>
               </div>
             </div>
@@ -118,7 +115,6 @@ export const Testimonials = (props) => {
                 <div className="testimonial-meta">
                   {" "}
                   <b>Jessica B.</b> <br />
-                  $84,000 in deals done <br />
                 </div>
               </div>
             </div>
@@ -148,7 +144,6 @@ export const Testimonials = (props) => {
                 <div className="testimonial-meta">
                   {" "}
                   <b>Lindsay R. </b>
-                  <br /> $20,000 in deals done <br />
                 </div>
               </div>
             </div>

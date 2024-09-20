@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Header = () => {
+export const Hero = () => {
   return (
     <header id="header">
       <div className="intro">
@@ -8,16 +8,17 @@ export const Header = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-                <h4>Real Estate Investors...</h4>
+                <h4>Cleaners...</h4>
                 <h1>
-                  DO YOU WANT MORE MOTIVATED SELLERS?
+                  DO YOU WANT{" "}
+                  <span className="highlight">MORE APPOINTMENTS?</span>
                   <span></span>
                 </h1>
                 <br />
                 <br />
                 <p>
-                  Book a call to learn how we can help your do more deals,
-                  hassle-free.
+                  Book a call to learn about our one-click system that fills up
+                  your schedule every week with cleanings, hassle-free.
                 </p>
                 <a
                   href="/book"
