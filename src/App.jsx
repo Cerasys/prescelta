@@ -11,7 +11,7 @@ import { Privacy } from "./components/privacy";
 // import { Audit } from "./components/audit";
 import { Navigation } from "./components/navigation";
 import { Footer } from "./components/footer";
-import { UserForm } from "./components/book";
+import { Contact } from "./components/contact";
 import { Terms } from "./components/terms";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -27,7 +27,7 @@ const App = () => {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/contact" element={<UserForm />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
           <Route
             exact
             path="/book"

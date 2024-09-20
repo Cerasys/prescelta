@@ -1,170 +1,236 @@
-// import { useState } from "react";
-//import emailjs from "emailjs-com";
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
-// const initialState = {
-//   name: "",
-//   email: "",
-//   message: "",
-// };
-export const Contact = (props) => {
-  //const [{ name, email, message }, setState] = useState(initialState);
-  // const [button, setButton] = useState("Send Message");
-  // const [isSending, setIsSending] = useState(false);
+export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    optInSMS: false,
+  });
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setState((prevState) => ({ ...prevState, [name]: value }));
-  // };
-  // const clearState = () => setState({ ...initialState });
+  const [buttonText, setButtonText] = useState("Submit");
+  const [isSending, setIsSending] = useState(false);
+  const [errors, setErrors] = useState({ email: "", phone: "" });
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(name, email, message);
-  //   setIsSending(true);
+  const validateEmail = (email) => {
+    // Simple regex for email validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailPattern.test(email);
+  };
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_0o9gqfd",
-  //       "template_mfm8eam",
-  //       e.target,
-  //       "mDnwL7ATmhWms9Hv3"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         clearState();
-  //         setIsSending(false);
-  //         setButton("Message sent");
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //         setIsSending(false);
-  //         setButton("Something went Wrong");
-  //       }
-  //     );
-  // };
+  const validatePhone = (phone) => {
+    // Simple regex for phone number validation (US phone numbers)
+    const phonePattern = /^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
+    return phonePattern.test(phone);
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const isValidEmail = validateEmail(formData.email);
+    const isValidPhone = validatePhone(formData.phone);
+
+    if (!isValidEmail || !isValidPhone) {
+      setErrors({
+        email: !isValidEmail ? "Invalid email format" : "",
+        phone: !isValidPhone ? "Invalid phone format (e.g. 123-456-7890)" : "",
+      });
+      return;
+    }
+
+    setIsSending(true);
+    setButtonText("Sending...");
+
+    emailjs
+      .sendForm(
+        "service_0o9gqfd", // Replace with your service ID
+        "template_mfm8eam", // Replace with your template ID
+        e.target,
+        "mDnwL7ATmhWms9Hv3" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSending(false);
+          setButtonText("Message Sent");
+        },
+        (error) => {
+          console.error(error.text);
+          setIsSending(false);
+          setButtonText("Something went wrong");
+        }
+      );
+  };
+
+  const formStyles = {
+    maxWidth: "400px",
+    margin: "150px auto",
+    padding: "20px",
+    border: "1px solid #ccc",
+    borderRadius: "10px",
+    backgroundColor: "#f9f9f9",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  };
+
+  const labelStyles = {
+    display: "block",
+    marginBottom: "8px",
+    fontWeight: "bold",
+    fontSize: "14px",
+  };
+
+  const inputStyles = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "15px",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+    fontSize: "14px",
+  };
+
+  const textAreaStyles = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "15px",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+    fontSize: "14px",
+    height: "120px",
+  };
+
+  const checkboxStyles = {
+    marginRight: "10px",
+  };
+
+  const errorStyles = {
+    color: "red",
+    fontSize: "12px",
+    marginBottom: "10px",
+  };
+
+  const buttonStyles = {
+    width: "100%",
+    padding: "10px",
+    backgroundColor: isSending ? "#ccc" : "#ff9a3c",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: isSending ? "not-allowed" : "pointer",
+    fontSize: "16px",
+  };
+
   return (
-    <div>
-      <div id="contact">
-        <div className="container">
-          <div className="col-md-8">
-            <div className="row">
-              <div className="section-title">
-                <h2>Get In Touch</h2>
-                {/* <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p> 
-                */}
-              </div>
-              {/*
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  {isSending ? "Sending..." : button}
-                </button> */}
-              <a href="/book" target="_blank" rel="noopener noreferrer">
-                <div className="btn btn-custom btn-lg">book a call!</div>
-              </a>
-              {/* </form> */}
-            </div>
-          </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
-              <h3>Contact Info</h3>
-              {/* {props.data.address &
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {props.data ? props.data.address : "loading"}
-              </p>} */}
-            </div>
-            <div className="contact-item">
-              {/* <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
-              </p> */}
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
-                {props.data ? props.data.email : "loading"}
-              </p>
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  {/* <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>*/}
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+    <form onSubmit={handleSubmit} style={formStyles}>
+      <h3>Contact Us</h3>
+      <br />
+      <div>
+        <label htmlFor="name" style={labelStyles}>
+          Name:
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          style={inputStyles}
+        />
       </div>
-    </div>
+
+      <div>
+        <label htmlFor="email" style={labelStyles}>
+          Email:
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          style={inputStyles}
+        />
+        {errors.email && <div style={errorStyles}>{errors.email}</div>}
+      </div>
+
+      <div>
+        <label htmlFor="phone" style={labelStyles}>
+          Phone:
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          style={inputStyles}
+          pattern="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$" // Ensures HTML5 validation too
+        />
+        {errors.phone && <div style={errorStyles}>{errors.phone}</div>}
+      </div>
+
+      <div>
+        <label htmlFor="message" style={labelStyles}>
+          Message:
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          style={textAreaStyles}
+        />
+      </div>
+
+      <div>
+        <label htmlFor="optInSMS" style={labelStyles}>
+          <input
+            type="checkbox"
+            id="optInSMS"
+            name="optInSMS"
+            checked={formData.optInSMS}
+            onChange={handleChange}
+            style={checkboxStyles}
+          />
+          I agree to{" "}
+          <a href="/terms" target="_blank" rel="noopener noreferrer">
+            terms & conditions
+          </a>{" "}
+          and{" "}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer">
+            privacy policy
+          </a>{" "}
+          provided by the company. By providing my phone number, I agree to
+          receive text messages from the business.
+        </label>
+      </div>
+
+      <button
+        type="submit"
+        style={buttonStyles}
+        disabled={isSending}
+        onMouseOver={(e) =>
+          !isSending && (e.target.style.backgroundColor = "#ff6f3c")
+        }
+        onMouseOut={(e) =>
+          !isSending && (e.target.style.backgroundColor = "#ff9a3c")
+        }
+      >
+        {buttonText}
+      </button>
+    </form>
   );
 };
