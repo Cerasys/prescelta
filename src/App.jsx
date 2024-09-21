@@ -32,14 +32,15 @@ const App = () => {
             exact
             path="/book"
             element={
-              <Calendly
-                url={
-                  "https://calendly.com/nathanblee/onboarding?background_color=1a1a1a&text_color=ffffff&primary_color=f48948"
-                }
-                minWidth={"400px"}
-                height={"100vh"}
-                margin-top={"7vh"}
-              />
+              // <Calendly
+              //   url={
+              //     "https://calendly.com/nathanblee/onboarding?background_color=1a1a1a&text_color=ffffff&primary_color=f48948"
+              //   }
+              //   minWidth={"400px"}
+              //   height={"100vh"}
+              //   margin-top={"7vh"}
+              // />
+              <Contact />
             }
           ></Route>{" "}
           <Route exact path="/privacy" element={<Privacy />}></Route>
