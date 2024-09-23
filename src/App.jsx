@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./components/home/home";
 import ScrollToAnchor from "./components/util/scroll";
-import { Calendly } from "./components/calendly";
+// import { Calendly } from "./components/calendly";
 import { Privacy } from "./components/privacy";
 // import { Audit } from "./components/audit";
 import { Navigation } from "./components/navigation";
