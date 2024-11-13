@@ -5,7 +5,7 @@ export const Footer = () => {
     <div id="footer">
       <div className="container text-center">
         <p>
-          &copy; 2024 Prescelta LLC DBA 500Flips.com |{" "}
+          &copy; 2024 Prescelta LLC DBA Hoshino Media |{" "}
           <a href="/privacy" target="_blank" rel="noopener noreferrer">
             Privacy Policy
           </a>{" "}

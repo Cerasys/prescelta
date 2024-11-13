@@ -45,7 +45,7 @@ export const Info = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>&copy; 2024 Prescelta LLC</p>
+          <p>&copy; 2024 Prescelta LLC DBA Hoshino Media</p>
         </div>
       </div>
     </div>

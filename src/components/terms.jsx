@@ -7,7 +7,7 @@ export const Terms = () => {
       <header id="header"></header>
       <br />
       <div className="terms">
-        <h2>Prescelta LLC SMS Terms & Conditions </h2>
+        <h2>Prescelta LLC DBA Hoshino Media SMS Terms & Conditions </h2>
 
         <h3>1.Program description:</h3>
 
@@ -36,7 +36,8 @@ export const Terms = () => {
         <h3>4. Help:</h3>
         <p>
           If you are experiencing any issues, you can reply with the keyword
-          HELP. Or, you can get help directly from us at nathan@prescelta.com.{" "}
+          HELP. Or, you can get help directly from us at
+          nathan@hoshinomedia.com.{" "}
         </p>
 
         <h3>5.Interruption: </h3>

@@ -213,10 +213,10 @@ export const Contact = () => {
           <a href="/privacy" target="_blank" rel="noopener noreferrer">
             privacy policy
           </a>{" "}
-          provided by Prescelta LLC. By providing my phone number, I agree to
-          receive text messages from the business. Message frequency varies.
-          Message & data rates may apply. You can reply STOP to unsubscribe at
-          any time.
+          provided by Prescelta LLC DBA Hoshino Media. By providing my phone
+          number, I agree to receive text messages from the business. Message
+          frequency varies. Message & data rates may apply. You can reply STOP
+          to unsubscribe at any time.
         </label>
       </div>
 
