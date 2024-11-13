@@ -16,8 +16,8 @@ export const Hero = () => {
                 <br />
                 <br />
                 <p>
-                  Use our one-click system that fills up your schedule every
-                  week with cleanings, hassle-free. No setup fee, no paid ads.
+                  Use our one-click system that generates high quality
+                  customers, on autopilot.
                 </p>
                 <a
                   href="/book"

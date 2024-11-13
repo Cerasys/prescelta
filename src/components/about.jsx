@@ -35,37 +35,30 @@ export const About = () => {
                 , and I'm here to help you next.
               </p>
               <p>
-                I now specialize in lead generation for getting people
-                appointments (not just sales calls) with local businesses.
-                leaning businesses like yours stand out, book more clients, and
-                scale faster than ever before. Let us bring you the leads while
-                you focus on what you do best—delivering spotless service.{" "}
-                <br />{" "}
-                <b>
-                  The best part? You don't pay me in advanced, we partner
-                  together and you pay me on commission.
-                </b>
-                .
+                I now specialize in paid ads for getting customers to empty your
+                entire online inventory. Let us bring you the sales while you
+                focus on what you do best—delivering high quality service and
+                designing awesome collections. <br />
               </p>
               <p>
                 {" "}
                 And me and my team want to partner with you to bring you more
-                appointments and experience more freedom in your life.
+                sales and experience more freedom in your life.
               </p>
               <p>
-                <b>So stop paying $100s for angieleads.</b>
+                <b>So stop paying posting on fashion megathreads.</b>
                 <br />
                 <b>
-                  Stop waiting for other business owners to drip feed you your
-                  freedom.
+                  Stop discounting your clothes so low that you barely are
+                  breaking even.
                 </b>
                 <br />
-                <b>Get consistent leads to sustainably scale your business</b>
+                <b>Get consistent profit to sustainably scale your business</b>
                 <br />
               </p>
               <h3>
-                So if you want to build a consistent deal acquisition pipeline
-                and experience true freedom in business...
+                So if you want to build a consistent customer acquisition
+                pipeline and experience true freedom in business...
               </h3>
               <a
                 href="/book"
