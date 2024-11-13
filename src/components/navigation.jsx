@@ -18,8 +18,12 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <Link className="navbar-brand page-scroll" to="/#page-top">
-            <span className="logo">Hoshino Media</span>
+          <Link className="navbar-brand page-scroll logo" to="/#page-top">
+            <img
+              src="img/logo_juicy.png"
+              alt="Juicy Logo"
+              style={{ maxWidth: "80px" }}
+            />
           </Link>{" "}
         </div>
 

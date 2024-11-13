@@ -99,6 +99,15 @@ hr {
   color: var(--orange-dark);
 }
 
+.logo img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  /* You can tweak positioning */
+  top: -15px;
+  /* Adjust based on your design */
+}
+
 #menu {
   padding: 15px;
   transition: all 0.8s;
