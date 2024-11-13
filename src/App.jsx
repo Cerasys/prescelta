@@ -67,10 +67,11 @@ const App = () => {
                 header={step.header}
                 vimeoUrl={step.vimeoUrl}
                 description={step.description}
+                secondaryHeader={step.secondaryHeader}
+                headlineCalloutText={step.headlineCalloutText}
+                headlineLink={step.headlineLink}
                 buttonText={step.buttonText}
                 buttonLink={step.buttonLink}
-                extraButtonText={step.extraButtonText}
-                extraButtonLink={step.extraButtonLink}
               />
             }
           />
