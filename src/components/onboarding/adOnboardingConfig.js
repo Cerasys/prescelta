@@ -1,5 +1,5 @@
 // onboardingConfig.js
-export const onboardingSteps = [
+export const smmOnboardingSteps = [
   {
     path: "/smm-onboarding/step-1",
     header: "Step 1: What To Expect From Onboarding 🤷🏻‍♂️",

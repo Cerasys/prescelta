@@ -18,7 +18,7 @@ import { Navigation } from "./components/navigation";
 import { Footer } from "./components/footer";
 import { Contact } from "./components/contact";
 import { Terms } from "./components/terms";
-import { onboardingSteps } from "./components/onboarding/onboardingConfig";
+import { smmOnboardingSteps } from "./components/onboarding/smmOnboardingConfig";
 import OnboardingStep from "./components/onboarding/onboardingPage";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -58,7 +58,11 @@ const App = () => {
           path="/smm-onboarding/*"
           element={<Navigate to="/smm-onboarding/step-1" replace />}
         />
-        {onboardingSteps.map((step, index) => (
+        <Route
+          path="/ad-onboarding/*"
+          element={<Navigate to="/ad-onboarding/step-1" replace />}
+        />
+        {smmOnboardingSteps.map((step, index) => (
           <Route
             key={index}
             path={step.path}
