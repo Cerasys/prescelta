@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import {
@@ -30,6 +30,14 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 const App = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    // Check if the current site is prescelta.com
+    if (window.location.hostname === "prescelta.com") {
+      // Redirect to hoshinomedia.com
+      window.location.href = "https://hoshinomedia.com";
+    }
+  }, []);
+
   // Check if the current path is part of the onboarding routes
   const isOnboardingPath =
     location.pathname.startsWith("/smm-onboarding") ||
@@ -42,21 +50,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
-        <Route
-          exact
-          path="/book"
-          element={
-            // <Calendly
-            //   url={
-            //     "https://calendly.com/nathanblee/onboarding?background_color=1a1a1a&text_color=ffffff&primary_color=f48948"
-            //   }
-            //   minWidth={"400px"}
-            //   height={"100vh"}
-            //   margin-top={"7vh"}
-            // />
-            <Contact />
-          }
-        ></Route>
+        <Route exact path="/book" element={<Contact />}></Route>
         <Route
           path="/smm-onboarding/*"
           element={<Navigate to="/smm-onboarding/step-1" replace />}
