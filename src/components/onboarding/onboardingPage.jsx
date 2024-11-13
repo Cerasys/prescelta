@@ -48,7 +48,14 @@ const OnboardingStep = ({
 
       {/* Show horizontal line if either description or secondaryHeader exists */}
       {(description || secondaryHeader) && (
-        <hr style={{ border: "2px solid black", margin: "20px 0" }} />
+        <hr
+          style={{
+            border: "2px solid black",
+            margin: "20px 0",
+            width: "60%",
+            justifySelf: "center",
+          }}
+        />
       )}
 
       {/* Render headline2 */}
@@ -74,7 +81,14 @@ const OnboardingStep = ({
 
       {/* Show horizontal line if either description or secondaryHeader exists */}
       {(description || secondaryHeader) && (
-        <hr style={{ border: "2px solid black", margin: "20px 0" }} />
+        <hr
+          style={{
+            border: "2px solid black",
+            margin: "20px 0",
+            width: "60%",
+            justifySelf: "center",
+          }}
+        />
       )}
 
       {/* Main button */}
