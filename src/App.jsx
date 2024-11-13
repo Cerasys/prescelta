@@ -20,6 +20,7 @@ import { Contact } from "./components/contact";
 import { Terms } from "./components/terms";
 import { smmOnboardingSteps } from "./components/onboarding/smmOnboardingConfig";
 import OnboardingStep from "./components/onboarding/onboardingPage";
+import { adOnboardingSteps } from "./components/onboarding/adOnboardingConfig";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -30,7 +31,9 @@ const App = () => {
   const location = useLocation();
 
   // Check if the current path is part of the onboarding routes
-  const isOnboardingPath = location.pathname.startsWith("/smm-onboarding");
+  const isOnboardingPath =
+    location.pathname.startsWith("/smm-onboarding") ||
+    location.pathname.startsWith("/ad-onboarding");
 
   return (
     <div>
@@ -63,6 +66,25 @@ const App = () => {
           element={<Navigate to="/ad-onboarding/step-1" replace />}
         />
         {smmOnboardingSteps.map((step, index) => (
+          <Route
+            key={index}
+            path={step.path}
+            element={
+              <OnboardingStep
+                header={step.header}
+                vimeoUrl={step.vimeoUrl}
+                description={step.description}
+                secondaryHeader={step.secondaryHeader}
+                headlineCalloutText={step.headlineCalloutText}
+                headlineLink={step.headlineLink}
+                buttonText={step.buttonText}
+                buttonLink={step.buttonLink}
+              />
+            }
+          />
+        ))}
+
+        {adOnboardingSteps.map((step, index) => (
           <Route
             key={index}
             path={step.path}
