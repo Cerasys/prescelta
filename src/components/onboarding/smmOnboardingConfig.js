@@ -11,7 +11,7 @@ export const smmOnboardingSteps = [
   {
     path: "/smm-onboarding/step-2",
     header: "Step 2: What To Expect From The 90 Days 🏅",
-    vimeoUrl: "",
+    vimeoUrl: "https://player.vimeo.com/video/1029805256",
     description: "",
     buttonText: "Take Me To The Next Step",
     buttonLink: "/smm-onboarding/step-3",
