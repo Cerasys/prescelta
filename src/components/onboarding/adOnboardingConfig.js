@@ -23,7 +23,7 @@ export const adOnboardingSteps = [
     description: "",
     secondaryHeader: "Sign the Contract",
     headlineCalloutText: "Here",
-    headlineLink: "https://lego.com",
+    headlineLink: "",
     buttonText: "Take Me To The Next Step",
     buttonLink: "/ad-onboarding/step-4",
   },
@@ -54,7 +54,8 @@ export const adOnboardingSteps = [
     description: "",
     secondaryHeader: "Book a Strategy Session ",
     headlineCalloutText: "Here",
-    headlineLink: "https://calendly.com/nathanblee/ad-strategy-session",
+    headlineLink:
+      "https://calendly.com/nathanblee/paid-traffic-client-strategy-session",
     buttonText: "Take Me To The Next Step",
     buttonLink: "/ad-onboarding/step-7",
   },
