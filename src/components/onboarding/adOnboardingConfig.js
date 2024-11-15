@@ -28,9 +28,9 @@ export const adOnboardingSteps = [
     buttonLink: "/ad-onboarding/step-4",
   },
   {
-    path: "/ad-onboarding/step-4",
+    path: "/smm-onboarding/step-4",
     header: "Step 4: Time For Ads Manager Integration! 💥",
-    vimeoUrl: "",
+    vimeoUrl: "https://player.vimeo.com/video/1029855707",
     description: "",
     secondaryHeader: "Ad ID: 2499636336910980",
     buttonText: "Take Me To The Next Step",
