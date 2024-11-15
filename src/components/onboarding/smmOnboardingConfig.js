@@ -34,6 +34,17 @@ export const smmOnboardingSteps = [
     description: "",
     secondaryHeader: "Ad ID: 2499636336910980",
     buttonText: "Take Me To The Next Step",
+    buttonLink: "/smm-onboarding/step-4-5",
+  },
+  {
+    path: "/smm-onboarding/step-4-5",
+    header: "Step 4.5: Buffer Setup! ⚙️",
+    vimeoUrl: "https://player.vimeo.com/video/1029862512",
+    description: "",
+    secondaryHeader: "Add media@hoshinomedia.com to your buffer acount ",
+    headlineCalloutText: "Here",
+    headlineLink: "https://buffer.com",
+    buttonText: "Take Me To The Next Step",
     buttonLink: "/smm-onboarding/step-5",
   },
   {
