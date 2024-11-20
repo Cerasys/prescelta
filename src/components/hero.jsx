@@ -8,7 +8,7 @@ export const Hero = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-                <h4>Brand Owners...</h4>
+                <h4>High Ticket Coaches...</h4>
                 <h1>
                   DO YOU WANT{" "}
                   <span className="highlight">MORE COACHING CLIENTS?</span>
