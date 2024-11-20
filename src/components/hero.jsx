@@ -17,8 +17,8 @@ export const Hero = () => {
                 <br />
                 <br />
                 <p>
-                  Use our one-click system that generates high quality,
-                  knowledge hungry customers, on autopilot.
+                  Use our one-click system that generates high ticket,
+                  knowledge-hungry customers, on autopilot.
                 </p>
                 <a
                   href="https://calendly.com/nathanblee/growth-blueprint-call"
