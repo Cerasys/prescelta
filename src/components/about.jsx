@@ -71,14 +71,14 @@ export const About = () => {
                 </b>
                 <br />
                 <b>
-                  Let us develop an automated, scalable way to achieve your
-                  business goals for you
+                  Let us develop an automated customer acquisition method to
+                  help you crush your business goals
                 </b>
                 <br />
               </p>
               <h3>
-                So if you want an automated customer acquisition way to make
-                your dreams come true...
+                So if you want an automated, scalable way to help achieve your
+                dreams...
               </h3>
               <a
                 href="https://calendly.com/nathanblee/growth-blueprint-call"
