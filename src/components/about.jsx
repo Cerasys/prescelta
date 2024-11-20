@@ -17,16 +17,23 @@ export const About = () => {
             <div className="about-text">
               <h2>About The Founder</h2>
               <p>
-                Finding jobs has changed FOREVER. <br />
-                There is an all-time high for cleaners entering the market.{" "}
+                <b>
+                  We'll bring you more coaching clients without you needing to
+                  be famous or having to dance on tiktok daily.{" "}
+                </b>
                 <br />
-                Word of mouth alone won't help you scale <br />
-                Without a reliable system to consistently bring you high-value
-                clients that your competitors are missing, you're leaving money
-                on the table.
+                Covid has changed our world FOREVER. <br />
+                People are waking up to the reality that the "salaryman life" is
+                a lie spun by big corporation to keep them from living life to
+                the fullest. <br />
+                It's a gold rush of hungry people trying to discover what life
+                could hold. And in the gold rush, the best thing to do was not
+                to pan for gold, but to sell shovels.
+                <br />
               </p>
               <p>
-                I'm Nathan, your <b>marketing wizard</b>. Me and my partner have
+                I'm Nathan, your <b>growth architect and marketing wizard</b>.
+                Me and my partner have
                 <u>
                   {" "}
                   spent over 6 figures in ads, sent 600,000 texts, sent over 1
@@ -35,33 +42,46 @@ export const About = () => {
                 , and I'm here to help you next.
               </p>
               <p>
-                I now specialize in paid ads for getting customers to empty your
-                entire online inventory. Let us bring you the sales while you
-                focus on what you do best—delivering high quality service and
-                designing awesome collections. <br />
+                I now specialize in paid ads for getting your knowledge-hungry
+                coaching clients.{" "}
+                <b>
+                  My team has built a revolutionary funnel that has decreased
+                  lead costs by more than 5x for high paying, hungry clients.
+                </b>
+                <br />
               </p>
               <p>
-                {" "}
                 And me and my team want to partner with you to bring you more
                 sales and experience more freedom in your life.
               </p>
               <p>
-                <b>So stop paying posting on fashion megathreads.</b>
-                <br />
                 <b>
-                  Stop discounting your clothes so low that you barely are
-                  breaking even.
+                  So stop paying posting on TikTok and Instagram praying that
+                  you'll go viral.
                 </b>
                 <br />
-                <b>Get consistent profit to sustainably scale your business</b>
+                <b>
+                  Stop paying for TubeBuddy and scraping keywords to match
+                  against to show on people's YouTube feeds.
+                </b>
+                <br />
+                <b>
+                  Stop trying to publish a book trying to build credibility and
+                  to get in front of people.
+                </b>
+                <br />
+                <b>
+                  Let us develop an automated, scalable way to achieve your
+                  business goals for you
+                </b>
                 <br />
               </p>
               <h3>
-                So if you want to build a consistent customer acquisition
-                pipeline and experience true freedom in business...
+                So if you want an automated customer acquisition way to make
+                your dreams come true...
               </h3>
               <a
-                href="/book"
+                href="https://calendly.com/nathanblee/growth-blueprint-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-custom btn-lg page-scroll"
