@@ -41,7 +41,7 @@ const App = () => {
   // Check if the current path is part of the onboarding routes
   const isOnboardingPath =
     location.pathname.startsWith("/smm-onboarding") ||
-    location.pathname.startsWith("/ad-onboarding");
+    location.pathname.startsWith("/laf-onboarding");
 
   return (
     <div>
@@ -56,8 +56,8 @@ const App = () => {
           element={<Navigate to="/smm-onboarding/step-1" replace />}
         />
         <Route
-          path="/ad-onboarding/*"
-          element={<Navigate to="/ad-onboarding/step-1" replace />}
+          path="/laf-onboarding/*"
+          element={<Navigate to="/laf-onboarding/step-1" replace />}
         />
         {smmOnboardingSteps.map((step, index) => (
           <Route
