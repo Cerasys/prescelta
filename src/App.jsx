@@ -56,6 +56,10 @@ const App = () => {
           element={<Navigate to="/smm-onboarding/step-1" replace />}
         />
         <Route
+          path="/onboarding/*"
+          element={<Navigate to="/laf-onboarding/step-1" replace />}
+        />
+        <Route
           path="/laf-onboarding/*"
           element={<Navigate to="/laf-onboarding/step-1" replace />}
         />
