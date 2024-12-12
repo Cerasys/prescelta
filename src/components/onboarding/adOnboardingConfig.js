@@ -11,7 +11,7 @@ export const adOnboardingSteps = [
   {
     path: "/laf-onboarding/step-2",
     header: "Step 2: What To Expect From The 90 Days 🏅",
-    vimeoUrl: "",
+    vimeoUrl: "https://player.vimeo.com/video/1038719167",
     description: "",
     buttonText: "Take Me To The Next Step",
     buttonLink: "/laf-onboarding/step-3",
