@@ -1,8 +1,10 @@
 export const adOnboardingSteps = [
   {
     path: "/laf-onboarding/step-1",
-    header: "Step 1: What To Expect From Onboarding 🤷🏻‍♂️",
+    header: "Step 1: Welcome to our Onboarding - Here's What To Expect 🤷🏻‍♂️",
     vimeoUrl: "https://player.vimeo.com/video/1029120130",
+    secondaryHeader:
+      "A Streamlined Process to Take the Second Step Towards Your Future Freedom",
     description:
       "Please Note: The on-boarding process takes around 90 minutes, please leave adequate time for this. This is the most efficient marketing on-boarding process you'll ever come across. \n\nIt may take 90 min, but once it's done... it's done. No back and forth emails or stumbling for passwords further down the line.",
     buttonText: "Take Me To The Next Step",
@@ -40,8 +42,9 @@ export const adOnboardingSteps = [
     path: "/laf-onboarding/step-5",
     header: "Step 5: Tell Us About Your Audience! 😎",
     vimeoUrl: "https://player.vimeo.com/video/1029120367",
-    description: "",
-    secondaryHeader: "Time To Tell Us About Your Audience: ",
+    description:
+      "This is probably the longest step, but bear with it! Remember: we are buying your future freedom and success! The more detail you can give us, the faster we can get there",
+    secondaryHeader: "Tell Us About Your Audience: ",
     headlineCalloutText: "Here",
     headlineLink: "https://forms.gle/D6eXUeqYk9FK8irK8",
     buttonText: "Take Me To The Next Step",
