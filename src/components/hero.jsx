@@ -10,15 +10,16 @@ export const Hero = () => {
               <div className="col-md-8 col-md-offset-2 intro-text">
                 <h4>Clothing Brands...</h4>
                 <h1>
-                  DO YOU WANT TO BE{" "}
-                  <span className="highlight">A BRAND PEOPLE REMEMBER?</span>
+                  DO YOU WANT TO BUILD{" "}
+                  <span className="highlight"> A BRAND</span> THAT THE WORLD{" "}
+                  <span className="highlight"> REMEMBERS?</span>
                   <span></span>
                 </h1>
                 <br />
                 <br />
                 <p>
-                  We generate hungry customers that want to part of your brand
-                  and your story with our one-click system.
+                  We help tell the story of your brand to hungry customers with
+                  our one-click system.
                 </p>
                 <a
                   href="https://go.hoshinomedia.com/book-call"

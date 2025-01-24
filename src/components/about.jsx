@@ -15,38 +15,58 @@ export const About = () => {
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
-              <h2>About The Founder</h2>
+              <h2>Our Story</h2>
+              <h4>How do you go about scaling? </h4>
               <p>
+                I'll give you a hint: it comes with time and perseverence and a
+                whole lot of sweat equity...
+                <br />
                 <b>
-                  We'll bring you more coaching clients without you needing to
-                  be famous or having to dance on tiktok daily.{" "}
+                  But it's only doable if you have a few key systems in place
                 </b>
                 <br />
-                Covid has changed our world FOREVER. <br />
-                People are waking up to the reality that the "salaryman life" is
-                a lie spun by big corporation to keep them from living life to
-                the fullest. <br />
-                It's a gold rush of hungry people trying to discover what life
-                could hold. And in the gold rush, the best thing to do was not
-                to pan for gold, but to sell shovels.
+              </p>
+              <p>
+                I'm Nathan, your{" "}
+                <b>sales process architect and marketing wizard</b>. Having got
+                my start in e-commerce, I've cut my teeth on marketing,{" "}
+                <u>first for survival, then for fun.</u>
                 <br />
-              </p>
-              <p>
-                I'm Nathan, your <b>growth architect and marketing wizard</b>.
-                Me and my partner have
-                <u>
-                  {" "}
-                  spent over 6 figures in ads, sent 600,000 texts, sent over 1
-                  MILLION emails
-                </u>
-                , and I'm here to help you next.
-              </p>
-              <p>
-                I now specialize in paid ads for getting your knowledge-hungry
-                coaching clients.{" "}
+                <br />
+                In 2020, I started out in ecommerce and got{" "}
+                <i>dropkicked by Covid.</i>
+                <br />
+                <br />
+                I was making organic content but barely seeing any progress. I
+                knew I needed to advertise, but I had no idea how.
+                <br />
+                <br />
+                I wasted my first $300 on advertisements, with one sale.
+                <br />I wasted the next $300. <b>Two sales. Progress.</b>
+                <br />
+                <br />I kept cranking until from zero until I saw{" "}
                 <b>
-                  My team has built a revolutionary funnel that has decreased
-                  lead costs by more than 5x for high paying, hungry clients.
+                  $11,000 show up overnight in my bank account and
+                  <i> I knew I had something.</i>
+                </b>
+                <br />
+                <br />
+                I've gone all in on ads since then, first for me, then for my
+                friends, and then for strangers brought to me by the universe.
+                <br />
+                <br />
+                Since then, me and my partner have{" "}
+                <u>
+                  spent over 7 figures in ads, sent over 600,000 texts, and over
+                  1 MILLION emails
+                </u>
+                , to drive business for brands, and I'm here to help you next.
+              </p>
+              <p>
+                <b>
+                  My team has built our revolutionary "TBF System" that has
+                  decreased customer costs by more than 5x for hungry customers
+                  that want to be part of your tribe.
                 </b>
                 <br />
               </p>
@@ -55,33 +75,24 @@ export const About = () => {
                 sales and experience more freedom in your life.
               </p>
               <p>
-                <b>
-                  So stop paying posting on TikTok and Instagram praying that
-                  you'll go viral.
-                </b>
+                So stop paying posting on TikTok and Instagram praying that
+                you'll go viral.
+                <br />
+                Stop trying to pay influencers to make your brand look more
+                credible.
                 <br />
                 <b>
-                  Stop paying for TubeBuddy and scraping keywords to match
-                  against to show on people's YouTube feeds.
-                </b>
-                <br />
-                <b>
-                  Stop trying to publish a book trying to build credibility and
-                  to get in front of people.
-                </b>
-                <br />
-                <b>
-                  Let us develop an automated customer acquisition method to
-                  help you crush your business goals
+                  Let us develop you a custom, automated customer acquisition
+                  method to help you crush your business goals...
                 </b>
                 <br />
               </p>
               <h3>
-                So if you want an automated, scalable way to help achieve your
-                dreams...
+                So if you want an automated, scalable way to tell your brand's
+                story to the world...
               </h3>
               <a
-                href="https://calendly.com/nathanblee/growth-blueprint-call"
+                href="https://go.hoshinomedia.com/book-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-custom btn-lg page-scroll"
