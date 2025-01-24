@@ -32,11 +32,33 @@ export const Info = (props) => {
             <div className="row">
               <div className="social">
                 <ul>
-                  {/* <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                  <li>
+                    <a
+                      href={props.data ? props.data.facebook : "/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={props.data ? props.data.youtube : "/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i className="fa fa-youtube"></i>
                     </a>
-                  </li> */}
+                  </li>
+                  <li>
+                    <a
+                      href={props.data ? props.data.instagram : "/"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa fa-instagram"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -45,7 +67,7 @@ export const Info = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>&copy; 2024 Prescelta LLC DBA Hoshino Media</p>
+          <p>&copy; 2025 Prescelta LLC DBA Hoshino Media</p>
         </div>
       </div>
     </div>
