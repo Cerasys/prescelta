@@ -22,7 +22,7 @@ export const Hero = () => {
                   our one-click system.
                 </p>
                 <a
-                  href="https://go.hoshinomedia.com/book-call"
+                  href="https://book.hoshinomedia.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"
