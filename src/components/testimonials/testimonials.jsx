@@ -13,7 +13,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/07.jpg" alt="headshot of N M." />
+                {/* <img src="/img/testimonials/07.jpg" alt="headshot of N M." /> */}
               </div>
               <div className="testimonial-content">
                 <p>
@@ -42,7 +42,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/08.jpg" alt="headshot of PS" />
+                {/* <img src="/img/testimonials/08.jpg" alt="headshot of PS" /> */}
               </div>
               <div className="testimonial-content">
                 <p>
@@ -62,7 +62,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/09.jpg" alt="headshot of LM" />
+                {/* <img src="/img/testimonials/09.jpg" alt="headshot of LM" /> */}
               </div>
               <div className="testimonial-content">
                 <p>
@@ -96,7 +96,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/10.jpg" alt="headshot of JW" />
+                {/* <img src="/img/testimonials/10.jpg" alt="headshot of JW" /> */}
               </div>
               <div className="testimonial-content">
                 <p>
@@ -123,7 +123,7 @@ export const Testimonials = (props) => {
             <div className="testimonial">
               <div className="testimonial-image">
                 {" "}
-                <img src="/img/testimonials/11.jpg" alt="headshot of L T" />
+                {/* <img src="/img/testimonials/11.jpg" alt="headshot of L T" /> */}
               </div>
               <div className="testimonial-content">
                 <p>
