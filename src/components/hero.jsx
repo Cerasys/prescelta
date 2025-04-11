@@ -7,7 +7,7 @@ export const Hero = () => {
         <div className="overlay">
           <div className="container">
             <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
+              <div className="col-md-12 col-md-offset-2 intro-text">
                 <h4>Clothing Brands...</h4>
                 <h1>
                   DO YOU WANT TO BUILD{" "}
