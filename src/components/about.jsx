@@ -92,7 +92,7 @@ export const About = () => {
                 story to the world...
               </h3>
               <a
-                href="https://book.hoshinomedia.com/"
+                href="https://apply.hoshinomedia.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-custom btn-lg page-scroll"

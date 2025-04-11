@@ -59,7 +59,7 @@ export const Navigation = (props) => {
             </li>
             <li>
               <Link
-                to="/contact"
+                to="https://apply.hoshinomedia.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="page-scroll"
