@@ -20,7 +20,6 @@ import { Contact } from "./components/contact";
 import { Terms } from "./components/terms";
 import { smmOnboardingSteps } from "./components/onboarding/smmOnboardingConfig";
 import OnboardingStep from "./components/onboarding/onboardingPage";
-import { adOnboardingSteps } from "./components/onboarding/adOnboardingConfig";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -52,15 +51,7 @@ const App = () => {
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/book" element={<Contact />}></Route>
         <Route
-          path="/smm-onboarding/*"
-          element={<Navigate to="/smm-onboarding/step-1" replace />}
-        />
-        <Route
           path="/onboarding/*"
-          element={<Navigate to="/laf-onboarding/step-1" replace />}
-        />
-        <Route
-          path="/laf-onboarding/*"
           element={<Navigate to="/laf-onboarding/step-1" replace />}
         />
         {smmOnboardingSteps.map((step, index) => (
@@ -82,28 +73,8 @@ const App = () => {
           />
         ))}
 
-        {adOnboardingSteps.map((step, index) => (
-          <Route
-            key={index}
-            path={step.path}
-            element={
-              <OnboardingStep
-                header={step.header}
-                vimeoUrl={step.vimeoUrl}
-                description={step.description}
-                secondaryHeader={step.secondaryHeader}
-                headlineCalloutText={step.headlineCalloutText}
-                headlineLink={step.headlineLink}
-                buttonText={step.buttonText}
-                buttonLink={step.buttonLink}
-              />
-            }
-          />
-        ))}
-
         <Route exact path="/privacy" element={<Privacy />}></Route>
         <Route exact path="/terms" element={<Terms />}></Route>
-        {/* <Route exact path="/free-audit" element={<Audit />}></Route> */}
       </Routes>
       {!isOnboardingPath && <Footer />}
     </div>
