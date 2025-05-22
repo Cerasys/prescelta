@@ -33,18 +33,18 @@ export const Navigation = (props) => {
         >
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <Link to="/#testimonials" className="page-scroll">
+              {/* <Link to="/#testimonials" className="page-scroll">
                 Testimonials
-              </Link>
+              </Link> */}
             </li>
             <li>
               <Link
-                to="https://nathanblee.com"
+                to="/#about"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="page-scroll"
               >
-                Team
+                About
               </Link>
             </li>
             <li>
@@ -54,7 +54,7 @@ export const Navigation = (props) => {
                 rel="noopener noreferrer"
                 className="page-scroll"
               >
-                Book a Call
+                Apply as a brand
               </Link>
             </li>
             <li>
@@ -64,7 +64,7 @@ export const Navigation = (props) => {
                 rel="noopener noreferrer"
                 className="page-scroll"
               >
-                Contact Us
+                Apply as a creator
               </Link>
             </li>
           </ul>
