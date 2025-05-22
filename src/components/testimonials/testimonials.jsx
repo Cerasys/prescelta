@@ -28,12 +28,6 @@ export const Testimonials = (props) => {
                     expertise and how well he supports my work.
                   </b>
                 </p>
-
-                <div className="testimonial-meta">
-                  {" "}
-                  <b>Nicholas M. </b>
-                  Current Client
-                </div>
               </div>
             </div>
           </div>
@@ -46,15 +40,8 @@ export const Testimonials = (props) => {
               </div>
               <div className="testimonial-content">
                 <p>
-                  "Nathan, I've been in industry for 20 years,
-                  <b> and I wish I had met you 20 years ago!"</b>
+                  <b>"Nathan, I wish I had met you 20 years ago!"</b>
                 </p>
-
-                <div className="testimonial-meta">
-                  {" "}
-                  <b>Maria S.</b>
-                  Current Client
-                </div>
               </div>
             </div>
           </div>
@@ -66,26 +53,16 @@ export const Testimonials = (props) => {
               </div>
               <div className="testimonial-content">
                 <p>
-                  Consulting with Nathan helped me to clarify the most strategic
-                  options for my marketing situation.
+                  Consulting with Nathan helped clarify the most strategic
+                  options for my marketing.
                   <br />
-                  He was very patient, intentional and knowledgeable about best
-                  practices. I appreciated how he took the time to listen well
-                  to me about my business, and he put in the work to generate
-                  solutions.{" "}
-                </p>
-                <p>
-                  He was very prompt in his responses, kept his word and took
-                  the effort to communicate well. Nathan was encouraging,
-                  empathetic and professional!
+                  He was very patient, intentional and knowledgeable. He took
+                  the time to listen about my business, and he put in the work
+                  to generate solutions.{" "}
                 </p>
                 <p>
                   <b> I heartily recommend his help to others!</b>
                 </p>
-                <div className="testimonial-meta">
-                  {" "}
-                  <b>Matthew G.</b>
-                </div>
               </div>
             </div>
           </div>
@@ -112,10 +89,6 @@ export const Testimonials = (props) => {
                   <b>This is the best thing that has ever happened to me</b>
                   ."
                 </p>
-                <div className="testimonial-meta">
-                  {" "}
-                  <b>Jessica B.</b> <br />
-                </div>
               </div>
             </div>
           </div>
@@ -140,11 +113,6 @@ export const Testimonials = (props) => {
                     business during the program.
                   </b>
                 </p>
-
-                <div className="testimonial-meta">
-                  {" "}
-                  <b>Lindsay R. </b>
-                </div>
               </div>
             </div>
           </div>
