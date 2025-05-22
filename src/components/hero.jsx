@@ -8,18 +8,16 @@ export const Hero = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-                <h4>Clothing Brands...</h4>
+                <h4>influencer marketing ...</h4>
                 <h1>
-                  DO YOU WANT TO BUILD{" "}
-                  <span className="highlight"> A BRAND</span> THAT THE WORLD{" "}
-                  <span className="highlight"> REMEMBERS?</span>
-                  <span></span>
+                  Where <span className="highlight"> Integrity</span> Meets
+                  <span className="highlight"> Storytelling</span>
                 </h1>
                 <br />
                 <br />
                 <p>
-                  We help tell the story of your brand to hungry customers with
-                  our one-click system.
+                  We connect high-integrity creators with brands that value
+                  depth, curiosity, and storytelling
                 </p>
                 <a
                   href="https://apply.hoshinomedia.com/apply"
@@ -27,7 +25,7 @@ export const Hero = () => {
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"
                 >
-                  Yes, Show me How!
+                  I'm a Creator, Show me How!
                 </a>{" "}
               </div>
             </div>

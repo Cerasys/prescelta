@@ -8,6 +8,7 @@ import { Testimonials } from "../testimonials/testimonials";
 import JsonData from "../../data/data.json";
 import { Hero } from "../hero";
 import { Info } from "../info";
+import MarketingHighlights from "../marketingHighlights";
 
 const Home = () => {
   const [landingPageData, setLandingPageData] = useState({});
@@ -19,8 +20,8 @@ const Home = () => {
     <React.Fragment>
       <Hero />
       {/* <Features data={landingPageData.Features} /> */}
-      <About data={landingPageData.About} />
-      <Testimonials data={landingPageData.Testimonials} />
+      <MarketingHighlights /> <About data={landingPageData.About} />
+      {/* <Testimonials data={landingPageData.Testimonials} /> */}
       {/* <Services data={landingPageData.Services} /> */}
       {/* <Gallery data={landingPageData.Gallery} /> */}
       {/* <Team data={landingPageData.Team} /> */}
