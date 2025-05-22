@@ -37,7 +37,7 @@ export const Terms = () => {
         <p>
           If you are experiencing any issues, you can reply with the keyword
           HELP. Or, you can get help directly from us at
-          nathan@hoshinomedia.com.{" "}
+          influence@hoshinomedia.com.{" "}
         </p>
 
         <h3>5.Interruption: </h3>
