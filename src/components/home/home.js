@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { About } from "../about";
 // import { Services } from "../services";
 // import { Gallery } from "./components/gallery";
-import { Testimonials } from "../testimonials/testimonials";
 // import { Team } from "../Team/Team";
 import JsonData from "../../data/data.json";
 import { Hero } from "../hero";
