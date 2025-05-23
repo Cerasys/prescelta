@@ -244,6 +244,17 @@ hr {
   border-radius: 25px;
   transition: all 0.5s linear;
   border: 0;
+  margin: 1rem;
+}
+
+.brand {
+  background-color: var(--gray) !important;
+
+  background-image: linear-gradient(
+    to right,
+    var(--gray) 0%,
+    black 100%
+  ) !important;
 }
 
 .btn-custom:hover,
@@ -358,7 +369,7 @@ header .intro-text {
 
 /* About Section */
 #about {
-  padding: 100px 0;
+  padding: 2rem 0;
 }
 
 #about h3 {
@@ -537,7 +548,7 @@ header .intro-text {
 
 /* Contact Section */
 #contact {
-  padding: 100px 0 60px;
+  padding: 0 0 10px;
   background: linear-gradient(
     to right,
     var(--orange-dark) 0%,
@@ -662,9 +673,7 @@ label {
 }
 
 #contact .social {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -710,6 +719,6 @@ label {
 
 @media (max-width: 768px) {
   #about img {
-    margin: 50px 0;
+    display: none;
   }
 }
