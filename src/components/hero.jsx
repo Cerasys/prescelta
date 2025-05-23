@@ -27,6 +27,14 @@ export const Hero = () => {
                 >
                   I'm a Creator, Show me How!
                 </a>{" "}
+                <a
+                  href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-custom brand btn-lg page-scroll"
+                >
+                  I'm a Brand, Show me How!
+                </a>{" "}
               </div>
             </div>
           </div>

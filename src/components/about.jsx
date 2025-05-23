@@ -65,12 +65,12 @@ export const About = () => {
                 Bottom Line...
               </h3>
               <a
-                href="https://apply.hoshinomedia.com/apply"
+                href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-custom btn-lg page-scroll"
               >
-                Book a Call Now
+                Apply as a Brand
               </a>{" "}
             </div>
           </div>
