@@ -22,8 +22,8 @@ export const About = () => {
                 teeth in ecommerce, <u>first for survival, then for fun.</u>
                 <br />
                 <br />
-                In 2020, this code monkey went rogue, started out on his own,
-                and then instantly got <i>dropkicked by Covid.</i>
+                In 2020, I was a code monkey that went rogue and started his own
+                brand, and then instantly got <i>dropkicked by Covid.</i>
                 <br />
                 <br />
                 I was making organic content but barely saw any progress.
