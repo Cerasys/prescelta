@@ -18,11 +18,12 @@ export const About = () => {
               <h2>Our Story</h2>
               <p>
                 I'm Nathan, your{" "}
-                <b>sales process architect and marketing wizard</b>. I cut my
+                <b>influencer architect and marketing engineer</b>. I cut my
                 teeth in ecommerce, <u>first for survival, then for fun.</u>
                 <br />
                 <br />
-                In 2020, I started out and got <i>dropkicked by Covid.</i>
+                In 2020, this code monkey went rogue, started out on his own,
+                and then instantly got <i>dropkicked by Covid.</i>
                 <br />
                 <br />
                 I was making organic content but barely saw any progress.
@@ -32,7 +33,8 @@ export const About = () => {
                 I wasted my first $300 on paid ads, with one sale.
                 <br />I wasted the next $300, no sales.
                 <br />
-                We added on UGC and user testimonials. Two sales.{" "}
+                We sent some products to some friends for them to post about and
+                got some user testimonials. Two sales. <br />
                 <b>Progress.</b>
                 <br />
                 <br />I kept cranking until from zero until I saw{" "}
@@ -42,8 +44,9 @@ export const About = () => {
                 </b>
                 <br />
                 <br />
-                I've gone all in on ads since then, first for me, then for my
-                friends, and then for strangers brought to me by the universe.
+                I've gone all in on marketing, influencers, and ads since then,
+                first for me, then for my friends, and then for strangers
+                brought to me by the universe.
                 <br />
                 <br />
                 Influence is a funny thing.
