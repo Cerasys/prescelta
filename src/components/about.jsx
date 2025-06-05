@@ -18,7 +18,7 @@ export const About = () => {
               <h2>Our Story</h2>
               <p>
                 I'm Nathan, your{" "}
-                <b>influencer architect and marketing engineer</b>. I cut my
+                <b>influence architect and marketing engineer</b>. I cut my
                 teeth in ecommerce, <u>first for survival, then for fun.</u>
                 <br />
                 <br />
