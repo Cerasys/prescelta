@@ -1,0 +1,42 @@
+/* Footer Section*/
+#footer {
+  background: #f6f6f6;
+  padding: 30px 0;
+}
+
+/* New: Flex container for footer content */
+.footer-content-wrapper {
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack children vertically on smaller screens */
+  align-items: center; /* Center items horizontally in the container */
+  justify-content: center; /* Center content when there's extra space */
+}
+
+@media (min-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .footer-content-wrapper {
+    flex-direction: row; /* Arrange children horizontally on larger screens */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Vertically align items in the middle */
+  }
+}
+
+#footer p {
+  color: #888;
+  font-size: 14px;
+  margin-top: 20px; /* Add some top margin to separate from icons on small screens */
+}
+
+@media (min-width: 768px) {
+  #footer p {
+    margin-top: 0; /* Remove top margin when horizontal */
+  }
+}
+
+#footer a {
+  color: var(--yellow);
+}
+
+#footer a:hover {
+  border-bottom: 2px solid var(--orange-light);
+}

@@ -1,0 +1,23 @@
+/* Info Section (social links) */
+.social ul {
+  padding: 0;
+  display: flex; /* Make the ul a flex container */
+  justify-content: center; /* Center the icons horizontally */
+  list-style: none; /* Remove bullet points */
+  margin-bottom: 20px; /* Add some space below the icons */
+}
+
+.social ul li {
+  display: inline-block; /* Make list items display inline */
+  margin: 0 10px; /* Add some space between icons */
+}
+
+.social ul li a {
+  font-size: 24px; /* Adjust icon size as needed */
+  color: #555; /* Default icon color */
+  transition: all 0.3s ease-in-out;
+}
+
+.social ul li a:hover {
+  color: var(--yellow); /* Hover color for icons */
+}

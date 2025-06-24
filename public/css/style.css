@@ -697,28 +697,3 @@ label {
   color: #608dfd;
   background: #fff;
 }
-
-/* Footer Section*/
-#footer {
-  background: #f6f6f6;
-  padding: 30px 0;
-}
-
-#footer p {
-  color: #888;
-  font-size: 14px;
-}
-
-#footer a {
-  color: var(--yellow);
-}
-
-#footer a:hover {
-  border-bottom: 2px solid var(--orange-light);
-}
-
-@media (max-width: 768px) {
-  #about img {
-    display: none;
-  }
-}
