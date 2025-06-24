@@ -73,7 +73,7 @@ export const About = () => {
                 rel="noopener noreferrer"
                 className="btn btn-custom brand btn-lg page-scroll"
               >
-                Apply as a Brand
+                Book a Call
               </a>{" "}
             </div>
           </div>

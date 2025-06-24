@@ -20,6 +20,7 @@ import { Contact } from "./components/contact";
 import { Terms } from "./components/terms";
 import { smmOnboardingSteps } from "./components/onboarding/smmOnboardingConfig";
 import OnboardingStep from "./components/onboarding/onboardingPage";
+import { About } from "./components/about";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -49,6 +50,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
+        <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/book" element={<Contact />}></Route>
         <Route
           path="/onboarding/*"
