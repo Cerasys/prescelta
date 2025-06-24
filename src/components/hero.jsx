@@ -20,7 +20,7 @@ export const Hero = () => {
                   depth, curiosity, and storytelling
                 </p>
                 <a
-                  href="https://apply.hoshinomedia.com/apply"
+                  href="https://calendly.com/hoshinomedia/discovery"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"

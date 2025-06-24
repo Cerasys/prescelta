@@ -41,7 +41,12 @@ const MarketingHighlights = () => {
         </div>
 
         <div className="marketing-footer">
-          <a href="/apply" className="cta-button">
+          <a
+            href="https://calendly.com/hoshinomedia/discovery"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-custom btn-lg page-scroll"
+          >
             Apply as a Creator
           </a>
         </div>
