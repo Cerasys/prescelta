@@ -38,12 +38,7 @@ export const Navigation = (props) => {
               </Link> */}
             </li>
             <li>
-              <Link
-                to="/#about"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="page-scroll"
-              >
+              <Link to="/about" rel="noopener noreferrer">
                 About
               </Link>
             </li>
