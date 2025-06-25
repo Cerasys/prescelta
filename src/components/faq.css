@@ -1,0 +1,15 @@
+.faq {
+  margin-top: 10rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+li {
+  margin-left: 25px;
+}
+
+p {
+  font-size: 16px;
+}
