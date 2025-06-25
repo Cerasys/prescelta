@@ -42,7 +42,35 @@ export const FAQ = () => {
             </h3>
             <p>
               We run managed campaigns, creator partnerships, talent management,
-              and more. Ask us about our scaling roadmap!
+              and more. We have a 5 step process to make sure campaigns are a
+              success for both creators and brands:
+              <ol>
+                <li>
+                  Research: We do a deep dive of campaign goals, KPIs, and
+                  expectations.
+                </li>
+                <li>
+                  Collaboration: We tee up and let you know if we have any
+                  pushback
+                </li>
+                <li>
+                  Prep: Meanwhile, we're sourcing our pool of creators, giving
+                  them the brief. We'll then work with both creators and brands
+                  until D-Day to ensure all content is authentic while also
+                  aligning with brand goals.
+                </li>
+                <li>
+                  Execute: We go into full alert 3 days before the campaign to
+                  make sure everything is checked and ready. When content
+                  launches, we work with every creator to make sure it meets all
+                  legal and alignment requirements.
+                </li>
+                <li>
+                  Retrospective: After the campaign, we'll do a deep dive into
+                  wins and losses of the campaign, and make any adjustments
+                  necessary.
+                </li>
+              </ol>
             </p>
             <br />
             <h3>3. What makes Hoshino Media different from XYZ agency?</h3>
