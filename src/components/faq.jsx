@@ -41,32 +41,32 @@ export const FAQ = () => {
               2. What sorts of influencer marketing services do you offer?
             </h3>
             <p>
-              We run managed campaigns, creator partnerships, talent management,
-              and more. We have a 5 step process to make sure campaigns are a
-              success for both creators and brands:
+              Hoshino Media runs managed campaigns, creator partnerships, talent
+              management, and more. I created a 5 step process to make sure
+              campaigns are a success for both creators and brands:
               <ol>
                 <li>
                   Research: We do a deep dive of campaign goals, KPIs, and
                   expectations.
                 </li>
                 <li>
-                  Collaboration: We tee up and let you know if we have any
-                  pushback
+                  Collaboration: I tee up creators and let them know if the
+                  brand(s) have any pushback
                 </li>
                 <li>
-                  Prep: Meanwhile, we're sourcing our pool of creators, giving
-                  them the brief. We'll then work with both creators and brands
+                  Prep: Meanwhile, I'm sourcing our pool of creators, giving
+                  them the brief. I'll then work with both creators and brands
                   until D-Day to ensure all content is authentic while also
                   aligning with brand goals.
                 </li>
                 <li>
                   Execute: We go into full alert 3 days before the campaign to
                   make sure everything is checked and ready. When content
-                  launches, we work with every creator to make sure it meets all
+                  launches, I work with every creator to make sure it meets all
                   legal and alignment requirements.
                 </li>
                 <li>
-                  Retrospective: After the campaign, we'll do a deep dive into
+                  Retrospective: After the campaign, I'll do a deep dive into
                   wins and losses of the campaign, and make any adjustments
                   necessary.
                 </li>
@@ -78,32 +78,32 @@ export const FAQ = () => {
               <b>💖 Creators are our soul 💖</b>
             </p>
             <p>
-              Hoshino Media focuses on representing the best storytellers, but
-              we don't just bring creators the big bucks and call it a day.
+              Hoshino Media focuses on representing the best storytellers, but I
+              don't just bring creators the big bucks and call it a day.
             </p>
             <p>
-              <u>To our creator clients, we're in it for the long haul:</u>
+              <u>To my creator clients, we're in it for the long haul:</u>
               <ul>
                 <li>
-                  Not only will we find brand partners that align with your
+                  Not only will I find brand partners that align with your
                   values, <br />
                   <b>
-                    {"\t"}we'll help you define your career goals and build a
+                    {"\t"}I'll help you define your career goals and build a
                     roadmap to get there.
                   </b>
                 </li>
                 <li>
-                  Not only will we negotiate better terms (usage, budget,
+                  Not only will I negotiate better terms (usage, budget,
                   timeline) for you, <br />
                   <b>
-                    we'll help you analyze your audience to improve your content
+                    I'll help you analyze your audience to improve your content
                     and connection to them.
                   </b>
                 </li>
                 <li>
-                  Not only will we represent you and your audience to the brands
-                  we work with, <br />
-                  <b>we'll make you write thank you cards to them too. 📝</b>
+                  Not only will I represent you and your audience to the brands
+                  we'll work with, <br />
+                  <b>I'll make you write thank you cards to them too. 📝</b>
                 </li>
               </ul>
             </p>
@@ -114,22 +114,21 @@ export const FAQ = () => {
               </u>
               <ul>
                 <li>
-                  Not only will we find creators that will say the script,{" "}
-                  <br />
+                  Not only will I find creators that will say the script, <br />
                   <b>
-                    {"\t"}we'll find creators who care and will help their
-                    audience to care too.
+                    {"\t"}I'll find creators who care and will help their
+                    audience care too.
                   </b>
                 </li>
                 <li>
-                  Not only will we maximize your ROI, <br />
+                  Not only will I maximize your ROI, <br />
                   <b>
-                    we'll help you create experiences with your potential
+                    I'll help you create experiences with your potential
                     customers they will remember forever.
                   </b>
                 </li>
                 <li>
-                  Not only will we wow you with campaign and results, <br />
+                  Not only will I wow you with campaign and results, <br />
                   <b>you might also get a thank you cards too. 😂</b>
                 </li>
               </ul>
@@ -139,18 +138,27 @@ export const FAQ = () => {
             <p>
               Hoshino Media works with creators on YouTube, Instagram, and
               TikTok who tell stories about life, society, and love.
-              <br /> We typically partner with creators with over 50k followers
-              / subscribers, who tell stories to an engaged audience.
+              <br /> I typically partner with creators with over 50k followers /
+              subscribers, who tell stories to an engaged audience.
+              <br />
+              If you consider yourself an entertainer or a curator (or both),
+              you're exactly the type of creator I love working with.
             </p>
             <p>
               Our talent is diverse across gender, ethnicity and race,
               orientation, and even hair texture 💇‍♀️
             </p>
             <br />
-            <h3>5. What is your pricing?</h3>
+            <h3>5. How do you earn money, Nathan?</h3>
             <p>
-              For creator partnerships, we operate on a commission basis. <br />
-              Our commission is 20% of the total budget.
+              I earn 20% of all the deals I close, both inbound and outbound.{" "}
+              <br />
+              Ultimately, I want you to make money (lots of it), because that's
+              how I make money (lots of it).
+              <br />
+              For all talent, we spend the first 60 days to strengthen your
+              positioning to brands, while strategizing and planning how to land
+              your "dream brand".
             </p>
             <br />
             <a
