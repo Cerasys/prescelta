@@ -57,6 +57,11 @@ export const Navigation = (props) => {
                 FAQ
               </Link>
             </li>
+            <li>
+              <Link to="/resources" rel="noopener noreferrer">
+                Resources
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

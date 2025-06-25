@@ -13,3 +13,7 @@ li {
 p {
   font-size: 16px;
 }
+
+.no-color {
+  color: #155263;
+}

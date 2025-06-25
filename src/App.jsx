@@ -20,6 +20,7 @@ import { smmOnboardingSteps } from "./components/onboarding/smmOnboardingConfig"
 import OnboardingStep from "./components/onboarding/onboardingPage";
 import { About } from "./components/about";
 import { FAQ } from "./components/faq";
+import { Resources } from "./components/resources";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -51,6 +52,7 @@ const App = () => {
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/faq" element={<FAQ />}></Route>
+        <Route exact path="/resources" element={<Resources />}></Route>
         <Route
           path="/onboarding/*"
           element={<Navigate to="/laf-onboarding/step-1" replace />}
