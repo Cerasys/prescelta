@@ -96,10 +96,10 @@ export const Resources = () => {
               href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-custom brand btn-lg page-scroll"
+              className="btn btn-custom btn-brand btn-lg page-scroll"
             >
               Book a Call
-            </a>{" "}
+            </a>
           </div>
         </div>
       </div>

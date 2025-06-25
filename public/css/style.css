@@ -245,16 +245,48 @@ hr {
   transition: all 0.5s linear;
   border: 0;
   margin: 1rem;
+  /* --- Shimmer Effect Additions --- */
+  position: relative;
+  overflow: hidden;
 }
 
-.brand {
-  background-color: var(--gray) !important;
-
-  background-image: linear-gradient(
+.btn-custom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; /* Initial starting point, off-screen to the left */
+  width: 50%; /* The width of the shimmer band */
+  height: 100%;
+  background: linear-gradient(
     to right,
-    var(--gray) 0%,
-    black 100%
-  ) !important;
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg); /* Apply initial skew */
+
+  /* --- Animation Properties --- */
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* Define the shimmer animation */
+@keyframes shimmer {
+  0% {
+    /* Start position: push it further left so its right edge is off the button's left edge */
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    /* End position: push it far enough right so its left edge is off the button's right edge */
+    /* Calculation:
+     - Shimmer is at left: -75% initially
+     - Shimmer width is 50% of button width
+     - To end completely off right, its left edge needs to reach 100% + 50% (its own width) = 150% of button width.
+     - Total travel distance from initial -75% to 150% = 150% - (-75%) = 225% of button width.
+     - As a percentage of shimmer's own width (50% of button width): 225% / 50% = 4.5
+     - So, 4.5 * 100% = 450%
+  */
+    transform: translateX(450%) skewX(-20deg);
+  }
 }
 
 .btn-custom:hover,
@@ -265,6 +297,79 @@ hr {
   color: #fff;
   background-image: none;
   background-color: #e6220c;
+}
+
+.btn-brand {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #2890ad;
+  background-image: linear-gradient(
+    to right,
+    #2890ad 0%,
+    rgb(87, 154, 248) 80%
+  );
+  padding: 14px 34px;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+  border: 0;
+  margin: 1rem;
+
+  /* --- Shimmer Effect Additions --- */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-brand::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; /* Initial starting point, off-screen to the left */
+  width: 50%; /* The width of the shimmer band */
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg); /* Apply initial skew */
+
+  /* --- Animation Properties --- */
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* Define the shimmer animation */
+@keyframes shimmer {
+  0% {
+    /* Start position: push it further left so its right edge is off the button's left edge */
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    /* End position: push it far enough right so its left edge is off the button's right edge */
+    /* Calculation:
+       - Shimmer is at left: -75% initially
+       - Shimmer width is 50% of button width
+       - To end completely off right, its left edge needs to reach 100% + 50% (its own width) = 150% of button width.
+       - Total travel distance from initial -75% to 150% = 150% - (-75%) = 225% of button width.
+       - As a percentage of shimmer's own width (50% of button width): 225% / 50% = 4.5
+       - So, 4.5 * 100% = 450%
+    */
+    transform: translateX(450%) skewX(-20deg);
+  }
+}
+.btn-brand:hover,
+.btn-brand:focus,
+.btn-brand.focus,
+.btn-brand:active,
+.btn-brand.active {
+  color: #fff;
+  background-image: none;
+  background-color: #54c1e0;
 }
 
 .btn:active,
