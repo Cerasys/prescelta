@@ -39,27 +39,22 @@ export const Navigation = (props) => {
             </li>
             <li>
               <Link to="/about" rel="noopener noreferrer">
-                About
+                Our Story
               </Link>
             </li>
             <li>
-              <Link
-                to="/book"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="page-scroll"
-              >
-                Apply as a brand
+              <Link to="/creators" rel="noopener noreferrer">
+                Creators
               </Link>
             </li>
             <li>
-              <Link
-                to="https://apply.hoshinomedia.com/apply"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="page-scroll"
-              >
-                Apply as a creator
+              <Link to="/brands" rel="noopener noreferrer">
+                Brands
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" rel="noopener noreferrer">
+                FAQ
               </Link>
             </li>
           </ul>
