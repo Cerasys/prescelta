@@ -1,0 +1,57 @@
+.about {
+  margin-top: 10rem;
+}
+
+/* Base styles for image containers (mobile-first: full width) */
+.image-left,
+.image-right {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 15px auto;
+  text-align: center; /* Centers the image itself on mobile */
+}
+
+/* Style for the caption */
+.image-left figcaption,
+.image-right figcaption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+  padding: 0 5px; /* Little padding if text is wide */
+
+  /* --- Crucial for Centering the Caption Itself --- */
+  text-align: center; /* This centers the text content *inside* the figcaption */
+  display: block; /* Ensure it behaves as a block, taking up available width */
+  width: 100%; /* Ensure it takes full width of its parent for text-align to work */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* --- Media Query for Desktop Screens --- */
+@media (min-width: 768px) {
+  /* Adjust 768px as your breakpoint */
+  .image-left {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    max-width: 45%;
+    text-align: left; /* Re-align image left on desktop */
+  }
+
+  .image-right {
+    /* If you add this later */
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    max-width: 45%;
+    text-align: right;
+  }
+
+  /* Clear float for the container wrapping your markdown content.
+     This is applied to .markdown-body if that's the container of the output HTML. */
+  .markdown-body::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
