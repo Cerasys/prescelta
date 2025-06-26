@@ -20,16 +20,14 @@ export const Hero = () => {
                   depth, curiosity, and storytelling
                 </p>
                 <a
-                  href="https://calendly.com/hoshinomedia/discovery"
-                  target="_blank"
+                  href="/creators"
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll"
                 >
                   I'm a Creator, Show me How!
                 </a>{" "}
                 <a
-                  href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
-                  target="_blank"
+                  href="/brands"
                   rel="noopener noreferrer"
                   className="btn btn-brand btn-lg page-scroll"
                 >
