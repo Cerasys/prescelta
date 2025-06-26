@@ -22,14 +22,14 @@ export const Hero = () => {
                 <a
                   href="/creators"
                   rel="noopener noreferrer"
-                  className="btn btn-custom btn-lg page-scroll"
+                  className="btn btn-custom btn-lg page-scroll shimmer-effect"
                 >
                   I'm a Creator, Show me How!
                 </a>{" "}
                 <a
                   href="/brands"
                   rel="noopener noreferrer"
-                  className="btn btn-brand btn-lg page-scroll"
+                  className="btn btn-brand btn-lg page-scroll shimmer-effect"
                 >
                   I'm a Brand, Show me How!
                 </a>{" "}
