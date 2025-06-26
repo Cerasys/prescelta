@@ -245,48 +245,6 @@ hr {
   transition: all 0.5s linear;
   border: 0;
   margin: 1rem;
-  /* --- Shimmer Effect Additions --- */
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-custom::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%; /* Initial starting point, off-screen to the left */
-  width: 50%; /* The width of the shimmer band */
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-20deg); /* Apply initial skew */
-
-  /* --- Animation Properties --- */
-  animation: shimmer 2.5s infinite linear;
-}
-
-/* Define the shimmer animation */
-@keyframes shimmer {
-  0% {
-    /* Start position: push it further left so its right edge is off the button's left edge */
-    transform: translateX(-100%) skewX(-20deg);
-  }
-  100% {
-    /* End position: push it far enough right so its left edge is off the button's right edge */
-    /* Calculation:
-     - Shimmer is at left: -75% initially
-     - Shimmer width is 50% of button width
-     - To end completely off right, its left edge needs to reach 100% + 50% (its own width) = 150% of button width.
-     - Total travel distance from initial -75% to 150% = 150% - (-75%) = 225% of button width.
-     - As a percentage of shimmer's own width (50% of button width): 225% / 50% = 4.5
-     - So, 4.5 * 100% = 450%
-  */
-    transform: translateX(450%) skewX(-20deg);
-  }
 }
 
 .btn-custom:hover,
@@ -318,50 +276,8 @@ hr {
   transition: all 0.5s linear;
   border: 0;
   margin: 1rem;
-
-  /* --- Shimmer Effect Additions --- */
-  position: relative;
-  overflow: hidden;
 }
 
-.btn-brand::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%; /* Initial starting point, off-screen to the left */
-  width: 50%; /* The width of the shimmer band */
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-20deg); /* Apply initial skew */
-
-  /* --- Animation Properties --- */
-  animation: shimmer 2.5s infinite linear;
-}
-
-/* Define the shimmer animation */
-@keyframes shimmer {
-  0% {
-    /* Start position: push it further left so its right edge is off the button's left edge */
-    transform: translateX(-100%) skewX(-20deg);
-  }
-  100% {
-    /* End position: push it far enough right so its left edge is off the button's right edge */
-    /* Calculation:
-       - Shimmer is at left: -75% initially
-       - Shimmer width is 50% of button width
-       - To end completely off right, its left edge needs to reach 100% + 50% (its own width) = 150% of button width.
-       - Total travel distance from initial -75% to 150% = 150% - (-75%) = 225% of button width.
-       - As a percentage of shimmer's own width (50% of button width): 225% / 50% = 4.5
-       - So, 4.5 * 100% = 450%
-    */
-    transform: translateX(450%) skewX(-20deg);
-  }
-}
 .btn-brand:hover,
 .btn-brand:focus,
 .btn-brand.focus,
@@ -389,6 +305,80 @@ a:focus,
 .btn.active.focus {
   outline: none;
   outline-offset: none;
+}
+
+.shimmer-effect {
+  position: relative; /* Needed for positioning the ::before pseudo-element */
+  overflow: hidden; /* Hides the shimmer when it's outside the element boundaries */
+}
+
+.shimmer-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; /* Initial starting point, off-screen to the left */
+  width: 50%; /* The width of the shimmer band relative to the parent */
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg); /* Apply initial skew */
+
+  /* --- Animation Properties --- */
+  animation: shimmer 2.5s infinite linear;
+}
+
+/* Define the shimmer animation (needs to be globally accessible or in the same file) */
+@keyframes shimmer {
+  0% {
+    /* Start position: push it further left so its right edge is off the button's left edge */
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    /* End position: push it far enough right so its left edge is off the button's right edge */
+    transform: translateX(450%) skewX(-20deg);
+  }
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: -200% 0; /* Start the gradient far off to the left */
+  }
+  100% {
+    background-position: 200% 0; /* Move the gradient far off to the right */
+  }
+}
+
+/* The new class for text-only shimmer effect */
+.text-shimmer {
+  /* Crucial: Make the text color transparent so the background can show through */
+  color: var(--orange-dark);
+  -webkit-text-fill-color: transparent; /* For Safari compatibility */
+
+  /* Define the gradient that will be the "shimmer" light */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    /* Start transparent */ rgba(255, 255, 255, 0.9) 50%,
+    /* The white "shine" */ rgba(255, 255, 255, 0) 100% /* End transparent */
+  );
+  /* Make the background wider than the text itself to allow the shimmer to pass through */
+  background-size: 200% auto; /* Adjust this to control the shimmer's width and travel */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+
+  /* Clip the background to the text shape */
+  -webkit-background-clip: text; /* For Safari compatibility */
+  background-clip: text;
+
+  /* Apply the animation */
+  animation: textShimmer 2.5s infinite linear; /* Adjust duration and timing as needed */
+
+  /* Ensure any base text styles like font-weight are set BEFORE transparency */
+  /* If your .highlight class has font-weight or other text properties, they should be applied here or in .highlight */
+  font-weight: 700; /* Example: ensure text is bold if highlight implies it */
 }
 
 /* Header Section */
