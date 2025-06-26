@@ -1,0 +1,87 @@
+.creators {
+  margin-top: 6rem;
+}
+
+/* This is the main container that will define the area the video covers */
+.creators-video-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the actual video element */
+.creators-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  /* It's good practice to ensure the video itself doesn't have a default background */
+  background-color: transparent;
+}
+
+/* Style for the overlay content (which will sit on top of the video) */
+.creators-video-overlay {
+  position: absolute; /* Position relative to .creators-video-container */
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent black overlay */
+  z-index: 0; /* Make sure it's above the video */
+
+  /* Optional: Styles to center content within the overlay */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Example text color */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.creators-video-overlay h1 {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.creators-video-overlay h1 span {
+  font-weight: 800;
+  color: #5ca9fb;
+}
+
+.creators-video-overlay p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.creators-video-overlay h4 {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.creators-video-overlay .intro-text {
+  padding-top: 170px;
+  padding-bottom: 150px;
+  text-align: center;
+}
