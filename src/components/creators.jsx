@@ -1,6 +1,6 @@
 import React from "react";
-import MarketingHighlights from "./marketingHighlights";
 import "./creators.css";
+import CreatorServices from "./creatorServices";
 
 export const Creators = () => {
   return (
@@ -30,7 +30,7 @@ export const Creators = () => {
           </div>
         </div>
       </div>
-      <MarketingHighlights />
+      <CreatorServices />
       <a
         href="https://calendly.com/hoshinomedia/discovery"
         target="_blank"
