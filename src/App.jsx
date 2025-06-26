@@ -21,6 +21,8 @@ import OnboardingStep from "./components/onboarding/onboardingPage";
 import { About } from "./components/about";
 import { FAQ } from "./components/faq";
 import { Resources } from "./components/resources";
+import { Creators } from "./components/creators";
+import { Brands } from "./components/brands";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -50,6 +52,8 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
+        <Route exact path="/creators" element={<Creators />}></Route>
+        <Route exact path="/brands" element={<Brands />}></Route>
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/faq" element={<FAQ />}></Route>
         <Route exact path="/resources" element={<Resources />}></Route>
