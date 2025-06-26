@@ -28,12 +28,20 @@ export const About = () => {
                 Bottom Line...
               </h3>
               <a
+                href="https://calendly.com/hoshinomedia/discovery"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-custom btn-lg page-scroll"
+              >
+                I'm a Creator, Show me How!
+              </a>{" "}
+              <a
                 href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-custom brand btn-lg page-scroll"
+                className="btn btn-brand btn-lg page-scroll"
               >
-                Book a Call
+                I'm a Brand, Show me How!
               </a>{" "}
             </div>
           </div>
