@@ -5,6 +5,21 @@ I am not sponsored by these tools in any way.
 
 ---
 
+### FTC 101 Guidelines for Sponsorshpis
+
+Taking brand deals? You need to disclose any paid promotions or sponsorships. Here's a quick guide on how to do so.
+
+<div>
+<a
+      href="https://www.ftc.gov/system/files/documents/plain-language/1001a-influencer-guide-508_1.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    > <h4><u>Read it here.</u></h4>
+    </a>
+</div>
+
+---
+
 ### Invoice Generator
 
 Need a good-looking invoice template to send to a brand? Here's a quick and easy one. It allows you to set your currency, add line items, and download it directly to your computer.
