@@ -25,7 +25,7 @@ const CreatorServices = () => {
             </p>
             <p>
               from there, we advocate you to our network of high-profile brand
-              partners.
+              partners, so you land more partnerships then ever before.
             </p>
             <p>
               then we'll work together to create a strategy to land your dream
@@ -58,7 +58,8 @@ const CreatorServices = () => {
             </p>
           </div>
         </div>
-
+        <br />
+        <h3>Sound like a plan?</h3>
         <div className="marketing-footer">
           <a
             href="https://calendly.com/hoshinomedia/discovery"
@@ -66,7 +67,7 @@ const CreatorServices = () => {
             rel="noopener noreferrer"
             className="btn btn-custom btn-lg page-scroll shimmer-effect"
           >
-            Wow, that sounds dope!
+            that sounds dope!
           </a>
         </div>
       </div>
