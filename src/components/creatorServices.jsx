@@ -9,8 +9,9 @@ const CreatorServices = () => {
           <h1>
             we are <span className="flex">hoshino media</span>
           </h1>
+          <h4>a small but mighty team</h4>
           <h3>
-            and we exist to help you tell your story while helping you partner
+            that exists to help you tell your story while helping you partner
             with your dream brands
           </h3>
           <br />
