@@ -1,6 +1,7 @@
 import React from "react";
 import "./creators.css";
 import CreatorServices from "./creatorServices";
+import Testimonials from "./testimonials/testimonials";
 
 export const Creators = () => {
   return (
@@ -31,6 +32,8 @@ export const Creators = () => {
         </div>
       </div>
       <CreatorServices />
+      {/* here you should have a section on brands we've partnered with as well as testimonials */}
+      <Testimonials />
     </div>
   );
 };

@@ -1,53 +1,149 @@
-/* Testimonials Section */
-#testimonials {
-  padding: 100px 0;
-  background: #f6f6f6;
-}
-
-#testimonials i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.testimonial {
-  position: relative;
-  padding: 20px;
-}
-
-.testimonial-image {
-  float: left;
-  margin-right: 15px;
-}
-
-.testimonial-stats img {
-  float: left;
-  width: 600px;
-}
-
-.testimonial-image,
-.testimonial-image img {
-  display: flex;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial-content {
-  position: relative;
+/* Base section styles */
+.testimonials-section {
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem; /* py-16 */
+  background: linear-gradient(
+    to bottom right,
+    var(--tw-gradient-stops)
+  ); /* bg-gradient-to-br */
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); /* Default for bg-gradient */
+  --tw-gradient-from: #eff6ff; /* from-blue-50 */
+  --tw-gradient-to: #e0e7ff; /* to-indigo-100 */
   overflow: hidden;
 }
 
-.testimonial-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-  font-style: italic;
+/* Container for text alignment and max width */
+.testimonials-container {
+  max-width: 84rem; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  text-align: center;
+}
+@media (min-width: 640px) {
+  /* sm */
+  .testimonials-container {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem; /* sm:px-6 */
+  }
+}
+@media (min-width: 1024px) {
+  /* lg */
+  .testimonials-container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem; /* lg:px-8 */
+  }
 }
 
+/* Main heading */
+.testimonials-heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 800; /* font-extrabold */
+  color: #1a202c; /* text-gray-900 */
+}
+@media (min-width: 640px) {
+  /* sm */
+  .testimonials-heading {
+    font-size: 3rem; /* sm:text-5xl */
+  }
+}
+
+/* Sub-headline */
+.testimonials-subheading {
+  margin-top: 1rem; /* mt-4 */
+  font-size: 1.25rem; /* text-xl */
+  color: #4a5568; /* text-gray-700 */
+}
+
+/* Horizontal scroll wrapper for cards */
+.testimonials-scroll-wrapper {
+  margin-top: 3rem; /* mt-12 */
+  display: flex;
+  gap: 1.5rem; /* space-x-6 */
+  padding-bottom: 1rem; /* pb-4 */
+  overflow-x: auto;
+  -ms-overflow-style: none; /* For IE and Edge */
+  scrollbar-width: none; /* For Firefox */
+  justify-content: center; /* lg:justify-center */
+}
+.testimonials-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+/* If you want to force visible scrollbars on large screens */
+@media (min-width: 1024px) {
+  /* lg */
+  .testimonials-scroll-wrapper {
+    overflow-x: visible; /* lg:overflow-visible */
+  }
+}
+
+/* Individual testimonial card */
+.testimonial-card {
+  flex-shrink: 0; /* flex-none */
+  width: 20rem; /* w-80 */
+  background-color: #ffffff; /* bg-white */
+  padding: 2rem; /* p-8 */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+  transition-property: box-shadow, transform; /* transition-shadow, transform */
+  transition-duration: 300ms; /* duration-300 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonial-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
+  transform: translateY(-0.25rem); /* hover:-translate-y-1 */
+}
+@media (min-width: 640px) {
+  /* sm */
+  .testimonial-card {
+    width: 24rem; /* sm:w-96 */
+  }
+}
+
+/* Blockquote for testimonial text */
+.testimonial-quote {
+  font-size: 1.125rem; /* text-lg */
+  color: #4a5568; /* text-gray-700 */
+  font-weight: 500; /* font-medium */
+  line-height: 1.625; /* leading-relaxed */
+}
+
+/* Name and title container */
 .testimonial-meta {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #666;
+  margin-top: 1.5rem; /* mt-6 */
+  text-align: right;
+}
+
+/* Testimonial name */
+.testimonial-name {
+  font-size: 1rem; /* text-md */
+  font-weight: 600; /* font-semibold */
+  color: #1a202c; /* text-gray-900 */
+}
+
+/* Testimonial title */
+.testimonial-title {
+  font-size: 0.875rem; /* text-sm */
+  color: #4a5568; /* text-gray-600 */
+}
+
+.testimonial-avatar {
+  width: 64px; /* Adjust size as needed */
+  height: 64px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it a circle */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  margin-bottom: 1rem; /* Space between image and quote */
+  margin-left: auto; /* Center the image in the card if desired */
+  margin-right: auto; /* Center the image in the card if desired */
+  display: block; /* Ensures margin auto works for centering */
+}
+
+/* Adjust quote margin if image is present */
+.testimonial-card .testimonial-quote {
+  margin-top: 0.5rem; /* Reduce top margin if image is above */
 }
