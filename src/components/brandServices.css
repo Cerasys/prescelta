@@ -36,9 +36,9 @@
 }
 
 .marketing-header h1,
-h2,
-h3,
-h4 {
+.marketing-header h2,
+.marketing-header h3,
+.marketing-header h4 {
   text-align: center;
   color: white;
 }

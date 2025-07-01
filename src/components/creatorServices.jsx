@@ -60,7 +60,9 @@ const CreatorServices = () => {
           </div>
         </div>
         <br />
-        <h3>Sound like a plan?</h3>
+        <div className="marketing-header">
+          <h3>Sound like a plan?</h3>
+        </div>
         <div className="marketing-footer">
           <a
             href="https://calendly.com/hoshinomedia/discovery"

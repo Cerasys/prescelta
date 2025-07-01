@@ -2,6 +2,10 @@
   margin-top: 10rem;
 }
 
+.about-text {
+  color: #155263;
+}
+
 /* Base styles for image containers (mobile-first: full width) */
 .image-left,
 .image-right {

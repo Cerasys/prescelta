@@ -74,7 +74,9 @@ const BrandServices = () => {
           </div>
         </div>
         <br />
-        <h3>Ready to tell your brand's story?</h3>
+        <div className="marketing-header">
+          <h3>Ready to tell your brand's story?</h3>
+        </div>
         <div className="marketing-footer">
           <a
             href="https://calendly.com/nathanblee/hoshino-media-discovery-call" // Update this link if you have a separate one for brands
