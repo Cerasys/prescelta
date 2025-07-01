@@ -1,6 +1,7 @@
 import React from "react";
 import "./brands.css";
 import Testimonials from "./testimonials/testimonials";
+import BrandServices from "./brandServices";
 
 export const Brands = () => {
   return (
@@ -20,8 +21,8 @@ export const Brands = () => {
           <div className="row">
             <div className="col-md-8 col-md-offset-2 intro-text">
               <h1>
-                Partner with{" "}
-                <span className="highlight text"> Authenticity</span>
+                Influence that moves your{" "}
+                <span className=" text brand-highlight shimmer"> Audience</span>
               </h1>
               <br />
               <br />
@@ -29,6 +30,7 @@ export const Brands = () => {
           </div>
         </div>
       </div>
+      <BrandServices />
       {/* here you should have a section on brands we've partnered with as well as testimonials */}
       <Testimonials />
     </div>
