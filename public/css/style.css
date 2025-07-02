@@ -220,6 +220,19 @@ hr {
   background-color: var(--orange-light);
 }
 
+@media (max-width: 1000px) and (min-width: 768px) {
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 13px; /* Smaller font size for links */
+    margin: 9px 10px 0; /* Reduced horizontal margin between items */
+    padding: 8px 1px; /* Slightly less horizontal padding if needed */
+  }
+
+  /* If the logo is also contributing to the width issue, consider scaling it down slightly here */
+  .logo img {
+    max-width: 70px; /* Example: slightly smaller logo */
+  }
+}
+
 .section-title {
   margin-bottom: 70px;
 }
