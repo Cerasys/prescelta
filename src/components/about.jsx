@@ -22,6 +22,8 @@ export const About = () => {
             </div>
             <div className="about-text">
               <MarkdownContent markdownPath="/content/about3.md" />
+            </div>
+            <div className="btn-container">
               <h3>
                 So if you're ready to leverage Influencer Marketing to help your
                 Organic, Paid Media, Retail, Customer Experience, and Your

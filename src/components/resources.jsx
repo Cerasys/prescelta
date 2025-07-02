@@ -54,7 +54,7 @@ export const Resources = () => {
         {" "}
         {/* Reusing 'faq container' class for consistency */}
         <div className="row">
-          <div className="about-text">
+          <div className="resources-text">
             {/* Removed the extra <br/> here; ReactMarkdown will handle spacing */}
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {markdownContent}
