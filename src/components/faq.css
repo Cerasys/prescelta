@@ -21,13 +21,9 @@
 
   /* You might also want to adjust the top margin on mobile */
   .faq {
-    margin-top: 5rem; /* Reduce top margin for mobile, for example */
+    margin-top: 10rem; /* Reduce top margin for mobile, for example */
   }
 
-  /* Adjust font sizes for better readability on mobile if needed */
-  p {
-    font-size: 15px;
-  }
   .accordion-title {
     font-size: 16px;
     padding: 12px 15px; /* Slightly less padding for accordion titles on mobile */
@@ -56,7 +52,11 @@ li {
   margin-left: 15px; /* Reduce list item indentation on mobile */
 }
 
-p {
+.faq-accordions p {
+  font-size: 18px;
+}
+
+.faq-accordions li {
   font-size: 16px;
 }
 

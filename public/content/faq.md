@@ -5,7 +5,9 @@
 ### 1. What is influencer marketing?
 
 Influencer marketing is the greatest thing since canned bread.  
+
 Imagine having a small army of passionate, raving customers telling their friends and family about your products.  
+
 **Except, they have 100,000 friends each.**  
 
 Every person has someone they look up to in their lives, someone who they like and trust. That trust goes a long way to giving them peace of mind that when they try a product, it'll be all they dreamed of and more.
@@ -61,6 +63,7 @@ Hoshino Media focuses on representing the best storytellers, but I don't just br
 ### 4. What kind of creators do you work with?
 
 Hoshino Media works with creators on YouTube, Instagram, and TikTok who tell stories about life, society, and love. I typically partner with creators with over 50k followers/subscribers, who tell stories to an engaged audience.  
+
 If you consider yourself an entertainer or a curator (or both), you're exactly the type of creator I love working with.
 
 Our talent is diverse across gender, ethnicity and race, orientation, and even hair texture 💇‍♀️  
@@ -70,5 +73,7 @@ Our talent is diverse across gender, ethnicity and race, orientation, and even h
 ### 5. How do you earn money, Nathan?
 
 I earn 20% of all the deals I close, both inbound and outbound.  
+
 Ultimately, I want you to make money (lots of it), because that's how I make money (lots of it).  
+
 For all talent, we spend the first 60 days to strengthen your positioning to brands, while strategizing and planning how to land your "dream brand."  
