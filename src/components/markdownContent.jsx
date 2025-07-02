@@ -68,7 +68,7 @@ function MarkdownContent({ markdownPath }) {
     fetchAndProcessMarkdown();
   }, [markdownPath]);
 
-  if (loading) return <p>Loading content...</p>;
+  if (loading) return <h1>We're buffering 🤪...</h1>;
   if (error) return <p>Error loading content: {error.message}</p>;
 
   return (
