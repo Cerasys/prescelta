@@ -121,14 +121,14 @@
 
 /* Testimonial name */
 .testimonial-name {
-  font-size: 1rem; /* text-md */
+  font-size: 2rem; /* text-md */
   font-weight: 600; /* font-semibold */
   color: #1a202c; /* text-gray-900 */
 }
 
 /* Testimonial title */
 .testimonial-title {
-  font-size: 0.875rem; /* text-sm */
+  font-size: 1.2rem; /* text-sm */
   color: #4a5568; /* text-gray-600 */
 }
 
