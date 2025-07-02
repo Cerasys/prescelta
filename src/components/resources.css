@@ -2,25 +2,16 @@
 
 /* Style for links within the markdown content */
 /* This targets <a> tags that are descendants of the element that holds your markdown */
-.about-text a {
+.resources-text a {
   /* Use a more specific selector if needed, e.g., .markdown-content a */
   color: var(--orange-light);
   text-decoration: none; /* Remove underline by default */
   transition: color 0.3s ease-in-out; /* Smooth transition for color change */
 }
 
-.about-text a:hover {
+.resources-text a:hover {
   color: var(--orange-dark); /* Change to a darker orange on hover */
   text-decoration: underline; /* Add underline on hover for clarity */
-}
-
-.btn-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.btn-container p,
-.btn-container a {
-  font-size: 24px;
 }
 
 /* ... (rest of your existing CSS) ... */
