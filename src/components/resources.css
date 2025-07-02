@@ -25,10 +25,6 @@
 
 /* ... (rest of your existing CSS) ... */
 
-.faq {
-  margin-top: 10rem;
-}
-
 .faq.container {
   /* Default padding for larger screens (if you want any) */
   padding-left: 15px; /* Adjust as needed */

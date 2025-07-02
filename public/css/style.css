@@ -37,6 +37,7 @@ body {
   flex: 1; /* This makes the content area grow to fill available space */
   display: flex; /* Often helpful if content inside also needs layout */
   flex-direction: column; /* Or row, depending on inner content layout */
+  padding-top: 80px;
 }
 
 h2,

@@ -1,5 +1,5 @@
 .faq {
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 .faq.container {
@@ -21,7 +21,7 @@
 
   /* You might also want to adjust the top margin on mobile */
   .faq {
-    margin-top: 10rem; /* Reduce top margin for mobile, for example */
+    margin-top: 4rem; /* Reduce top margin for mobile, for example */
   }
 
   .accordion-title {
