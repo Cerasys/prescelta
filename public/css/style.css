@@ -13,7 +13,30 @@ html {
   color: var(--gray);
   font-weight: 400;
   width: 100% !important;
-  height: 100% !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+  display: flex; /* Make the body a flex container */
+  flex-direction: column; /* Stack children (header, main, footer) vertically */
+  min-height: 100vh; /* Ensure the body is at least 100% of the viewport height */
+}
+
+#root {
+  /* Assuming #root is your main app container */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Make sure #root itself is at least 100% of its parent (body) */
+}
+
+.page-wrapper {
+  /* Or whatever div wraps your main page content (e.g., FAQ, Resources) */
+  flex: 1; /* This makes the content area grow to fill available space */
+  display: flex; /* Often helpful if content inside also needs layout */
+  flex-direction: column; /* Or row, depending on inner content layout */
 }
 
 h2,
@@ -49,7 +72,7 @@ h5 {
 }
 
 p {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 p.intro {

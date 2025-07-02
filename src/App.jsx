@@ -49,40 +49,42 @@ const App = () => {
     <div>
       <ScrollToAnchor />
       {!isOnboardingPath && <Navigation />}
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route exact path="/contact" element={<Contact />}></Route>
-        <Route exact path="/creators" element={<Creators />}></Route>
-        <Route exact path="/brands" element={<Brands />}></Route>
-        <Route exact path="/about" element={<About />}></Route>
-        <Route exact path="/faq" element={<FAQ />}></Route>
-        <Route exact path="/resources" element={<Resources />}></Route>
-        <Route
-          path="/onboarding/*"
-          element={<Navigate to="/laf-onboarding/step-1" replace />}
-        />
-        {smmOnboardingSteps.map((step, index) => (
+      <div className="page-wrapper">
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
+          <Route exact path="/creators" element={<Creators />}></Route>
+          <Route exact path="/brands" element={<Brands />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/faq" element={<FAQ />}></Route>
+          <Route exact path="/resources" element={<Resources />}></Route>
           <Route
-            key={index}
-            path={step.path}
-            element={
-              <OnboardingStep
-                header={step.header}
-                vimeoUrl={step.vimeoUrl}
-                description={step.description}
-                secondaryHeader={step.secondaryHeader}
-                headlineCalloutText={step.headlineCalloutText}
-                headlineLink={step.headlineLink}
-                buttonText={step.buttonText}
-                buttonLink={step.buttonLink}
-              />
-            }
+            path="/onboarding/*"
+            element={<Navigate to="/laf-onboarding/step-1" replace />}
           />
-        ))}
+          {smmOnboardingSteps.map((step, index) => (
+            <Route
+              key={index}
+              path={step.path}
+              element={
+                <OnboardingStep
+                  header={step.header}
+                  vimeoUrl={step.vimeoUrl}
+                  description={step.description}
+                  secondaryHeader={step.secondaryHeader}
+                  headlineCalloutText={step.headlineCalloutText}
+                  headlineLink={step.headlineLink}
+                  buttonText={step.buttonText}
+                  buttonLink={step.buttonLink}
+                />
+              }
+            />
+          ))}
 
-        <Route exact path="/privacy" element={<Privacy />}></Route>
-        <Route exact path="/terms" element={<Terms />}></Route>
-      </Routes>
+          <Route exact path="/privacy" element={<Privacy />}></Route>
+          <Route exact path="/terms" element={<Terms />}></Route>
+        </Routes>
+      </div>
       {!isOnboardingPath && <Footer />}
     </div>
   );
