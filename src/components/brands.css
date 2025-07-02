@@ -85,3 +85,10 @@
 .brand-highlight {
   color: #2890ad;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .brand-video-overlay h1 {
+    font-size: 65px;
+  }
+}
