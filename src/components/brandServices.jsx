@@ -1,5 +1,5 @@
 import React from "react";
-import "./brandServices.css"; // You'll create this CSS file
+import "./brandServices.css";
 
 const BrandServices = () => {
   return (
@@ -21,9 +21,19 @@ const BrandServices = () => {
           <br />
         </div>
 
+        {/* New container for desktop images */}
+        <div className="marketing-images-desktop">
+          <img src="/img/creator.jpg" alt="Creative process" />
+          <img src="/img/editing.jpg" alt="Editing process" />
+          {/* Add more images here if needed for desktop view */}
+        </div>
+
         <div className="marketing-grid">
           <div className="marketing-column">
             <p className="highlight-brand">we find your perfect match,</p>
+            <div className="brand-image-mobile">
+              <img src="/img/creator.jpg" alt="Creative process" />{" "}
+            </div>
             <p>
               we start by diving deep into your brand, understanding your goals,
               and pinpointing your target audience.
@@ -41,6 +51,9 @@ const BrandServices = () => {
 
           <div className="marketing-column">
             <p className="highlight-brand">we manage the entire journey,</p>
+            <div className="brand-image-mobile">
+              <img src="/img/editing.jpg" alt="Editing process" />{" "}
+            </div>
             <p>
               from initial outreach and negotiation to content review and
               campaign launch, we handle all the details.
@@ -57,6 +70,7 @@ const BrandServices = () => {
 
           <div className="marketing-column">
             <p className="highlight-brand">and we deliver.</p>
+            {/* If you have a third image for mobile, add it here */}
             <p>
               whether you're looking for increased brand awareness, conversions,
               or engagement with new audiences, we build strategies to meet your
@@ -79,7 +93,7 @@ const BrandServices = () => {
         </div>
         <div className="marketing-footer">
           <a
-            href="https://calendly.com/nathanblee/hoshino-media-discovery-call" // Update this link if you have a separate one for brands
+            href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-brand btn-lg page-scroll shimmer-effect"
