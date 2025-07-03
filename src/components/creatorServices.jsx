@@ -17,6 +17,13 @@ const CreatorServices = () => {
           <br />
         </div>
 
+        {/* New container for desktop images */}
+        <div className="marketing-images-desktop">
+          <img src="/img/production.jpg" alt="Creative process" />
+          <img src="/img/timeline.jpg" alt="Editing process" />
+          {/* Add more images here if needed for desktop view */}
+        </div>
+
         <div className="marketing-grid">
           <div className="marketing-column">
             <p className="highlight">we're your hypeman,</p>
@@ -33,7 +40,9 @@ const CreatorServices = () => {
               brand.​
             </p>
           </div>
-
+          <div className="creator-image-mobile">
+            <img src="/img/production.jpg" alt="Creative process" />{" "}
+          </div>
           <div className="marketing-column">
             <p className="highlight">your project manager,</p>
             <p>we handle all the grunt work of your brand partnerships.</p>
@@ -42,6 +51,9 @@ const CreatorServices = () => {
             </p>
             <p>but all things legal, finance, crisis management</p>
             <p>and ensuring you become a brand's best friend.​</p>
+          </div>
+          <div className="creator-image-mobile">
+            <img src="/img/timeline.jpg" alt="Creative process" />{" "}
           </div>
 
           <div className="marketing-column">

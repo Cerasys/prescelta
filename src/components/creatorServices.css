@@ -70,3 +70,54 @@
   color: #ef4444;
   text-decoration: none;
 }
+
+/* Mobile Images */
+.creator-image-mobile {
+  display: block;
+  margin: 1rem auto; /* Combined margin top/bottom and centered */
+  text-align: center;
+}
+
+.creator-image-mobile img {
+  width: 90%; /* Responsive width */
+  max-width: 350px; /* Max width for larger mobiles/tablets */
+  height: 250px; /* Enforced fixed height */
+  object-fit: cover; /* Ensures image fills the space, cropping as needed */
+  border-radius: 8px;
+}
+
+/* Desktop Images */
+.marketing-images-desktop {
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.marketing-images-desktop img {
+  width: 300px; /* Enforced fixed width for consistency */
+  height: 200px; /* Enforced fixed height for consistency */
+  object-fit: cover; /* Ensures image fills the space, cropping as needed */
+  border-radius: 8px;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+  .creator-image-mobile {
+    display: none; /* Hide mobile images on desktop */
+  }
+
+  .marketing-images-desktop {
+    display: flex; /* Show desktop images in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .marketing-images-desktop {
+    display: none; /* Hide desktop images on mobile */
+  }
+  /* .creator-image-mobile is display: block by default, so no need to explicitly set here */
+}
