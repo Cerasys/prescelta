@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown"; // Import ReactMarkdown
 import remarkGfm from "remark-gfm"; // Import remarkGfm for GitHub Flavored Markdown
-import "./resources.css"; // Assuming faq.css contains shared styling, if not, create resources.css
+import "./resources.css";
 
 export const Resources = () => {
   const [markdownContent, setMarkdownContent] = useState("");
@@ -31,7 +31,7 @@ export const Resources = () => {
   if (loading) {
     return (
       <div id="resources">
-        <div className="faq container">
+        <div className="resources container">
           <p>Loading resources...</p>
         </div>
       </div>
@@ -41,7 +41,7 @@ export const Resources = () => {
   if (error) {
     return (
       <div id="resources">
-        <div className="faq container">
+        <div className="resources container">
           <p style={{ color: "red" }}>{error}</p>
         </div>
       </div>
@@ -50,9 +50,9 @@ export const Resources = () => {
 
   return (
     <div id="resources">
-      <div className="faq container">
+      <div className="resources container">
         {" "}
-        {/* Reusing 'faq container' class for consistency */}
+        {/* Reusing 'resources container' class for consistency */}
         <div className="row">
           <div className="resources-text">
             {/* Removed the extra <br/> here; ReactMarkdown will handle spacing */}

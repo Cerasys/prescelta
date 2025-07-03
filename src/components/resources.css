@@ -1,4 +1,4 @@
-/* ... (existing .faq, ul, ol, li, p, .no-color, accordion styles) ... */
+/* ... (existing .resources, ul, ol, li, p, .no-color, accordion styles) ... */
 
 /* Style for links within the markdown content */
 /* This targets <a> tags that are descendants of the element that holds your markdown */
@@ -16,7 +16,7 @@
 
 /* ... (rest of your existing CSS) ... */
 
-.faq.container {
+.resources.container {
   /* Default padding for larger screens (if you want any) */
   padding-left: 15px; /* Adjust as needed */
   padding-right: 15px; /* Adjust as needed */
@@ -28,14 +28,9 @@
 /* Media query for mobile screens */
 @media (max-width: 768px) {
   /* Adjust this breakpoint as per your design needs */
-  .faq.container {
+  .resources.container {
     padding-left: 20px; /* More padding for mobile */
     padding-right: 20px; /* More padding for mobile */
-  }
-
-  /* You might also want to adjust the top margin on mobile */
-  .faq {
-    margin-top: 10rem; /* Reduce top margin for mobile, for example */
   }
 
   .accordion-title {
@@ -66,11 +61,11 @@ li {
   margin-left: 15px; /* Reduce list item indentation on mobile */
 }
 
-.faq-accordions p {
+.resources-accordions p {
   font-size: 18px;
 }
 
-.faq-accordions li {
+.resources-accordions li {
   font-size: 16px;
 }
 
