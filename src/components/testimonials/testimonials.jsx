@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./testimonials.css"; // Import the CSS file
 
 const TestimonialsSection = () => {
@@ -47,6 +47,86 @@ const TestimonialsSection = () => {
     },
   ];
 
+  const scrollRef = useRef(null); // Ref to the scrollable div
+  const scrollIntervalRef = useRef(null); // Ref to hold the interval ID
+  const [isMobile, setIsMobile] = useState(false); // State to track mobile status
+
+  // Function to check if it's a mobile device based on your CSS breakpoint
+  const checkIsMobile = () => {
+    // This should match your @media (min-width: 1024px) breakpoint logic for desktop
+    return window.matchMedia("(max-width: 1023px)").matches;
+  };
+
+  useEffect(() => {
+    setIsMobile(checkIsMobile()); // Set initial mobile status
+
+    const handleResize = () => {
+      setIsMobile(checkIsMobile());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+
+    // Only enable auto-scrolling on mobile
+    if (!scrollContainer || !isMobile) {
+      clearInterval(scrollIntervalRef.current); // Clear any existing interval
+      return;
+    }
+
+    const scrollStep = 1; // Pixels to scroll per interval
+    const scrollSpeed = 50; // Milliseconds per step (lower = faster)
+    const pauseAtEndDuration = 2000; // Milliseconds to pause at the end before looping
+
+    const startScrolling = () => {
+      scrollIntervalRef.current = setInterval(() => {
+        if (
+          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+          scrollContainer.scrollWidth
+        ) {
+          // Reached the end, reset to start after a pause
+          clearInterval(scrollIntervalRef.current);
+          setTimeout(() => {
+            scrollContainer.scrollLeft = 0; // Jump to the beginning
+            startScrolling(); // Restart scrolling
+          }, pauseAtEndDuration);
+        } else {
+          scrollContainer.scrollLeft += scrollStep;
+        }
+      }, scrollSpeed);
+    };
+
+    // Pause scrolling when user interacts (hover/touch)
+    const handleMouseEnter = () => clearInterval(scrollIntervalRef.current);
+    const handleMouseLeave = () => startScrolling();
+    const handleTouchStart = () => clearInterval(scrollIntervalRef.current);
+    // Note: It's harder to reliably detect "touch end" for restarting on mobile.
+    // You might want to let them manually scroll after touch, or restart after a delay.
+    // For simplicity, we'll keep it paused until they leave the area, or you can add a timer.
+
+    scrollContainer.addEventListener("mouseenter", handleMouseEnter);
+    scrollContainer.addEventListener("mouseleave", handleMouseLeave);
+    scrollContainer.addEventListener("touchstart", handleTouchStart);
+    // You might also consider `scrollContainer.addEventListener("touchend", () => setTimeout(startScrolling, 1000));`
+    // but be careful with frequent restarts.
+
+    startScrolling(); // Initial start
+
+    // Cleanup: Clear the interval when the component unmounts or isMobile changes to false
+    return () => {
+      clearInterval(scrollIntervalRef.current);
+      scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
+      scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
+      scrollContainer.removeEventListener("touchstart", handleTouchStart);
+    };
+  }, [isMobile, testimonials.length]); // Re-run effect if mobile status or number of testimonials changes
+
   return (
     <section className="testimonials-section">
       <div className="testimonials-container">
@@ -56,14 +136,17 @@ const TestimonialsSection = () => {
         </p>
 
         {/* Horizontal scroll container */}
-        <div className="testimonials-scroll-wrapper">
+        <div className="testimonials-scroll-wrapper" ref={scrollRef}>
+          {/* Add a key to the wrapper if the children change dynamically,
+              though for static testimonials, index is okay.
+              Using `ref={scrollRef}` to get a direct DOM reference. */}
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
-              {testimonial.image && ( // Conditionally render image if available
+              {testimonial.image && (
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="testimonial-avatar" // New class for styling the image
+                  className="testimonial-avatar"
                 />
               )}
               <blockquote className="testimonial-quote">

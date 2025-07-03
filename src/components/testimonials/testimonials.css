@@ -9,7 +9,7 @@
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); /* Default for bg-gradient */
   --tw-gradient-from: #eff6ff; /* from-blue-50 */
   --tw-gradient-to: #e0e7ff; /* to-indigo-100 */
-  overflow: hidden;
+  overflow: hidden; /* Ensures no content overflows the section itself */
 }
 
 /* Container for text alignment and max width */
@@ -61,27 +61,78 @@
   margin-top: 3rem; /* mt-12 */
   display: flex;
   gap: 1.5rem; /* space-x-6 */
-  padding-bottom: 1rem; /* pb-4 */
-  overflow-x: auto;
-  -ms-overflow-style: none; /* For IE and Edge */
-  scrollbar-width: none; /* For Firefox */
-  justify-content: center; /* lg:justify-center */
+  padding-bottom: 1rem; /* pb-4 - space for potential scrollbar */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+
+  /* IMPORTANT: Do NOT use justify-content: center here for mobile/scrollable states.
+     It causes items on the left to become unreachable by scrolling.
+     Items will naturally align to flex-start (default). */
+
+  /* Add consistent padding to the scrollable area itself,
+     so the first/last card isn't against the edge */
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* Use pseudo-elements to create the visual centering effect on mobile
+     while maintaining scrollability. These act as flexible "padding" within the flex container. */
+  position: relative; /* Needed for pseudo-elements if you were to use absolute positioning, good practice */
 }
+
+/* Hide native scrollbar for Webkit browsers (Chrome, Safari) */
 .testimonials-scroll-wrapper::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
-/* If you want to force visible scrollbars on large screens */
+
+/* Pseudo-elements for centering effect on scrollable container */
+.testimonials-scroll-wrapper::before,
+.testimonials-scroll-wrapper::after {
+  content: "";
+  flex-shrink: 0; /* Ensures these don't shrink */
+  /* This width pushes the actual content towards the center initially.
+     Adjust this value if you want more or less initial push.
+     A common approach is to make it fill the remaining space on a small viewport
+     to truly center the first visible card. For example, calc(50% - (card_width / 2) - (gap / 2))
+     A simpler approach for general "push" is a fixed amount or a percentage of the viewport. */
+  width: calc(
+    50vw - 10rem - 0.75rem
+  ); /* Roughly 50% of viewport width minus half card width (20rem/2=10rem) and half gap */
+  min-width: 1rem; /* Ensure they have at least some width */
+}
+
+/* Specific adjustments for very small screens if needed, e.g., 320px */
+@media (max-width: 320px) {
+  .testimonials-scroll-wrapper::before,
+  .testimonials-scroll-wrapper::after {
+    width: calc(30vw - 8rem - 0.75rem);
+  }
+  .testimonial-card {
+    width: 16rem; /* Example: make cards slightly smaller on tiny screens */
+    min-height: 20rem; /* Adjust min-height accordingly */
+  }
+}
+
+/* Media query for larger screens (e.g., desktop) */
 @media (min-width: 1024px) {
   /* lg */
   .testimonials-scroll-wrapper {
-    overflow-x: visible; /* lg:overflow-visible */
+    overflow-x: visible; /* Make items fully visible on large screens */
+    justify-content: center; /* Now it's safe to center, as no overflow scrolling is expected */
+    padding-left: 0; /* Remove horizontal padding if content is fully centered and visible */
+    padding-right: 0;
+  }
+  /* Hide pseudo-elements when they are no longer needed for the scroll-centering trick */
+  .testimonials-scroll-wrapper::before,
+  .testimonials-scroll-wrapper::after {
+    display: none;
   }
 }
 
 /* Individual testimonial card */
 .testimonial-card {
-  flex-shrink: 0; /* flex-none */
-  width: 20rem; /* w-80 */
+  flex-shrink: 0; /* Prevents cards from shrinking below their defined width */
+  width: 20rem; /* Base width for cards */
   background-color: #ffffff; /* bg-white */
   padding: 2rem; /* p-8 */
   border-radius: 0.75rem; /* rounded-xl */
@@ -91,7 +142,11 @@
   transition-duration: 300ms; /* duration-300 */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Distributes space between items, pushing meta to bottom */
+
+  /* ADDED: Manage card height to prevent extreme stretching/squishing */
+  min-height: 22rem; /* A reasonable minimum height for your cards */
+  /* max-height: 28rem; */ /* OPTIONAL: Uncomment and adjust if you want to cap card height */
 }
 .testimonial-card:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -99,9 +154,9 @@
   transform: translateY(-0.25rem); /* hover:-translate-y-1 */
 }
 @media (min-width: 640px) {
-  /* sm */
+  /* sm breakpoint */
   .testimonial-card {
-    width: 24rem; /* sm:w-96 */
+    width: 24rem; /* sm:w-96 - Wider cards for tablet and up */
   }
 }
 
@@ -111,6 +166,10 @@
   color: #4a5568; /* text-gray-700 */
   font-weight: 500; /* font-medium */
   line-height: 1.625; /* leading-relaxed */
+
+  /* OPTIONAL: Uncomment and adjust if quotes get too long and you want to truncate or scroll them internally */
+  /* max-height: 10rem; */ /* Example: Limit quote height */
+  /* overflow-y: auto; */ /* Add scrollbar for long quotes */
 }
 
 /* Name and title container */
@@ -121,14 +180,14 @@
 
 /* Testimonial name */
 .testimonial-name {
-  font-size: 2rem; /* text-md */
+  font-size: 1.125rem; /* Corrected to match text-lg, assuming this was the intent as 2rem is huge for name */
   font-weight: 600; /* font-semibold */
   color: #1a202c; /* text-gray-900 */
 }
 
 /* Testimonial title */
 .testimonial-title {
-  font-size: 1.2rem; /* text-sm */
+  font-size: 0.875rem; /* Corrected to match text-sm */
   color: #4a5568; /* text-gray-600 */
 }
 
@@ -144,6 +203,7 @@
 }
 
 /* Adjust quote margin if image is present */
+/* This rule is correct and good to keep if needed, but ensure its specificity is right */
 .testimonial-card .testimonial-quote {
   margin-top: 0.5rem; /* Reduce top margin if image is above */
 }
