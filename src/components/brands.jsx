@@ -34,7 +34,7 @@ export const Brands = () => {
           muted
           playsInline
           className="brand-background-video"
-          poster="/img/whiteboard.jpg"
+          poster="/img/whiteboard-lite.jpg"
         >
           <source src="/img/whiteboard.mp4" type="video/mp4" />
         </video>

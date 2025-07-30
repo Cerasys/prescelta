@@ -33,7 +33,7 @@ export const Creators = () => {
           muted // Crucial for autoplay to work in most modern browsers
           playsInline // Important for iOS Safari to play inline rather than fullscreen
           className="creators-background-video" // CSS class for styling the video
-          poster="/img/editing-poster.jpg"
+          poster="/img/editing-poster-lite.jpg"
         >
           <source src="/img/editing.mp4" type="video/mp4" />
         </video>

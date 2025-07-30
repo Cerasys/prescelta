@@ -10,9 +10,9 @@ export const Hero = () => {
           muted // Crucial for autoplay to work in most modern browsers
           playsInline // Important for iOS Safari to play inline rather than fullscreen
           className="creators-background-video" // CSS class for styling the video
-          poster="/img/downtown.jpg"
+          poster="/img/downtown-lite.jpg"
         >
-          <source src="/img/downtown.mp4" type="video/mp4" />
+          <source src="/img/downtown-lite.mp4" type="video/mp4" />
         </video>
         <div className="overlay">
           <div className="container">
