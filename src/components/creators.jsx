@@ -1,7 +1,6 @@
 import React from "react";
 import "./creators.css";
 import CreatorServices from "./creatorServices";
-import Testimonials from "./testimonials/testimonials";
 
 export const Creators = () => {
   return (
