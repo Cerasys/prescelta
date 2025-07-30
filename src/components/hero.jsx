@@ -25,7 +25,7 @@ export const Hero = () => {
       setCurrentWordIndex(
         (prevIndex) => (prevIndex + 1) % scrollingWords.length
       );
-    }, 2000); // Change word every 2 seconds (adjust this duration)
+    }, 2500); // Change word every 2 seconds (adjust this duration)
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
