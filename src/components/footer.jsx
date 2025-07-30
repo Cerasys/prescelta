@@ -22,7 +22,8 @@ export const Footer = (props) => {
           |{" "}
           <a href="/terms" target="_blank" rel="noopener noreferrer">
             Terms and Conditions
-          </a>
+          </a>{" "}
+          | Based in Seattle with 💖
         </p>
       </div>
     </div>

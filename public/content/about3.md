@@ -27,6 +27,6 @@ We can celebrate their victories and lament their failures as we live our own li
 To all the brands and brand reps reading this, you need a storyteller as it will make or break your business.  
 **Because people don't attach to products, they attach to people**
 
-I get to do amazing things now by partnering with the world's best storytellers, and I hope we get to work with you to share great tales about your company.
+I started Hoshino Media to do just that. Based out of Seattle, we get to do amazing things now by partnering with the world's best storytellers, and I hope we get to work with you to share great tales about your company.
 
 **And to all the storytellers reading this, keep telling yours.**
