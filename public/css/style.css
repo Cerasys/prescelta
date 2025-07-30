@@ -426,23 +426,51 @@ a:focus,
   /* Ensure any base text styles like font-weight are set BEFORE transparency */
   /* If your .highlight class has font-weight or other text properties, they should be applied here or in .highlight */
   font-weight: 700; /* Example: ensure text is bold if highlight implies it */
+} /* Header Section */
+.intro {
+  position: relative; /* Essential for video and overlay absolute positioning */
+  width: 100%;
+  height: 100vh; /* Make it full viewport height */
+  padding: 0; /* Remove padding that might push content off */
+  overflow: hidden; /* Hide any video overflow */
+  /* These flex properties center the content block (intro-text) within the .intro section */
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
 }
 
-/* Header Section */
-.intro {
-  display: table;
+/* Add this new CSS block for your video element */
+/* Assuming the video element in your HTML has the class 'creators-background-video' */
+.intro .creators-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 0;
-  background: url(../img/background.gif) center center no-repeat;
-  background-color: #e5e5e5;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire container without distortion */
+  z-index: -1; /* Puts the video behind the overlay content */
+  background-color: transparent; /* Good practice */
 }
 
 .intro .overlay {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Adjusted transparency for better text visibility */
+  position: absolute; /* Positions the overlay directly over the video */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensures the overlay is above the video but below the text */
+
+  /* These flex properties center the .intro-text content within the overlay */
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  flex-direction: column; /* Stacks content vertically if needed */
 }
 
 .intro h1 {
@@ -455,11 +483,12 @@ a:focus,
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
+  text-align: center; /* Ensure h1 text is centered */
 }
 
 .intro h1 span {
   font-weight: 800;
-  color: #5ca9fb;
+  color: #2890ad; /* Changed color to your consistent brand highlight */
 }
 
 .intro p {
@@ -469,6 +498,7 @@ a:focus,
   line-height: 30px;
   margin: 0 auto;
   margin-bottom: 60px;
+  text-align: center; /* Ensure paragraph text is centered */
 }
 
 .intro h4 {
@@ -479,23 +509,29 @@ a:focus,
   line-height: 30px;
   margin: 0 auto;
   margin-bottom: 60px;
+  text-align: center; /* Ensure h4 text is centered */
 }
 
 header .intro-text {
-  padding-top: 170px;
-  padding-bottom: 150px;
-  text-align: center;
+  /* Remove padding-top/bottom as centering is now handled by flexbox on .overlay */
+  /* Add some general padding to avoid content touching edges */
+  padding: 20px;
+  text-align: center; /* Ensures text inside is centered */
+  width: 100%; /* Allows it to take up available column width */
 }
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
+  .intro {
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 70vh; /* Ensure minimum height for video effect on smaller screens */
+  }
   .intro h1 {
-    font-size: 65px;
+    font-size: 45px; /* Adjust H1 font for mobile */
   }
   header .intro-text {
-    padding-top: 50px;
+    padding-top: 50px; /* Re-add padding for mobile as intro height is auto */
     padding-bottom: 50px;
-    text-align: center;
   }
 }
 

@@ -4,10 +4,20 @@ export const Hero = () => {
   return (
     <header id="header">
       <div className="intro">
+        <video
+          autoPlay // Start playing automatically
+          loop // Loop the video
+          muted // Crucial for autoplay to work in most modern browsers
+          playsInline // Important for iOS Safari to play inline rather than fullscreen
+          className="creators-background-video" // CSS class for styling the video
+          poster="/img/downtown.jpg"
+        >
+          <source src="/img/downtown.mp4" type="video/mp4" />
+        </video>
         <div className="overlay">
           <div className="container">
             <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
+              <div className="col-md-12 intro-text">
                 <h4>influencer marketing for authentic storytellers</h4>
                 <h1>
                   Where <span className="highlight"> Influence</span> Meets
