@@ -6,6 +6,13 @@
   --yellow: #ffc93c;
 }
 
+/* UNIVERSAL BOX-SIZING RESET: This is crucial for consistent layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 body,
 html {
   font-family: "Open Sans", sans-serif;
@@ -13,17 +20,21 @@ html {
   -webkit-font-smoothing: antialiased !important;
   color: var(--gray);
   font-weight: 400;
-  width: 100% !important;
+  width: 100%; /* No need for !important here if box-sizing is handled globally */
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  /* box-sizing: border-box; <-- REMOVED from here, now in universal reset */
 }
 
 body {
   display: flex; /* Make the body a flex container */
   flex-direction: column; /* Stack children (header, main, footer) vertically */
   min-height: 100vh; /* Ensure the body is at least 100% of the viewport height */
+  /* If you still see a tiny margin, sometimes browsers add default margins
+     to elements like <body>. You've already set margin: 0; padding: 0; above,
+     but it's worth double-checking if any user agent stylesheet overrides it.
+     A 'reset' or 'normalize.css' often takes care of this. */
 }
 
 #root {
@@ -31,6 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%; /* Make sure #root itself is at least 100% of its parent (body) */
+  width: 100%; /* Explicitly set #root to 100% width if it's not spanning */
 }
 
 .page-wrapper {
@@ -39,6 +51,7 @@ body {
   display: flex; /* Often helpful if content inside also needs layout */
   flex-direction: column; /* Or row, depending on inner content layout */
   padding-top: 80px;
+  width: 100%; /* Ensure this also takes up 100% of its parent's width */
 }
 
 h2,
@@ -119,7 +132,7 @@ hr {
 
 .logo {
   height: 64px;
-  width: 64px;
+  width: 64px; /* Ensure width is explicitly set */
   margin-top: -15px;
   color: var(--orange-dark);
 }
@@ -128,9 +141,7 @@ hr {
   max-width: 100%;
   height: auto;
   position: relative;
-  /* You can tweak positioning */
   top: -15px;
-  /* Adjust based on your design */
 }
 
 #menu {
@@ -890,4 +901,87 @@ label {
 #contact .social i.fa:hover {
   color: #608dfd;
   background: #fff;
+}
+
+/* Add this new media query at the very end of your styles.css file
+   or within an existing mobile-specific media query if you have one
+   that specifically targets max-width: 400px. */
+
+@media (max-width: 400px) {
+  /* General body text */
+  body {
+    font-size: 16px; /* Adjust base font size for overall text */
+  }
+
+  /* Headings adjustments */
+  h1 {
+    font-size: 40px; /* Significantly reduce h1 for very small screens */
+  }
+
+  h2 {
+    font-size: 28px; /* Reduce h2 size */
+    margin-bottom: 15px; /* Adjust margin if needed */
+  }
+
+  h3 {
+    font-size: 18px; /* Reduce h3 size */
+  }
+
+  h4 {
+    font-size: 16px; /* Reduce h4 size, perhaps aligning with body text */
+  }
+
+  p {
+    font-size: 16px; /* Reduce paragraph font size if needed */
+    line-height: 1.5; /* Ensure good line-height for readability */
+  }
+
+  /* Specific elements you have from your CSS that might be large */
+
+  /* Intro Section (Hero) - specific overrides */
+  .intro h1 {
+    font-size: 38px; /* Further reduction for hero h1 on very small phones */
+    word-spacing: 0px; /* Reduce word spacing if it causes overflow */
+  }
+
+  .intro p,
+  .intro h4 {
+    font-size: 18px; /* Smaller text in the hero section */
+    line-height: 24px;
+    margin-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  /* Navigation links */
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 14px; /* Smaller nav links if they're shown on very small screens */
+    margin: 5px 10px 0; /* Adjust margins */
+  }
+
+  /* Buttons - ensure they don't get too small or too large */
+  .btn-custom,
+  .btn-brand {
+    padding: 10px 20px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    margin: 0.5rem; /* Reduce button margin */
+  }
+
+  /* Testimonials Section specific adjustments (if relevant on the same page) */
+  .testimonials-heading {
+    font-size: 2.25rem; /* Match existing mobile breakpoint or go smaller */
+  }
+
+  .testimonials-subheading {
+    font-size: 1rem;
+  }
+
+  .testimonial-card {
+    width: 90%; /* Make cards more fluid */
+    max-width: 280px; /* Max width to prevent them from getting too wide if parent allows */
+    min-height: 18rem; /* Adjust min-height for content fitting */
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  .testimonial-quote {
+    font-size: 1rem; /* Smaller quote font */
+  }
 }
