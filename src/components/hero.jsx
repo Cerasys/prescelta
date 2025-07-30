@@ -1,6 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const scrollingWords = [
+  "messy",
+  "misaligned",
+  '"When\'s the deadline?"',
+  "cancelled",
+  "ghosted",
+  "budget-breaking",
+  "low ROI",
+  "low-impact",
+  "untracked",
+  "uncreative",
+  "off-brand",
+  "spammy",
+  "fake",
+];
 
 export const Hero = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    // Set an interval to change the word
+    const intervalId = setInterval(() => {
+      setCurrentWordIndex(
+        (prevIndex) => (prevIndex + 1) % scrollingWords.length
+      );
+    }, 2000); // Change word every 2 seconds (adjust this duration)
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array means this effect runs once on mount
+
   return (
     <header id="header">
       <div className="intro">
@@ -18,16 +48,23 @@ export const Hero = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-12 intro-text">
-                <h4>influencer marketing for authentic storytellers</h4>
+                <h1>No more </h1>
                 <h1>
-                  Where <span className="highlight"> Influence</span> Meets
-                  <span className="highlight"> Storytelling</span>
+                  <span className="scrolling-words-container highlight">
+                    <span
+                      key={scrollingWords[currentWordIndex]} // Key prop triggers re-render and animation
+                      className="scrolling-word-item highlight" // Apply class for animation
+                    >
+                      {scrollingWords[currentWordIndex]}
+                    </span>
+                  </span>{" "}
                 </h1>
+                <h1>Influencer Campaigns</h1>
                 <br />
                 <br />
                 <p>
-                  We connect high-integrity creators with brands that value
-                  depth over fleeting trends
+                  Experience influencer marketing done with clarity, creativity,
+                  and results.
                 </p>
                 <a
                   href="/creators"
