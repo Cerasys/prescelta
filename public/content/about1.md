@@ -9,7 +9,7 @@ I'm Nathan, your **creator marketing partner**. I cut my teeth in ecommerce, _fi
 In 2020, I was a "classically trained code monkey." I hated it.
 
 I went rogue with a few of my college friends and started our own card game brand, JailBird, a party game about framing your friends for bird crimes.  
-... and then instantly got _dropkicked by Covid._
+... and then instantly _got shut down by Covid._
 
 We needed to run playtests, but people weren't allowed within 6 feet of each other. **Shoot.**  
 I was making organic content on YouTube and Instagram but barely saw any progress.  
