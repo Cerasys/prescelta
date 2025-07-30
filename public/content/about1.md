@@ -4,7 +4,7 @@
   <img src="/img/team/nathan.jpg" alt="Photo of Nathan" />
 </div>
 
-I'm Nathan, your **influence architect and marketing engineer**. I cut my teeth in ecommerce, _first for survival, then for fun._
+I'm Nathan, your **creator marketing partner**. I cut my teeth in ecommerce, _first for survival, then for fun._
 
 In 2020, I was a "classically trained code monkey." I hated it.
 
