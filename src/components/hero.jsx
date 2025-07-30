@@ -61,7 +61,6 @@ export const Hero = () => {
                 </h1>
                 <h1>Influencer Campaigns</h1>
                 <br />
-                <br />
                 <p>
                   Experience influencer marketing done with clarity, creativity,
                   and results.
@@ -71,14 +70,14 @@ export const Hero = () => {
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll shimmer-effect"
                 >
-                  I'm a Creator, Show me How!
+                  <b>I'm a Creator, Show me How!</b>
                 </a>{" "}
                 <a
                   href="/brands"
                   rel="noopener noreferrer"
                   className="btn btn-brand btn-lg page-scroll shimmer-effect"
                 >
-                  I'm a Brand, Show me How!
+                  <b>I'm a Brand, Show me How!</b>
                 </a>{" "}
               </div>
             </div>
