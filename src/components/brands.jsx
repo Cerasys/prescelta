@@ -3,11 +3,16 @@ import "./brands.css"; // Ensure your CSS file is imported
 import BrandServices from "./brandServices";
 
 const scrollingWords = [
-  "messy",
-  "misaligned",
-  "cancelled",
-  "low ROI",
-  "inflated",
+  "ineffective",
+  "unpredictable",
+  "time-wasting",
+  "budget-draining",
+  "scattershot",
+  "low-return",
+  "off-brand",
+  "fake",
+  "ghosted",
+  "untracked",
 ];
 
 export const Brands = () => {
@@ -19,7 +24,7 @@ export const Brands = () => {
       setCurrentWordIndex(
         (prevIndex) => (prevIndex + 1) % scrollingWords.length
       );
-    }, 2000); // Change word every 2 seconds (adjust this duration)
+    }, 2500); // Change word every 2 seconds (adjust this duration)
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
@@ -41,7 +46,7 @@ export const Brands = () => {
         <div className="brand-video-overlay">
           <div className="row">
             <div className="col-md-12 intro-text">
-              <h1>No more</h1>
+              <h1>Say goodbye to</h1>
               <h1>
                 <span className="scrolling-words-container highlight">
                   <span
