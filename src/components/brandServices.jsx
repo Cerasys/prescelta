@@ -7,14 +7,13 @@ const BrandServices = () => {
       <div className="marketing-content">
         <div className="marketing-header">
           <h1>
-            we are <span className="flex">hoshino media</span>
+            we are <span className="highlight-brand">hoshino media</span>
           </h1>
-          <h4>your bridge to authentic audiences</h4>
           <h3>
-            connecting medium to large-sized businesses with <br />
+            connecting businesses and startups with <br />
             <span className="highlight-brand">engaging creators</span> in the{" "}
             <span className="highlight-brand">
-              entertainment, travel, and lifestyle
+              fitness, health and wellness, and lifestyle
             </span>{" "}
             spaces.
           </h3>
@@ -35,17 +34,12 @@ const BrandServices = () => {
               <img src="/img/creator.jpg" alt="Creative process" />{" "}
             </div>
             <p>
-              we start by diving deep into your brand, understanding your goals,
-              and pinpointing your target audience.
+              no more creators that will leave your audience bored, or worse
+              yet, get you cancelled.
             </p>
             <p>
-              then, we leverage our network to identify full-time creators who
-              genuinely resonate with your brand values and audience
-              demographics.
-            </p>
-            <p>
-              we focus on creators who are masters of storytelling, whether
-              through entertaining content or expert information curation.
+              we focus on creators who are master storytellers, who have full
+              alignment for your brand values.
             </p>
           </div>
 
@@ -62,10 +56,6 @@ const BrandServices = () => {
               we'll make sure there's smooth communication, timely deliverables,
               and compliance with terms, making the easy-peasy for you.
             </p>
-            <p>
-              we win if you win, and maximizing your ROI means long-term,
-              successful partnerships between your brand and our creators.
-            </p>
           </div>
 
           <div className="marketing-column">
@@ -77,19 +67,14 @@ const BrandServices = () => {
               objectives.
             </p>
             <p>
-              we specialize in working with creators on YouTube, Instagram, and
-              TikTok, understanding the nuances of each platform to optimize
-              your campaign's reach and impact.
-            </p>
-            <p>
-              we'll help you craft compelling narratives that captivate your
-              (new) audience and drive meaningful connections.
+              we work with creators on YouTube, Instagram, and TikTok, and
+              understand the nuances of each platform.
             </p>
           </div>
         </div>
         <br />
         <div className="marketing-header">
-          <h3>Ready to tell your brand's story?</h3>
+          <h3>Ready for the smoothest influencer marketing campaign ever?</h3>
         </div>
         <div className="marketing-footer">
           <a
@@ -98,7 +83,7 @@ const BrandServices = () => {
             rel="noopener noreferrer"
             className="btn btn-brand btn-lg page-scroll shimmer-effect"
           >
-            let's connect!
+            Book a call!
           </a>
         </div>
       </div>
