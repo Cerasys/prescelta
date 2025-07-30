@@ -7,7 +7,7 @@ const CreatorServices = () => {
       <div className="marketing-content">
         <div className="marketing-header">
           <h1>
-            we want to be <span className="highlight-brand">your</span>
+            we are <span className="highlight-brand">hoshino media</span>
           </h1>
           <br />
         </div>
@@ -21,7 +21,7 @@ const CreatorServices = () => {
 
         <div className="marketing-grid">
           <div className="marketing-column">
-            <p className="highlight-brand">hypeman,</p>
+            <p className="highlight-brand">your hypeman,</p>
             <p>
               we start by learning your story and what makes you one-of-a-kind.​
             </p>
