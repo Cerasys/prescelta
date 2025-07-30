@@ -1,5 +1,6 @@
 :root {
   --gray: #155263;
+  --orange-dark-ex: #ca5f1a;
   --orange-dark: #ff6f3c;
   --orange-light: #ff9a3c;
   --yellow: #ffc93c;
@@ -652,6 +653,10 @@ header .intro-text {
 
 .highlight {
   color: #ff6f3c !important;
+}
+
+.highlight-dark {
+  color: #5ca9fb !important;
 }
 
 .hover-bg .hover-text {

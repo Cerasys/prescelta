@@ -45,7 +45,7 @@
   letter-spacing: 1px;
   word-spacing: 2px;
   color: #fff;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
@@ -85,6 +85,6 @@
 /* Media query for mobile screens */
 @media (max-width: 768px) {
   .creators-video-overlay h1 {
-    font-size: 65px;
+    font-size: 45px;
   }
 }

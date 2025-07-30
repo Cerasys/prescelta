@@ -19,11 +19,16 @@ export const Creators = () => {
         </video>
         <div className="creators-video-overlay">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2 intro-text">
+            <div className="col-md-12 intro-text">
+              <h1>Put an end to</h1>
               <h1>
-                You are a{" "}
-                <span className="highlight text-shimmer"> Storyteller,</span>{" "}
-                Not a<span className="highlight"> Number</span>
+                <span className="highlight"> unclear</span> partnerships,{" "}
+              </h1>
+              <h1>
+                <span className="highlight"> unfair</span> compensation, and
+              </h1>
+              <h1>
+                <span className="highlight">lack</span> of creative control
               </h1>
               <br />
               <br />
@@ -32,8 +37,6 @@ export const Creators = () => {
         </div>
       </div>
       <CreatorServices />
-      {/* here you should have a section on brands we've partnered with as well as testimonials */}
-      <Testimonials />
     </div>
   );
 };

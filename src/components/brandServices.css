@@ -1,6 +1,6 @@
 .marketing-container {
   width: 100%;
-  background-color: black;
+  background-color: lightgrey;
   padding: 4rem 2rem;
   box-sizing: border-box;
   display: flex;
@@ -19,20 +19,20 @@
 .marketing-column {
   flex: 1;
   min-width: 250px;
-  color: white;
+  color: black;
 }
 
 .marketing-column p {
   font-size: 1.8rem;
   line-height: 1.6;
   margin: 0.5rem 0;
-  color: white;
+  color: black;
   justify-content: center;
 }
 
 .highlight-brand {
   font-weight: bold;
-  color: #5ca9fb !important;
+  color: #ca5f1a !important;
 }
 
 .marketing-header h1,
@@ -40,7 +40,7 @@
 .marketing-header h3,
 .marketing-header h4 {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .marketing-header .flex {
