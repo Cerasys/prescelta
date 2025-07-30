@@ -23,6 +23,7 @@ import { FAQ } from "./components/faq";
 import { Resources } from "./components/resources";
 import { Creators } from "./components/creators";
 import { Brands } from "./components/brands";
+import TestimonialsPage from "./components/testimonials/testimonialsPage";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -57,6 +58,12 @@ const App = () => {
           <Route exact path="/brands" element={<Brands />}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/faq" element={<FAQ />}></Route>
+          <Route
+            exact
+            path="/testimonials"
+            element={<TestimonialsPage />}
+          ></Route>
+          <Route exact path="/services" element={<FAQ />}></Route>
           <Route exact path="/resources" element={<Resources />}></Route>
           <Route
             path="/onboarding/*"

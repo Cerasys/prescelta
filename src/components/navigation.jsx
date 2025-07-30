@@ -46,6 +46,11 @@ export const Navigation = (props) => {
               <Link to="/creators" rel="noopener noreferrer">
                 Creators
               </Link>
+            </li>{" "}
+            <li>
+              <Link to="/testimonials" rel="noopener noreferrer">
+                Testimonials
+              </Link>
             </li>
             <li>
               <Link to="/brands" rel="noopener noreferrer">
