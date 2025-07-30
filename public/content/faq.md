@@ -15,8 +15,9 @@ Every person has someone they look up to in their lives, someone who they like a
 Not only that, brands can shortcut years of building out their social media by partnering with creators who already know how to tell a story.
 
 Nike had Michael Jordan.  
-Skims had Kim Kardashian.  
-Pepsi had Beyoncé.  
+Pepsi had Beyoncé.
+
+
 
 **Who will you have represent you to the next generation?**
 
