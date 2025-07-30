@@ -369,6 +369,7 @@ a:focus,
   position: relative;
   overflow: hidden;
   display: inline-block;
+  z-index: 1;
 }
 
 .shimmer-effect::before {
@@ -385,7 +386,7 @@ a:focus,
     rgba(255, 255, 255, 0) 100%
   );
   animation: shimmer-slide 2s infinite;
-  z-index: 3;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -434,7 +435,9 @@ a:focus,
   /* Ensure any base text styles like font-weight are set BEFORE transparency */
   /* If your .highlight class has font-weight or other text properties, they should be applied here or in .highlight */
   font-weight: 700; /* Example: ensure text is bold if highlight implies it */
-} /* Header Section */
+}
+
+/* Header Section */
 .intro {
   position: relative; /* Essential for video and overlay absolute positioning */
   width: 100%;
@@ -456,7 +459,7 @@ a:focus,
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures video covers the entire container without distortion */
-  z-index: -2; /* Puts the video behind the overlay content */
+  z-index: 0; /* Puts the video behind the overlay content */
   background-color: transparent; /* Good practice */
 }
 
@@ -472,13 +475,14 @@ a:focus,
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensures the overlay is above the video but below the text */
+  z-index: 1; /* Ensures the overlay is above the video but below the text */
 
   /* These flex properties center the .intro-text content within the overlay */
   display: flex;
   align-items: center; /* Centers content vertically */
   justify-content: center; /* Centers content horizontally */
   flex-direction: column; /* Stacks content vertically if needed */
+  pointer-events: none;
 }
 
 .intro h1 {
@@ -526,6 +530,9 @@ header .intro-text {
   padding: 20px;
   text-align: center; /* Ensures text inside is centered */
   width: 100%; /* Allows it to take up available column width */
+  pointer-events: all;
+  z-index: 10;
+  position: relative;
 }
 
 /* Media query for mobile screens */
