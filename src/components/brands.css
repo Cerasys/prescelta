@@ -25,7 +25,7 @@
 /* Style for the overlay content (which will sit on top of the video) */
 .brand-video-overlay {
   position: absolute; /* Position relative to .brand-video-container */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
   z-index: 0; /* Make sure it's above the video */
 
   /* Optional: Styles to center content within the overlay */
@@ -50,11 +50,6 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
-}
-
-.brand-video-overlay h1 span {
-  font-weight: 800;
-  color: #5ca9fb;
 }
 
 .brand-video-overlay p {

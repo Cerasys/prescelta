@@ -104,6 +104,54 @@
   border-radius: 8px;
 }
 
+/* Container for the scrolling word */
+.scrolling-words-container {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.2em; /* Adjust this to match your H1's line-height/font-size */
+  vertical-align: top;
+  min-width: 150px; /* Optional: Adjust based on your longest word to prevent reflow */
+  text-align: left; /* Ensures the word aligns left within its container */
+}
+
+/* Individual word item that animates */
+.scrolling-word-item {
+  display: block;
+  animation: fadeInOut 1.5s ease-in-out forwards; /* Adjust duration to fit your interval */
+}
+
+/* Keyframes for the fade-in and fade-out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); /* Start from below */
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%); /* Fade in and move to position */
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0%); /* Stay visible */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%); /* Fade out and move up */
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
 /* Media Queries */
 @media (min-width: 769px) {
   .brand-image-mobile {
