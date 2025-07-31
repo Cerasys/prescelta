@@ -62,6 +62,11 @@ export const Resources = () => {
             <br />{" "}
             {/* Keep this if you want a visual break before the button */}
           </div>
+          <div className="marketing-header">
+            <h3>
+              Want to learn how to take your influencer marketing even further?
+            </h3>
+          </div>
           <div className="btn-container">
             <a
               href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
