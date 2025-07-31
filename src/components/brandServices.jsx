@@ -6,13 +6,10 @@ const BrandServices = () => {
     <div className="marketing-container">
       <div className="marketing-content">
         <div className="marketing-header">
-          <h1>
-            we are <span className="highlight-brand">hoshino media</span>
-          </h1>
           <h3>
             connecting businesses and startups with <br />
-            <span className="highlight-brand">engaging creators</span> in the{" "}
-            <span className="highlight-brand">
+            <span className="highlight">storytellers</span> in the{" "}
+            <span className="highlight">
               fitness, health and wellness, and lifestyle
             </span>{" "}
             spaces.
@@ -29,7 +26,7 @@ const BrandServices = () => {
 
         <div className="marketing-grid">
           <div className="marketing-column">
-            <p className="highlight-brand">we find your perfect match,</p>
+            <p className="highlight">we find your perfect match,</p>
             <div className="brand-image-mobile">
               <img src="/img/creator.jpg" alt="Creative process" />{" "}
             </div>
@@ -44,7 +41,7 @@ const BrandServices = () => {
           </div>
 
           <div className="marketing-column">
-            <p className="highlight-brand">we manage the entire journey,</p>
+            <p className="highlight">we manage the entire journey,</p>
             <div className="brand-image-mobile">
               <img src="/img/editing.jpg" alt="Editing process" />{" "}
             </div>
@@ -59,7 +56,7 @@ const BrandServices = () => {
           </div>
 
           <div className="marketing-column">
-            <p className="highlight-brand">and we deliver.</p>
+            <p className="highlight">and we deliver.</p>
             {/* If you have a third image for mobile, add it here */}
             <p>
               whether you're looking for increased brand awareness, conversions,
@@ -72,7 +69,13 @@ const BrandServices = () => {
             </p>
           </div>
         </div>
-        <br />
+
+        <div className="marketing-header">
+          <h1>
+            we are <span className="highlight">hoshino media</span>
+          </h1>
+          <h4>Your bridge to authentic audiences</h4>
+        </div>
         <div className="marketing-header">
           <h3>Ready for the smoothest influencer marketing campaign ever?</h3>
         </div>
