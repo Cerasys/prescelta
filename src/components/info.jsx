@@ -8,7 +8,8 @@ export const Info = (props) => {
         <div className="row">
           <div className="social">
             <ul>
-              {/* <li>
+              {
+                <li>
                   <a
                     href={props.data ? props.data.facebook : "/"}
                     target="_blank"
@@ -17,7 +18,7 @@ export const Info = (props) => {
                     <i className="fa fa-facebook"></i>
                   </a>
                 </li>
-                <li>
+                /* <li>
                   <a
                     href={props.data ? props.data.youtube : "/"}
                     target="_blank"
@@ -34,7 +35,8 @@ export const Info = (props) => {
                   >
                     <i className="fa fa-instagram"></i>
                   </a>
-                </li> */}
+                </li> */
+              }
               <li>
                 <a
                   href={props.data ? props.data.linkedin : "/"}
