@@ -152,6 +152,12 @@ export const FAQ = () => {
             </div>
             <br />
           </div>
+          <div className="marketing-header">
+            <h3>
+              Want to learn more about how we can make your brand connect with
+              people?
+            </h3>
+          </div>
           <div className="btn-container">
             <a
               href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
