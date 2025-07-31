@@ -43,13 +43,13 @@ export const Navigation = (props) => {
               </Link>
             </li>
             <li>
-              <Link to="/creators" rel="noopener noreferrer">
-                Creators
+              <Link to="/brands" rel="noopener noreferrer">
+                Brands
               </Link>
             </li>
             <li>
-              <Link to="/brands" rel="noopener noreferrer">
-                Brands
+              <Link to="/creators" rel="noopener noreferrer">
+                Creators
               </Link>
             </li>
             <li>

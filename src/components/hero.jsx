@@ -66,18 +66,18 @@ export const Hero = () => {
                   and results.
                 </p>
                 <a
-                  href="/creators"
-                  rel="noopener noreferrer"
-                  className="btn btn-custom btn-lg page-scroll shimmer-effect"
-                >
-                  <b>I'm a Creator, Show me How!</b>
-                </a>{" "}
-                <a
                   href="/brands"
                   rel="noopener noreferrer"
                   className="btn btn-brand btn-lg page-scroll shimmer-effect"
                 >
                   <b>I'm a Brand, Show me How!</b>
+                </a>{" "}
+                <a
+                  href="/creators"
+                  rel="noopener noreferrer"
+                  className="btn btn-custom btn-lg page-scroll shimmer-effect"
+                >
+                  <b>I'm a Creator, Show me How!</b>
                 </a>{" "}
               </div>
             </div>
