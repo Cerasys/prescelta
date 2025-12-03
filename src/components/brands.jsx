@@ -13,6 +13,9 @@ const scrollingWords = [
   "fake",
   "ghosted",
   "untracked",
+  "low-ROI",
+  "'ads-that-don't-convert'",
+  "fatigued creatives",
 ];
 
 export const Brands = () => {
@@ -57,7 +60,7 @@ export const Brands = () => {
                   </span>
                 </span>{" "}
               </h1>
-              <h1>influencer campaigns</h1>
+              <h1>marketing campaigns</h1>
             </div>
           </div>
         </div>

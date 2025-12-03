@@ -7,12 +7,9 @@ const BrandServices = () => {
       <div className="marketing-content">
         <div className="marketing-header">
           <h3>
-            connecting businesses and startups with <br />
-            <span className="highlight">storytellers</span> in the{" "}
-            <span className="highlight">
-              fitness, health and wellness, and lifestyle
-            </span>{" "}
-            spaces.
+            supercharging businesses and startups with <br />
+            <span className="highlight">storytellers and scale</span> in the{" "}
+            <span className="highlight">ecommerce</span> spaces.
           </h3>
           <br />
         </div>
@@ -36,18 +33,20 @@ const BrandServices = () => {
             </p>
             <p>
               we focus on creators who are master storytellers, who have full
-              alignment for your brand values.
+              alignment for your brand values, and do all the negotiation and
+              content review/
             </p>
           </div>
 
           <div className="marketing-column">
-            <p className="highlight">we manage the entire journey,</p>
+            <p className="highlight">we scale things up,</p>
             <div className="brand-image-mobile">
               <img src="/img/editing.jpg" alt="Editing process" />{" "}
             </div>
             <p>
-              from initial outreach and negotiation to content review and
-              campaign launch, we handle all the details.
+              we completely overhaul your paid media approach, working side by
+              side to find, write, and test creatives that will be magnetic to
+              your audience.
             </p>
             <p>
               we'll make sure there's smooth communication, timely deliverables,
@@ -64,8 +63,8 @@ const BrandServices = () => {
               objectives.
             </p>
             <p>
-              we work with creators on YouTube, Instagram, and TikTok, and
-              understand the nuances of each platform.
+              we work with creators and run ads on YouTube, Facebook, Instagram,
+              and TikTok, and understand the nuances of each platform.
             </p>
           </div>
         </div>
@@ -77,7 +76,7 @@ const BrandServices = () => {
           <h4>Your bridge to authentic audiences</h4>
         </div>
         <div className="marketing-header">
-          <h3>Ready for the smoothest influencer marketing campaign ever?</h3>
+          <h3>Ready for the smoothest marketing campaign ever?</h3>
         </div>
         <div className="marketing-footer">
           <a
