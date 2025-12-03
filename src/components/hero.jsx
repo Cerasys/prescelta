@@ -13,7 +13,7 @@ const scrollingWords = [
   "uninspired",
   "off-brand",
   "spammy",
-  "fake",
+  "inauthentic",
 ];
 
 export const Hero = () => {
@@ -59,11 +59,11 @@ export const Hero = () => {
                     </span>
                   </span>{" "}
                 </h1>
-                <h1>Influencer Campaigns</h1>
+                <h1>Marketing Campaigns</h1>
                 <br />
                 <p>
-                  Experience influencer marketing done with clarity, creativity,
-                  and results.
+                  Experience ads and influencer campaigns done with clarity,
+                  creativity, and results.
                 </p>
                 <a
                   href="/brands"
