@@ -7,6 +7,8 @@ const scrollingWords = [
   "unclear partnerships",
   "unfair compensation",
   "lack of creative control",
+  "getting ghosted by the brand",
+  "uncontrollable negotiations",
 ];
 
 export const Creators = () => {
