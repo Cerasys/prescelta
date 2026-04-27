@@ -1,1 +1,1 @@
-export const BOOKING_LINK = "https://www.book.hoshinomedia.com/";
+export const BOOKING_LINK = "https://book.hoshinomedia.com/";
