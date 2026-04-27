@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const scrollingWords = [
-  "messy",
-  "misaligned",
-  "forgotten deadline",
-  "cancelled",
-  "ghosted",
+  "low ROAS",
   "budget-breaking",
   "low ROI",
   "low-impact",
@@ -13,7 +9,8 @@ const scrollingWords = [
   "uninspired",
   "off-brand",
   "spammy",
-  "inauthentic",
+  "boosted posts",
+  "AI",
 ];
 
 export const Hero = () => {
@@ -23,7 +20,7 @@ export const Hero = () => {
     // Set an interval to change the word
     const intervalId = setInterval(() => {
       setCurrentWordIndex(
-        (prevIndex) => (prevIndex + 1) % scrollingWords.length
+        (prevIndex) => (prevIndex + 1) % scrollingWords.length,
       );
     }, 2500); // Change word every 2 seconds (adjust this duration)
 
@@ -62,8 +59,9 @@ export const Hero = () => {
                 <h1>Marketing Campaigns</h1>
                 <br />
                 <p>
-                  Experience ads and influencer campaigns done with clarity,
-                  creativity, and results.
+                  We help ecom brands level up through a full funnel overhaul:
+                  <br />
+                  Ads, emails, SMS, influencers, and CRO all done with 👌
                 </p>
                 <a
                   href="/brands"
@@ -72,13 +70,13 @@ export const Hero = () => {
                 >
                   <b>I'm a Brand, Show me How!</b>
                 </a>{" "}
-                <a
+                {/* <a
                   href="/creators"
                   rel="noopener noreferrer"
                   className="btn btn-custom btn-lg page-scroll shimmer-effect"
                 >
                   <b>I'm a Creator, Show me How!</b>
-                </a>{" "}
+                </a>{" "} */}
               </div>
             </div>
           </div>
