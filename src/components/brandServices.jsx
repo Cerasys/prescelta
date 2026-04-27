@@ -1,5 +1,6 @@
 import React from "react";
 import "./brandServices.css";
+import { BOOKING_LINK } from "../data/constants";
 
 const BrandServices = () => {
   return (
@@ -80,7 +81,7 @@ const BrandServices = () => {
         </div>
         <div className="marketing-footer">
           <a
-            href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
+            href={BOOKING_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-brand btn-lg page-scroll shimmer-effect"

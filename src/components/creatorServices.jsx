@@ -1,5 +1,6 @@
 import React from "react";
 import "./creatorServices.css";
+import { BOOKING_LINK } from "../data/constants";
 
 const CreatorServices = () => {
   return (
@@ -70,7 +71,7 @@ const CreatorServices = () => {
         </div>
         <div className="marketing-footer">
           <a
-            href="https://calendly.com/hoshinomedia/discovery"
+            href={BOOKING_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-custom btn-lg page-scroll shimmer-effect"

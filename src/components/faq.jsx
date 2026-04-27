@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown"; // Import ReactMarkdown
 import remarkGfm from "remark-gfm";
 import "./faq.css";
+import { BOOKING_LINK } from "../data/constants";
 
 // Accordion component for each FAQ item
 const Accordion = ({ title, content }) => {
@@ -160,7 +161,7 @@ export const FAQ = () => {
           </div>
           <div className="btn-container">
             <a
-              href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
+              href={BOOKING_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-custom shimmer-effect btn-lg page-scroll"

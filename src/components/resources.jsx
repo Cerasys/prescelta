@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown"; // Import ReactMarkdown
 import remarkGfm from "remark-gfm"; // Import remarkGfm for GitHub Flavored Markdown
 import "./resources.css";
+import { BOOKING_LINK } from "../data/constants";
 
 export const Resources = () => {
   const [markdownContent, setMarkdownContent] = useState("");
@@ -69,7 +70,7 @@ export const Resources = () => {
           </div>
           <div className="btn-container">
             <a
-              href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
+              href={BOOKING_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-custom shimmer-effect btn-lg page-scroll"

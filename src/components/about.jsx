@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
 import MarkdownContent from "./markdownContent";
+import { BOOKING_LINK } from "../data/constants";
 
 export const About = () => {
   return (
@@ -29,7 +30,7 @@ export const About = () => {
                 Marketing to help people attach to your Brand...
               </h3>
               <a
-                href="https://calendly.com/nathanblee/hoshino-media-discovery-call"
+                href={BOOKING_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-brand btn-lg page-scroll"
