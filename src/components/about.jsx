@@ -26,8 +26,8 @@ export const About = () => {
             </div>
             <div className="btn-container">
               <h3 className="highlight">
-                So if you're ready to leverage <s>Influencer</s> Storytelling
-                Marketing to help people attach to your Brand...
+                So if you're ready to leverage Growth Marketing to help scale
+                your Brand...
               </h3>
               <a
                 href={BOOKING_LINK}

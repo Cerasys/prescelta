@@ -6,7 +6,7 @@
 
 ### Part I: Desperation
 
-I'm Nathan, your **creator marketing partner**. I cut my teeth in ecommerce, _mainly for survival._
+I'm Nathan, your **marketing growth operator**. I cut my teeth in ecommerce, _mainly for survival._
 
 In 2020, I was a "classically trained code monkey." I hated it.
 
@@ -19,14 +19,16 @@ I knew I needed to market, but _I was ignorant and had no idea how._
 
 Someone told me that paid ads were the next big thing, so I started sinking money into paid media.
 
-I wasted my first $300 on Facebook paid ads, with one sale.  
-I wasted the next $300 on Amazon Ads, again with no sales.
+- I wasted my first $300 on Facebook paid ads, with one sale.  
+- I wasted the next $300 on Amazon Ads, again with no sales.
 
-One of my team members told me that we should run a giveaway on social media.
+One of my team members told me that we should run a giveaway on social media.  
+Another told me that all we learned with the $600 were that "Ads don't work".
 
-I had always been skeptical that social media really worked.  
-Wasn't Instagram just a site for pretty pictures?  
-Do likes and comments really translate to sales?
+I was doubtful.  
+Facebook is worth billions of dollars, and all they do is have companies run ads on their platform.  
+
+Surely all those companies couldn't be wrong.  
 
 I was skeptical.  
 **But I was even more desperate.**
