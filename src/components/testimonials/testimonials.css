@@ -6,7 +6,8 @@
     to bottom right,
     var(--tw-gradient-stops)
   ); /* bg-gradient-to-br */
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); /* Default for bg-gradient */
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to); /* Default for bg-gradient */
   --tw-gradient-from: #eff6ff; /* from-blue-50 */
   --tw-gradient-to: #e0e7ff; /* to-indigo-100 */
   overflow: hidden; /* Ensures no content overflows the section itself */
@@ -129,6 +130,95 @@
   }
 }
 
+.results-grid {
+  margin-top: 3rem;
+  display: grid;
+  /* Mobile: 1 column, but limited width so it doesn't swallow the screen */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center; /* Centers the cards if they are narrower than the screen */
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.result-card {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+  /* LIMIT THE SIZE HERE */
+  width: 100%;
+  max-width: 400px; /* This prevents the cards from being "full screen" on mobile */
+  font-size: 16px;
+}
+
+.result-image-wrapper {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  /* This ensures the slide maintains its shape regardless of screen width */
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(224, 231, 255, 0.5); /* Light indigo border to define edges */
+}
+
+.result-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from 'cover' to 'contain' to ensure no data is cut off in the preview */
+  background-color: #f8fafc; /* Adds a light neutral background for the 'contain' letterboxing */
+  display: block;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  background: rgba(15, 23, 42, 0.9); /* slate-900 with opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
 /* Individual testimonial card */
 .testimonial-card {
   flex-shrink: 0; /* Prevents cards from shrinking below their defined width */
@@ -136,7 +226,8 @@
   background-color: #ffffff; /* bg-white */
   padding: 2rem; /* p-8 */
   border-radius: 0.75rem; /* rounded-xl */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
   transition-property: box-shadow, transform; /* transition-shadow, transform */
   transition-duration: 300ms; /* duration-300 */
@@ -149,7 +240,8 @@
   /* max-height: 28rem; */ /* OPTIONAL: Uncomment and adjust if you want to cap card height */
 }
 .testimonial-card:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
   transform: translateY(-0.25rem); /* hover:-translate-y-1 */
 }

@@ -49,11 +49,26 @@ const testimonials = [
   },
 ];
 
-// This is your TestimonialsSection component, now serving as the full page
+const caseStudies = [
+  {
+    id: 1,
+    title: "450% Revenue Growth for a Jewelry Brand",
+    image: "/img/results/results1.png",
+    // client: "Jewelry Brand",
+  },
+  {
+    id: 1,
+    title: "Shema Christian Counseling",
+    image: "/img/results/lead results.png",
+    /// client: "Shema Christian Counseling",
+  },
+];
+
 const TestimonialsPage = () => {
   const scrollRef = useRef(null); // Ref to the scrollable div
   const scrollIntervalRef = useRef(null); // Ref to hold the interval ID
   const [isMobile, setIsMobile] = useState(false); // State to track mobile status
+  const [selectedImg, setSelectedImg] = useState(null);
 
   // Function to check if it's a mobile device based on your CSS breakpoint
   const checkIsMobile = () => {
@@ -128,6 +143,34 @@ const TestimonialsPage = () => {
   return (
     <section className="testimonials-section">
       <div className="testimonials-container">
+        <h2 className="testimonials-heading">Results</h2>
+        <h4>
+          I've had the experience of consulting and running ad campaigns for
+          companies in ecommerce, healthcare, security, and more.
+        </h4>
+        <div className="results-grid">
+          {caseStudies.map((study) => (
+            <div
+              key={study.id}
+              className="result-card"
+              onClick={() => setSelectedImg(study.image)}
+            >
+              <div className="result-image-wrapper">
+                <img src={study.image} alt={study.title} />
+                <div className="result-overlay">
+                  <span>Click to Expand</span>
+                </div>
+              </div>
+              <h5 className="result-title">{study.title}</h5>
+            </div>
+          ))}
+        </div>
+        <h5 className="section-subheading">
+          <i>Click the images to see more.</i>
+        </h5>
+        <br /> <br />
+      </div>
+      <div className="testimonials-container">
         <h2 className="testimonials-heading">What Our Clients Say</h2>
         <p className="testimonials-subheading">
           I used to work largely in Mental Health doing marketing for therapists
@@ -159,8 +202,19 @@ const TestimonialsPage = () => {
           ))}
         </div>
       </div>
+      {selectedImg && (
+        <div className="lightbox" onClick={() => setSelectedImg(null)}>
+          <button className="close-lightbox">&times;</button>
+          <img
+            src={selectedImg}
+            style={{ objectFit: "contain" }}
+            onClick={(e) => e.stopPropagation()}
+            alt="Enlarged Result"
+          />
+        </div>
+      )}
     </section>
   );
 };
 
-export default TestimonialsPage; // Export the new page component
+export default TestimonialsPage;
