@@ -10,8 +10,6 @@ const scrollingWords = [
   "scattershot",
   "low-return",
   "off-brand",
-  "fake",
-  "ghosted",
   "untracked",
   "low-ROI",
   "'ads-that-don't-convert'",
@@ -25,7 +23,7 @@ export const Brands = () => {
     // Set an interval to change the word
     const intervalId = setInterval(() => {
       setCurrentWordIndex(
-        (prevIndex) => (prevIndex + 1) % scrollingWords.length
+        (prevIndex) => (prevIndex + 1) % scrollingWords.length,
       );
     }, 2500); // Change word every 2 seconds (adjust this duration)
 

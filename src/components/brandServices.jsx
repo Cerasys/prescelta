@@ -3,71 +3,72 @@ import "./brandServices.css";
 import { BOOKING_LINK } from "../data/constants";
 
 const BrandServices = () => {
+  const services = [
+    {
+      title: "Paid Media",
+      highlight: "Scaling things up",
+      description:
+        "We overhaul your paid media approach, writing and testing magnetic creatives for Meta and Google Platforms.",
+      items: [
+        "Creative Testing",
+        "Media Buying",
+        "Ad Copywriting",
+        "Full Campaign",
+      ],
+    },
+    {
+      title: "Influencer & Storytelling",
+      highlight: "Finding your perfect match",
+      description:
+        "No more boring content. We source creators who align with your values and handle all negotiations and reviews.",
+      items: ["Creator Sourcing", "Contract Negotiation", "Content Review"],
+    },
+    {
+      title: "Webstore & CRO",
+      highlight: "Stopping the leaks",
+      description:
+        "A fast site is a high-converting site. We audit your infrastructure to ensure traffic doesn't go to waste.",
+      items: [
+        "Infrastructure Audits",
+        "UX/UI Optimization",
+        "Conversion Lifting",
+      ],
+    },
+    {
+      title: "Email & SMS Marketing",
+      highlight: "Maximizing LTV",
+      description:
+        "We build retention loops that turn one-time buyers into lifelong fans through high-intent automation.",
+      items: ["Retention Flows", "Campaign Management", "List Growth"],
+    },
+  ];
+
   return (
     <div className="marketing-container">
       <div className="marketing-content">
         <div className="marketing-header">
           <h3>
-            supercharging businesses and startups with <br />
-            <span className="highlight">storytellers and scale</span> in the{" "}
-            <span className="highlight">ecommerce</span> spaces.
+            Say hello to your new growth operators,
+            <br />
+            who <span className="highlight">scale brands</span> in the{" "}
+            <span className="highlight">ecommerce</span> space
           </h3>
           <br />
         </div>
 
-        {/* New container for desktop images */}
-        <div className="marketing-images-desktop">
-          <img src="/img/creator.jpg" alt="Creative process" />
-          <img src="/img/editing.jpg" alt="Editing process" />
-          {/* Add more images here if needed for desktop view */}
-        </div>
-
-        <div className="marketing-grid">
-          <div className="marketing-column">
-            <p className="highlight">we find your perfect match,</p>
-            <div className="brand-image-mobile">
-              <img src="/img/creator.jpg" alt="Creative process" />{" "}
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <div key={index} className="service-card">
+              <span className="service-accent">{service.highlight}</span>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
+              <ul className="service-list">
+                {service.items.map((item, i) => (
+                  <li key={i}>• {item}</li>
+                ))}
+              </ul>
             </div>
-            <p>
-              no more creators that will leave your audience bored, or worse
-              yet, get you cancelled.
-            </p>
-            <p>
-              we focus on creators who are master storytellers, who have full
-              alignment for your brand values, and do all the negotiation and
-              content review/
-            </p>
-          </div>
-
-          <div className="marketing-column">
-            <p className="highlight">we scale things up,</p>
-            <div className="brand-image-mobile">
-              <img src="/img/editing.jpg" alt="Editing process" />{" "}
-            </div>
-            <p>
-              we completely overhaul your paid media approach, working side by
-              side to find, write, and test creatives that will be magnetic to
-              your audience.
-            </p>
-            <p>
-              we'll make sure there's smooth communication, timely deliverables,
-              and compliance with terms, making the easy-peasy for you.
-            </p>
-          </div>
-
-          <div className="marketing-column">
-            <p className="highlight">and we deliver.</p>
-            {/* If you have a third image for mobile, add it here */}
-            <p>
-              whether you're looking for increased brand awareness, conversions,
-              or engagement with new audiences, we build strategies to meet your
-              objectives.
-            </p>
-            <p>
-              we work with creators and run ads on YouTube, Facebook, Instagram,
-              and TikTok, and understand the nuances of each platform.
-            </p>
-          </div>
+          ))}
         </div>
 
         <div className="marketing-header">
