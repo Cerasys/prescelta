@@ -45,7 +45,7 @@ export const Hero = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-12 intro-text">
-                <h1>No more </h1>
+                {/* <h1>No more </h1>
                 <h1>
                   <span className="scrolling-words-container highlight">
                     <span
@@ -56,20 +56,26 @@ export const Hero = () => {
                     </span>
                   </span>{" "}
                 </h1>
-                <h1>Marketing Campaigns</h1>
+                <h1>Marketing Campaigns</h1> */}
+                <h2>
+                  <span className="highlight">
+                    We help creators build systems that scale.
+                  </span>
+                </h2>
                 <br />
                 <p>
-                  We help ecom brands level up through a full funnel overhaul:
+                  We are experts in selling physical products online <br />
+                  with all types of business models and digital marketing <br />
+                  ecosystems that prioritise always on revenue.
                   <br />
-                  Ads, emails, SMS, influencers, and CRO all done with 👌
                 </p>
                 <a
                   href="/brands"
                   rel="noopener noreferrer"
                   className="btn btn-brand btn-lg page-scroll shimmer-effect"
                 >
-                  <b>I'm a Brand, Show me How!</b>
-                </a>{" "}
+                  <b>Show me How!</b>
+                </a>
                 {/* <a
                   href="/creators"
                   rel="noopener noreferrer"
