@@ -24,6 +24,8 @@ import { Resources } from "./components/resources";
 // import { Creators } from "./components/creators";
 import { Brands } from "./components/brands";
 import TestimonialsPage from "./components/testimonials/testimonialsPage";
+import LeadMagnetHero from "./components/lead magnet/leadMagnetHero";
+import { SuccessPage } from "./components/lead magnet/successPage";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -69,6 +71,20 @@ const App = () => {
             path="/onboarding/*"
             element={<Navigate to="/laf-onboarding/step-1" replace />}
           />
+          <Route
+            path="email-flows-you-need"
+            element={
+              <LeadMagnetHero
+                title="Top Email Flows for 2026"
+                description="Download my private list of email flows that you need to install in your business"
+                creatorName="Nathan Lee"
+                imageSrc="/img/jailbird.jpg"
+                formName="email-flows-lead"
+                buttonText="GET IT FREE"
+              />
+            }
+          ></Route>
+          <Route path="success" element={<SuccessPage />} />
           {smmOnboardingSteps.map((step, index) => (
             <Route
               key={index}
