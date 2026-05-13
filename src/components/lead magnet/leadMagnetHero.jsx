@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./leadMagnetHero.css";
+import { useNavigate } from "react-router-dom";
 
 const LeadMagnetHero = ({
   title,
@@ -10,6 +11,34 @@ const LeadMagnetHero = ({
   buttonText = "Get It Free",
   onSuccessPath = "/success",
 }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const previousTitle = document.title; // Save the old title
+    document.title = title; // Set it to "Top Email Flows for 2026"
+
+    // This runs when the component disappears/unmounts
+    return () => {
+      document.title = previousTitle;
+    };
+  }, [title]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        // We pass the 'title' inside the 'state' object so the next page can read it
+        navigate(onSuccessPath, { state: { title: title } });
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div className="lm-hero-wrapper">
       <div className="lm-hero-container">
@@ -26,7 +55,7 @@ const LeadMagnetHero = ({
               name={formName}
               method="POST"
               data-netlify="true"
-              action={onSuccessPath}
+              onSubmit={handleSubmit}
               className="lm-form"
             >
               <input type="hidden" name="form-name" value={formName} />
