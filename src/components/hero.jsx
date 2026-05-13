@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-const scrollingWords = [
-  "low ROAS",
-  "budget-breaking",
-  "low ROI",
-  "low-impact",
-  "untracked",
-  "uninspired",
-  "off-brand",
-  "spammy",
-  "boosted posts",
-  "AI",
-];
+// const scrollingWords = [
+//   "low ROAS",
+//   "budget-breaking",
+//   "low ROI",
+//   "low-impact",
+//   "untracked",
+//   "uninspired",
+//   "off-brand",
+//   "spammy",
+//   "boosted posts",
+//   "AI",
+// ];
 
 export const Hero = () => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  // const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
-  useEffect(() => {
-    // Set an interval to change the word
-    const intervalId = setInterval(() => {
-      setCurrentWordIndex(
-        (prevIndex) => (prevIndex + 1) % scrollingWords.length,
-      );
-    }, 2500); // Change word every 2 seconds (adjust this duration)
+  // useEffect(() => {
+  //   // Set an interval to change the word
+  //   const intervalId = setInterval(() => {
+  //     setCurrentWordIndex(
+  //       (prevIndex) => (prevIndex + 1) % scrollingWords.length,
+  //     );
+  //   }, 2500); // Change word every 2 seconds (adjust this duration)
 
-    // Clean up the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, []); // Empty dependency array means this effect runs once on mount
+  //   // Clean up the interval when the component unmounts
+  //   return () => clearInterval(intervalId);
+  // }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <header id="header">
