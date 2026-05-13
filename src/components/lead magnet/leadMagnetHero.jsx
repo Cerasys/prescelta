@@ -7,7 +7,7 @@ const LeadMagnetHero = ({
   description,
   creatorName,
   imageSrc,
-  formName,
+  magnetId,
   buttonText = "Get It Free",
   onSuccessPath = "/success",
 }) => {
@@ -52,13 +52,18 @@ const LeadMagnetHero = ({
           {/* Glassmorphism Form */}
           <div className="lm-glass-card">
             <form
-              name={formName}
+              name="lead-magnet-master"
               method="POST"
               data-netlify="true"
               onSubmit={handleSubmit}
               className="lm-form"
             >
-              <input type="hidden" name="form-name" value={formName} />
+              <input
+                type="hidden"
+                name="form-name"
+                value="lead-magnet-master"
+              />
+              <input type="hidden" name="magnetId" value={magnetId} />
 
               <div className="lm-input-group">
                 <input

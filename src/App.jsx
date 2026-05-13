@@ -79,7 +79,7 @@ const App = () => {
                 description="Download my private list of email flows that you need to install in your business"
                 creatorName="Nathan Lee"
                 imageSrc="/img/jailbird.jpg"
-                formName="email-flows-lead"
+                magnetId="email-flows-lead"
                 buttonText="GET IT FREE"
               />
             }
