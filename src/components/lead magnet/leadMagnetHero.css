@@ -50,13 +50,13 @@
 
 @media (min-width: 768px) {
   .lm-title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 
 .lm-description {
   color: #ececec;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.6;
   max-width: 448px;
 }
@@ -136,7 +136,7 @@
 /* Footer Tag */
 .lm-creator-tag {
   margin-top: 32px;
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #d4d4d8;
