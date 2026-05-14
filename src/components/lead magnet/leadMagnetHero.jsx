@@ -57,6 +57,7 @@ const LeadMagnetHero = ({
               data-netlify="true"
               onSubmit={handleSubmit}
               className="lm-form"
+              data-netlify-honeypot="bot-field"
             >
               <input
                 type="hidden"
