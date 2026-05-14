@@ -2,14 +2,14 @@
   "name": "landingpage-prescelta",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "emailjs-com": "^2.6.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "emailjs-com": "^3.2.0",
     "gray-matter": "^4.0.3",
-    "marked": "^15.0.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "marked": "^18.0.3",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-markdown": "^10.1.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
@@ -44,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^7.15.0"
   }
 }
