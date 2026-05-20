@@ -57,7 +57,7 @@ const LeadMagnetHero = ({
               data-netlify="true"
               onSubmit={handleSubmit}
               className="lm-form"
-              data-netlify-honeypot="bot-field"
+              data-netlify-honeypot="bfield"
             >
               <input
                 type="hidden"
@@ -65,6 +65,9 @@ const LeadMagnetHero = ({
                 value="lead-magnet-master"
               />
               <input type="hidden" name="magnetId" value={magnetId} />
+              <div hidden>
+                <input name="bfield" />
+              </div>
 
               <div className="lm-input-group">
                 <input
