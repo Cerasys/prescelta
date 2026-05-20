@@ -88,8 +88,8 @@ const App = () => {
             path="ecom-offers-2026"
             element={
               <LeadMagnetHero
-                title="Ecom Offer Framework"
-                description="Download my PDF copy of the frameworks we use to build evergreen promotional offers for our clients for free"
+                title="Ecom Offer Frameworks"
+                description="Download my PDF copy of the frameworks we use to build evergreen promotional offers for our clients for FREE"
                 creatorName="Nathan Lee"
                 imageSrc="/img/offers-thumb.png"
                 magnetId="offer-creation"
