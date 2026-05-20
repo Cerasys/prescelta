@@ -59,7 +59,7 @@ export const Hero = () => {
                 <h1>Marketing Campaigns</h1> */}
                 <h2>
                   <span className="highlight">
-                    We help creators build systems that scale.
+                    We help brands build systems that scale.
                   </span>
                 </h2>
                 <br />
