@@ -96,6 +96,19 @@ const App = () => {
                 buttonText="GET IT FREE"
               />
             }
+          ></Route>{" "}
+          <Route
+            path="drop-day-blueprint"
+            element={
+              <LeadMagnetHero
+                title="Drop Day / Seasonal Sales Blueprint"
+                description="Download my PDF copy of the blueprint we use to build drop day funnels for our clients for FREE"
+                creatorName="Nathan Lee"
+                imageSrc="/img/drop-day-thumb.png"
+                magnetId="drop-day"
+                buttonText="GET IT FREE"
+              />
+            }
           ></Route>
           <Route path="success" element={<SuccessPage />} />
           {smmOnboardingSteps.map((step, index) => (
@@ -116,7 +129,6 @@ const App = () => {
               }
             />
           ))}
-
           <Route exact path="/privacy" element={<Privacy />}></Route>
           <Route exact path="/terms" element={<Terms />}></Route>
         </Routes>
