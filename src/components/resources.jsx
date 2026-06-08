@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown"; // Import ReactMarkdown
-import remarkGfm from "remark-gfm"; // Import remarkGfm for GitHub Flavored Markdown
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import "./resources.css";
 import { BOOKING_LINK } from "../data/constants";
 
@@ -27,13 +27,13 @@ export const Resources = () => {
     };
 
     fetchResources();
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   if (loading) {
     return (
-      <div id="resources">
-        <div className="resources container">
-          <p>Loading resources...</p>
+      <div className="res-hub-wrapper">
+        <div className="res-hub-container">
+          <p className="res-loading-text">Loading resources...</p>
         </div>
       </div>
     );
@@ -41,40 +41,47 @@ export const Resources = () => {
 
   if (error) {
     return (
-      <div id="resources">
-        <div className="resources container">
-          <p style={{ color: "red" }}>{error}</p>
+      <div className="res-hub-wrapper">
+        <div className="res-hub-container">
+          <p className="res-error-text">{error}</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div id="resources">
-      <div className="resources container">
-        {" "}
-        {/* Reusing 'resources container' class for consistency */}
-        <div className="row">
-          <div className="resources-text">
-            {/* Removed the extra <br/> here; ReactMarkdown will handle spacing */}
+    <div className="res-hub-wrapper">
+      <div className="res-hub-container">
+        {/* Main Content & Markdown Area */}
+        <div className="res-content-layout">
+          <div className="res-markdown-body">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {markdownContent}
             </ReactMarkdown>
-            <br />{" "}
-            {/* Keep this if you want a visual break before the button */}
           </div>
-          <div className="marketing-header">
-            <h3>Want to learn how to take your brand even further?</h3>
-          </div>
-          <div className="btn-container">
-            <a
-              href={BOOKING_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-custom shimmer-effect btn-lg page-scroll"
-            >
-              Book a Call
-            </a>
+
+          {/* Highlight Callout Block mirroring Lead Magnet styling */}
+          <div className="res-glass-callout">
+            <div className="res-glow-effect" />
+            <div className="res-callout-inner">
+              <h3 className="res-callout-title">
+                Want to learn how to take your brand even further?
+              </h3>
+              <p className="res-callout-desc">
+                Let's construct a bespoke acquisition funnel designed
+                specifically for your scaling requirements.
+              </p>
+              <div className="res-btn-container">
+                <a
+                  href={BOOKING_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="res-submit-btn"
+                >
+                  Book a Call
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
