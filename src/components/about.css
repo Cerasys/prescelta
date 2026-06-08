@@ -58,10 +58,10 @@
 }
 
 .about-text h1,
-h2,
-h3,
-h4,
-p {
+.about-text h2,
+.about-text h3,
+.about-text h4,
+.about-text p {
   color: black;
 }
 
