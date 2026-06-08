@@ -57,15 +57,14 @@ export const Hero = () => {
                   </span>{" "}
                 </h1>
                 <h1>Marketing Campaigns</h1> */}
-                <h2>
+                <h1>
                   <span className="highlight">
                     We help brands build systems that scale.
                   </span>
-                </h2>
+                </h1>
                 <br />
                 <p>
-                  We are experts in selling physical products online <br />
-                  with all types of business models and digital marketing <br />
+                  We help brands sell physical products online by building
                   ecosystems that prioritise always on revenue.
                   <br />
                 </p>
