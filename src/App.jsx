@@ -110,6 +110,19 @@ const App = () => {
               />
             }
           ></Route>
+          <Route
+            path="true-classic-blueprint"
+            element={
+              <LeadMagnetHero
+                title="True Classic's $250M Blueprint"
+                description="Download my breakdown of True Classic's funnel for FREE"
+                creatorName="Nathan Lee"
+                imageSrc="/img/true-classic-thumb.png"
+                magnetId="true-classic"
+                buttonText="GET IT FREE"
+              />
+            }
+          ></Route>
           <Route path="success" element={<SuccessPage />} />
           {smmOnboardingSteps.map((step, index) => (
             <Route
