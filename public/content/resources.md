@@ -1,8 +1,22 @@
-# Creator Resources
+# Brand Breakdowns
 
-All of these are free / freemium tools that I have used for my work.  
-I've either built them myself, or use them regularly enough to recommend them to you.
-I am not sponsored by these tools in any way.
+I post breaking strategic teardowns weekly on [YouTube](https://youtube.com/@nathanbelee). Check out the deep-dives below to grab the exact assets, frameworks, and architecture visual maps.
+
+***
+
+### ⚡ Featured Funnels & Blueprints
+
+* **[True Classic's $250M Funnel](/true-classic-blueprint)**
+* **[Drop Day Blueprint](/drop-day-blueprint)**
+* **[Creating Amazing Ecom Offers for your Ads in 2026](/ecom-offers-2026)**
+
+
+***
+***
+
+# Resources for Ambitious Brands
+
+I've built highly specific tools in order to assess how the infrasturcture we've built is operating, both for ourselves and our clients. We use these internally and now they are available to you.
 
 ---
 
