@@ -63,4 +63,4 @@ I knew that I wanted to learn everything about these things that I had known so 
 
 First I learned it just so the company could survive survive, then I started helping therapists grow their own private practices (they were lovely people who didn't know how to grow), and finally I am where I am today, doing work for ecommerce brands.
 
----
+***

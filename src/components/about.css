@@ -1,120 +1,236 @@
-/* About Section */
-#about {
-  padding: 2rem 0;
-}
-
-#about h3 {
-  font-size: 22px;
-  margin: 0 0 20px;
-}
-
-#about h2 {
-  position: relative;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-}
-
-#about h2::after {
-  position: absolute;
-  content: "";
-  background: linear-gradient(
-    to right,
-    var(--orange-light) 0%,
-    var(--yellow) 100%
+/* Premium Architecture Wrapper */
+.abt-hub-wrapper {
+  min-height: 90vh;
+  background-color: #0a0a0b;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 24px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background: radial-gradient(
+    circle at center,
+    #1c1c1f 0%,
+    #0d0d0e 40%,
+    #050505 100%
   );
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  left: 0;
+  background-attachment: fixed;
 }
 
-#about .about-text li {
-  margin-bottom: 6px;
-  margin-left: 6px;
-  list-style: none;
-  padding: 0;
+.abt-hub-container {
+  max-width: 850px; /* Optimal reading line length for text-wrapping prose */
+  width: 100%;
+  margin: 0 auto;
 }
 
-#about .about-text li:before {
-  content: "\f00c";
-  font-family: "FontAwesome";
-  color: #5ca9fb;
-  font-size: 11px;
-  font-weight: 300;
-  padding-right: 8px;
+/* Header Text Layout */
+.abt-header-block {
+  text-align: center;
+  margin-bottom: 56px;
 }
 
-#about img {
-  width: 520px;
-  margin-top: 10px;
-  background: #fff;
-  border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+.abt-main-title {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 
-#about p {
-  line-height: 24px;
-  margin: 30px 0;
+.abt-main-subtitle {
+  font-size: 1.9rem;
+  color: #a1a1aa;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
-.about-text h1,
-.about-text h2,
-.about-text h3,
-.about-text h4,
-.about-text p {
-  color: black;
+/* Single Container Timeline Flow */
+.abt-timeline-stack {
+  margin-bottom: 80px;
 }
 
-/* Base styles for image containers (mobile-first: full width) */
-.image-left,
-.image-right {
+/* Big unified dark glassy manuscript card */
+.abt-glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 48px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.01);
+}
+
+/* Scoped Editorial Markdown Formatting Engine */
+.abt-markdown-wrapper {
+  color: #ececec;
+  font-size: 1.75rem;
+  line-height: 1.8;
+}
+
+/* Clearfix engine to make sure sections don't blend into text floats abnormally */
+.abt-markdown-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.abt-markdown-wrapper p {
+  margin-bottom: 24px;
+  color: #e4e4e7;
+}
+
+.abt-markdown-wrapper h1,
+.abt-markdown-wrapper h2,
+.abt-markdown-wrapper h3,
+.abt-markdown-wrapper h4 {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  clear: both; /* Prevents headings from getting trapped beside narrow floats */
+}
+
+.abt-markdown-wrapper h3 {
+  font-size: 2.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.abt-markdown-wrapper a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Lists and Lists items */
+.abt-markdown-wrapper ul,
+.abt-markdown-wrapper ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.abt-markdown-wrapper li {
+  margin-bottom: 8px;
+  color: #e4e4e7;
+}
+
+/* --- In-Line Inline Media Float System --- */
+.abt-markdown-wrapper .image-left,
+.abt-markdown-wrapper .image-right {
   display: block;
+  width: 100%;
   max-width: 100%;
+  margin: 24px auto;
+  text-align: center;
+}
+
+.abt-markdown-wrapper img {
+  width: 100%;
   height: auto;
-  margin: 0 auto 15px auto;
-  text-align: center; /* Centers the image itself on mobile */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  background: transparent;
 }
 
-/* Style for the caption */
-.image-left figcaption,
-.image-right figcaption {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 5px;
-  padding: 0 5px; /* Little padding if text is wide */
-
-  /* --- Crucial for Centering the Caption Itself --- */
-  text-align: center; /* This centers the text content *inside* the figcaption */
-  display: block; /* Ensure it behaves as a block, taking up available width */
-  width: 100%; /* Ensure it takes full width of its parent for text-align to work */
-  box-sizing: border-box; /* Include padding in width calculation */
+.abt-markdown-wrapper figcaption {
+  font-size: 1.3rem;
+  color: #71717a;
+  margin-top: 8px;
+  text-align: center;
+  font-style: italic;
 }
 
-/* --- Media Query for Desktop Screens --- */
+/* Desktop float mechanics wrapper rules */
 @media (min-width: 768px) {
-  /* Adjust 768px as your breakpoint */
-  .image-left {
+  .abt-markdown-wrapper .image-left {
     float: left;
-    margin-right: 30px;
-    margin-bottom: 15px;
-    max-width: 45%;
-    text-align: left; /* Re-align image left on desktop */
+    margin: 8px 28px 20px 0;
+    max-width: 40%;
   }
 
-  .image-right {
-    /* If you add this later */
+  .abt-markdown-wrapper .image-right {
     float: right;
-    margin-left: 30px;
-    margin-bottom: 15px;
-    max-width: 45%;
-    text-align: right;
+    margin: 8px 0 20px 28px;
+    max-width: 40%;
   }
+}
 
-  /* Clear float for the container wrapping your markdown content.
-     This is applied to .markdown-body if that's the container of the output HTML. */
-  .markdown-body::after {
-    content: "";
-    display: table;
-    clear: both;
+/* Bottom Callout Framework Module */
+.abt-footer-callout {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.01);
+  padding: 48px 32px;
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+.abt-glow-effect {
+  position: absolute;
+  inset: -8px;
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 32px;
+  filter: blur(32px);
+  z-index: -1;
+}
+
+.abt-btn-center-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.abt-submit-btn {
+  display: inline-block;
+  min-width: 280px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  padding: 18px 32px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+  box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.05);
+}
+
+.abt-submit-btn:hover {
+  transform: scale(1.02);
+  background-color: #f4f4f5;
+  color: #000000;
+}
+
+/* Responsive Scaling Handlers */
+@media (max-width: 768px) {
+  .abt-hub-wrapper {
+    padding: 56px 16px;
+  }
+  .abt-main-title {
+    font-size: 3.6rem;
+  }
+  .abt-glass-card {
+    padding: 24px;
+  }
+  .abt-submit-btn {
+    width: 100%;
   }
 }

@@ -1,10 +1,11 @@
 
 
-<div class="image-left">
+### Part I: Desperation
+
+
+<div class="image-right">
   <img src="/img/team/nathan.jpg" alt="Photo of Nathan" />
 </div>
-
-### Part I: Desperation
 
 I'm Nathan, your **marketing growth operator**. I cut my teeth in ecommerce, _mainly for survival._
 
