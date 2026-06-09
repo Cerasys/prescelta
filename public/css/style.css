@@ -6,11 +6,11 @@
   --yellow: #ffc93c;
 }
 
-/* UNIVERSAL BOX-SIZING RESET: This is crucial for consistent layout */
+/* UNIVERSAL BOX-SIZING RESET */
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
 }
 
 body,
@@ -20,38 +20,31 @@ html {
   -webkit-font-smoothing: antialiased !important;
   color: var(--gray);
   font-weight: 400;
-  width: 100%; /* No need for !important here if box-sizing is handled globally */
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; <-- REMOVED from here, now in universal reset */
 }
 
 body {
-  display: flex; /* Make the body a flex container */
-  flex-direction: column; /* Stack children (header, main, footer) vertically */
-  min-height: 100vh; /* Ensure the body is at least 100% of the viewport height */
-  /* If you still see a tiny margin, sometimes browsers add default margins
-     to elements like <body>. You've already set margin: 0; padding: 0; above,
-     but it's worth double-checking if any user agent stylesheet overrides it.
-     A 'reset' or 'normalize.css' often takes care of this. */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #root {
-  /* Assuming #root is your main app container */
   display: flex;
   flex-direction: column;
-  min-height: 100%; /* Make sure #root itself is at least 100% of its parent (body) */
-  width: 100%; /* Explicitly set #root to 100% width if it's not spanning */
+  min-height: 100%;
+  width: 100%;
 }
 
 .page-wrapper {
-  /* Or whatever div wraps your main page content (e.g., FAQ, Resources) */
-  flex: 1; /* This makes the content area grow to fill available space */
-  display: flex; /* Often helpful if content inside also needs layout */
-  flex-direction: column; /* Or row, depending on inner content layout */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding-top: 80px;
-  width: 100%; /* Ensure this also takes up 100% of its parent's width */
+  width: 100%;
 }
 
 h2,
@@ -116,11 +109,12 @@ hr {
   border: 0;
 }
 
-/* Navigation */
-
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 .logo {
   height: 64px;
-  width: 64px; /* Ensure width is explicitly set */
+  width: 64px;
   margin-top: -15px;
   color: var(--orange-dark);
 }
@@ -220,19 +214,9 @@ hr {
   background-color: var(--orange-light);
 }
 
-@media (max-width: 1000px) and (min-width: 768px) {
-  #menu.navbar-default .navbar-nav > li > a {
-    font-size: 13px; /* Smaller font size for links */
-    margin: 9px 10px 0; /* Reduced horizontal margin between items */
-    padding: 8px 1px; /* Slightly less horizontal padding if needed */
-  }
-
-  /* If the logo is also contributing to the width issue, consider scaling it down slightly here */
-  .logo img {
-    max-width: 70px; /* Example: slightly smaller logo */
-  }
-}
-
+/* ==========================================================================
+   Structural Content Sections
+   ========================================================================== */
 .section-title {
   margin-bottom: 70px;
 }
@@ -267,6 +251,7 @@ hr {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .btn-container p,
 .btn-container a {
   font-size: 20px;
@@ -284,7 +269,6 @@ hr {
   );
   padding: 14px 34px;
   letter-spacing: 1px;
-  margin: 0;
   font-size: 15px;
   font-weight: 500;
   border-radius: 25px;
@@ -315,7 +299,6 @@ hr {
   );
   padding: 14px 34px;
   letter-spacing: 1px;
-  margin: 0;
   font-size: 15px;
   font-weight: 500;
   border-radius: 25px;
@@ -338,7 +321,6 @@ hr {
 .btn.active {
   background-image: none;
   outline: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -350,9 +332,11 @@ a:focus,
 .btn:active.focus,
 .btn.active.focus {
   outline: none;
-  outline-offset: none;
 }
 
+/* ==========================================================================
+   Visual Effects Layouts
+   ========================================================================== */
 .shimmer-effect {
   position: relative;
   overflow: hidden;
@@ -364,7 +348,7 @@ a:focus,
   content: "";
   position: absolute;
   top: 0;
-  left: -150%; /* Start far left */
+  left: -150%;
   width: 50%;
   height: 100%;
   background: linear-gradient(
@@ -389,87 +373,65 @@ a:focus,
 
 @keyframes textShimmer {
   0% {
-    background-position: -200% 0; /* Start the gradient far off to the left */
+    background-position: -200% 0;
   }
   100% {
-    background-position: 200% 0; /* Move the gradient far off to the right */
+    background-position: 200% 0;
   }
 }
 
-/* The new class for text-only shimmer effect */
 .text-shimmer {
-  /* Crucial: Make the text color transparent so the background can show through */
   color: var(--orange-dark);
-  -webkit-text-fill-color: transparent; /* For Safari compatibility */
-
-  /* Define the gradient that will be the "shimmer" light */
+  -webkit-text-fill-color: transparent;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0) 0%,
-    /* Start transparent */ rgba(255, 255, 255, 0.9) 50%,
-    /* The white "shine" */ rgba(255, 255, 255, 0) 100% /* End transparent */
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0) 100%
   );
-  /* Make the background wider than the text itself to allow the shimmer to pass through */
-  background-size: 200% auto; /* Adjust this to control the shimmer's width and travel */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-
-  /* Clip the background to the text shape */
-  -webkit-background-clip: text; /* For Safari compatibility */
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
   background-clip: text;
-
-  /* Apply the animation */
-  animation: textShimmer 2.5s infinite linear; /* Adjust duration and timing as needed */
-
-  /* Ensure any base text styles like font-weight are set BEFORE transparency */
-  /* If your .highlight class has font-weight or other text properties, they should be applied here or in .highlight */
-  font-weight: 700; /* Example: ensure text is bold if highlight implies it */
+  animation: textShimmer 2.5s infinite linear;
+  font-weight: 700;
 }
 
-/* Header Section */
+/* ==========================================================================
+   Header Hero Component
+   ========================================================================== */
 .intro {
-  position: relative; /* Essential for video and overlay absolute positioning */
+  position: relative;
   width: 100%;
-  height: 100vh; /* Make it full viewport height */
-  padding: 0; /* Remove padding that might push content off */
-  overflow: hidden; /* Hide any video overflow */
-  /* These flex properties center the content block (intro-text) within the .intro section */
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
+  align-items: center;
+  justify-content: center;
 }
 
-/* Add this new CSS block for your video element */
-/* Assuming the video element in your HTML has the class 'creators-background-video' */
 .intro .creators-background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures video covers the entire container without distortion */
-  z-index: 0; /* Puts the video behind the overlay content */
-  background-color: transparent; /* Good practice */
+  object-fit: cover;
+  z-index: 0;
 }
 
 .intro .overlay {
-  background: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Adjusted transparency for better text visibility */
-  position: absolute; /* Positions the overlay directly over the video */
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensures the overlay is above the video but below the text */
-
-  /* These flex properties center the .intro-text content within the overlay */
+  z-index: 1;
   display: flex;
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
-  flex-direction: column; /* Stacks content vertically if needed */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   pointer-events: none;
 }
 
@@ -483,12 +445,12 @@ a:focus,
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
-  text-align: center; /* Ensure h1 text is centered */
+  text-align: center;
 }
 
 .intro h1 span {
   font-weight: 800;
-  color: #2890ad; /* Changed color to your consistent brand highlight */
+  color: #2890ad;
 }
 
 .intro p {
@@ -496,9 +458,8 @@ a:focus,
   font-size: 22px;
   font-weight: 300;
   line-height: 30px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  text-align: center; /* Ensure paragraph text is centered */
+  margin: 0 auto 60px auto;
+  text-align: center;
 }
 
 .intro h4 {
@@ -507,172 +468,59 @@ a:focus,
   text-transform: uppercase;
   font-weight: 300;
   line-height: 30px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  text-align: center; /* Ensure h4 text is centered */
+  margin: 0 auto 60px auto;
+  text-align: center;
 }
 
 header .intro-text {
-  /* Remove padding-top/bottom as centering is now handled by flexbox on .overlay */
-  /* Add some general padding to avoid content touching edges */
   padding: 20px;
-  text-align: center; /* Ensures text inside is centered */
-  width: 100%; /* Allows it to take up available column width */
+  text-align: center;
+  width: 100%;
   pointer-events: all;
   z-index: 10;
   position: relative;
 }
 
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-  .intro {
-    height: auto; /* Allow height to adjust based on content */
-    min-height: 70vh; /* Ensure minimum height for video effect on smaller screens */
-  }
-  .intro h1 {
-    font-size: 45px; /* Adjust H1 font for mobile */
-  }
-  header .intro-text {
-    padding-top: 50px; /* Re-add padding for mobile as intro height is auto */
-    padding-bottom: 50px;
-  }
-}
-
-/* Scrolling Text Section */
-
-/* Container for the scrolling word */
 .scrolling-words-container {
   display: inline-block;
   overflow: hidden;
-  height: 1.2em; /* Adjust this to match your H1's line-height/font-size */
+  height: 1.2em;
   vertical-align: top;
-  min-width: 150px; /* Optional: Adjust based on your longest word to prevent reflow */
-  text-align: left; /* Ensures the word aligns left within its container */
+  min-width: 150px;
+  text-align: left;
 }
 
-/* Individual word item that animates */
 .scrolling-word-item {
   display: block;
-  animation: fadeInOut 1.5s ease-in-out forwards; /* Adjust duration to fit your interval */
+  animation: fadeInOut 1.5s ease-in-out forwards;
 }
 
-/* Keyframes for the fade-in and fade-out animation */
 @keyframes fadeInOut {
   0% {
     opacity: 0;
-    transform: translateY(100%); /* Start from below */
+    transform: translateY(100%);
   }
   15% {
     opacity: 1;
-    transform: translateY(0%); /* Fade in and move to position */
+    transform: translateY(0%);
   }
   85% {
     opacity: 1;
-    transform: translateY(0%); /* Stay visible */
+    transform: translateY(0%);
   }
   100% {
     opacity: 0;
-    transform: translateY(-100%); /* Fade out and move up */
+    transform: translateY(-100%);
   }
 }
 
-/* Features Section */
-#features {
-  background: #f6f6f6;
-}
-
-#features i.fa {
-  font-size: 38px;
-  margin-bottom: 20px;
-  transition: all 0.5s;
-  color: #fff;
-  width: 100px;
-  height: 100px;
-  padding: 30px 0;
-  border-radius: 50%;
-  background: linear-gradient(
-    to right,
-    var(--orange-light) 0%,
-    var(--yellow) 100%
-  );
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Services Section */
-#services {
-  padding: 100px 0;
-  background: linear-gradient(to right, var(--gray) 0%, var(--gray) 100%);
-  color: #fff;
-}
-
-#services .service-desc {
-  margin: 10px 10px 20px;
-}
-
-#services h2 {
-  color: #fff;
-}
-
-#services .section-title h2::after {
-  position: absolute;
-  content: "";
-  background: rgba(255, 255, 255, 0.3);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  margin-left: -30px;
-  left: 50%;
-}
-
-#services i.fa {
-  font-size: 42px;
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
-  background: linear-gradient(
-    to right,
-    var(--orange-dark) 0%,
-    var(--orange-dark) 100%
-  );
-  border-radius: 50%;
-  color: #fff;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-}
-
-#services h3 {
-  font-weight: 500;
-  padding: 5px 0;
-  color: #fff;
-}
-
-#services p {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-#services .service-desc {
-  margin-bottom: 40px;
-}
-
-/* Portfolio Section */
-#portfolio {
-  padding: 100px 0;
-}
-
-.portfolio-item {
-  margin: 1px -15px 0 -14px;
-  padding: 0;
-}
-
-.portfolio-item .hover-bg {
-  overflow: hidden;
-  position: relative;
-  margin: 0;
-}
+/* ==========================================================================
+   Page Block Sections
+   ========================================================================== */
 
 .highlight {
   color: #ff6f3c !important;
 }
-
 .highlight-dark {
   color: #5ca9fb !important;
 }
@@ -697,7 +545,6 @@ header .intro-text {
 .hover-bg .hover-text > h4 {
   opacity: 0;
   color: #fff;
-  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   transition: all 0.3s;
   font-size: 18px;
@@ -708,8 +555,6 @@ header .intro-text {
 
 .hover-bg:hover .hover-text > h4 {
   opacity: 1;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -717,12 +562,6 @@ header .intro-text {
   opacity: 1;
 }
 
-/* Calendly Section */
-#calendly {
-  padding: 100px 0 60px;
-}
-
-/* Contact Section */
 #contact {
   padding: 0 0 10px;
   background: linear-gradient(
@@ -801,39 +640,21 @@ label {
   line-height: 1.42857143;
   color: #444;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ddd;
   border-radius: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
 #contact .form-control:focus {
   border-color: #999;
   outline: 0;
-  -webkit-box-shadow: transparent;
-  box-shadow: transparent;
+  box-shadow: none;
 }
 
-.form-control::-webkit-input-placeholder {
+.form-control::placeholder {
   color: #777;
 }
-
-.form-control:-moz-placeholder {
-  color: #777;
-}
-
-.form-control::-moz-placeholder {
-  color: #777;
-}
-
-.form-control:-ms-input-placeholder {
-  color: #777;
-}
-
 #contact .contact-item {
   margin: 20px 0;
 }
@@ -847,12 +668,10 @@ label {
 #contact .contact-item i.fa {
   margin-right: 10px;
 }
-
 #contact .social {
   margin-top: 20px;
   text-align: center;
 }
-
 #contact .social ul li {
   display: inline-block;
   margin: 0 20px;
@@ -874,85 +693,74 @@ label {
   background: #fff;
 }
 
-/* Add this new media query at the very end of your styles.css file
-   or within an existing mobile-specific media query if you have one
-   that specifically targets max-width: 400px. */
+/* ==========================================================================
+   Unified Fluid Breakpoints
+   ========================================================================== */
+@media (max-width: 1000px) and (min-width: 768px) {
+  #menu.navbar-default .navbar-nav > li > a {
+    font-size: 13px;
+    margin: 9px 10px 0;
+    padding: 8px 1px;
+  }
+  .logo img {
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    height: auto;
+    min-height: 70vh;
+  }
+  .intro h1 {
+    font-size: 45px;
+  }
+  header .intro-text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 
 @media (max-width: 400px) {
-  /* General body text */
   body {
-    font-size: 16px; /* Adjust base font size for overall text */
+    font-size: 16px;
   }
-
-  /* Headings adjustments */
   h1 {
-    font-size: 40px; /* Significantly reduce h1 for very small screens */
+    font-size: 40px;
   }
-
   h2 {
-    font-size: 28px; /* Reduce h2 size */
-    margin-bottom: 15px; /* Adjust margin if needed */
+    font-size: 28px;
+    margin-bottom: 15px;
   }
-
   h3 {
-    font-size: 18px; /* Reduce h3 size */
+    font-size: 18px;
   }
-
   h4 {
-    font-size: 16px; /* Reduce h4 size, perhaps aligning with body text */
+    font-size: 16px;
   }
-
   p {
-    font-size: 16px; /* Reduce paragraph font size if needed */
-    line-height: 1.5; /* Ensure good line-height for readability */
+    font-size: 16px;
+    line-height: 1.5;
   }
 
-  /* Specific elements you have from your CSS that might be large */
-
-  /* Intro Section (Hero) - specific overrides */
   .intro h1 {
-    font-size: 38px; /* Further reduction for hero h1 on very small phones */
-    word-spacing: 0px; /* Reduce word spacing if it causes overflow */
+    font-size: 38px;
+    word-spacing: 0px;
   }
-
   .intro p,
   .intro h4 {
-    font-size: 18px; /* Smaller text in the hero section */
+    font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px; /* Reduce bottom margin */
+    margin-bottom: 30px;
   }
-
-  /* Navigation links */
   #menu.navbar-default .navbar-nav > li > a {
-    font-size: 14px; /* Smaller nav links if they're shown on very small screens */
-    margin: 5px 10px 0; /* Adjust margins */
+    font-size: 14px;
+    margin: 5px 10px 0;
   }
-
-  /* Buttons - ensure they don't get too small or too large */
   .btn-custom,
   .btn-brand {
-    padding: 10px 20px; /* Smaller padding */
-    font-size: 14px; /* Smaller font size */
-    margin: 0.5rem; /* Reduce button margin */
-  }
-
-  /* Testimonials Section specific adjustments (if relevant on the same page) */
-  .testimonials-heading {
-    font-size: 2.25rem; /* Match existing mobile breakpoint or go smaller */
-  }
-
-  .testimonials-subheading {
-    font-size: 1rem;
-  }
-
-  .testimonial-card {
-    width: 90%; /* Make cards more fluid */
-    max-width: 280px; /* Max width to prevent them from getting too wide if parent allows */
-    min-height: 18rem; /* Adjust min-height for content fitting */
-    padding: 1.5rem; /* Reduce padding */
-  }
-
-  .testimonial-quote {
-    font-size: 1rem; /* Smaller quote font */
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 0.5rem;
   }
 }
