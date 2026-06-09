@@ -1,0 +1,56 @@
+.res-404-container {
+  max-width: 600px;
+}
+
+.res-glass-card.error-panel {
+  padding: 48px 32px;
+  cursor: default;
+}
+
+.res-404-glow-title {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(to right, #ffffff, var(--orange-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.05em;
+}
+
+.res-main-title.error-subtitle {
+  font-size: 2.8rem;
+  margin-top: 16px;
+}
+
+.res-404-divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 24px 0;
+}
+
+.res-main-subtitle.error-paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+  color: #a1a1aa;
+}
+
+.btn-container.error-action {
+  margin: 0;
+}
+
+.btn-custom.error-btn {
+  margin: 0;
+  padding: 14px 40px;
+  box-shadow: 0 0 20px rgba(255, 111, 60, 0.2);
+}
+
+/* Flexbox centering layout modifier specific to full-viewport screens */
+.res-hub-wrapper.fullscreen-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

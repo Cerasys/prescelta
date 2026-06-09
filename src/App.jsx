@@ -14,7 +14,6 @@ import ScrollToAnchor from "./components/util/scroll";
 import { Privacy } from "./components/privacy";
 import { Navigation } from "./components/navigation";
 import { Footer } from "./components/footer";
-import { Contact } from "./components/contact";
 import { Terms } from "./components/terms";
 import { smmOnboardingSteps } from "./components/onboarding/smmOnboardingConfig";
 import OnboardingStep from "./components/onboarding/onboardingPage";
@@ -26,6 +25,7 @@ import { Brands } from "./components/brands";
 import TestimonialsPage from "./components/testimonials/testimonialsPage";
 import LeadMagnetHero from "./components/lead magnet/leadMagnetHero";
 import { SuccessPage } from "./components/lead magnet/successPage";
+import { NotFound } from "./components/404";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -55,7 +55,6 @@ const App = () => {
       <div className="page-wrapper">
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/contact" element={<Contact />}></Route>
           {/* <Route exact path="/creators" element={<Creators />}></Route> */}
           <Route exact path="/brands" element={<Brands />}></Route>
           <Route exact path="/about" element={<About />}></Route>
@@ -144,6 +143,7 @@ const App = () => {
           ))}
           <Route exact path="/privacy" element={<Privacy />}></Route>
           <Route exact path="/terms" element={<Terms />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
       {!isOnboardingPath && <Footer />}
