@@ -35,10 +35,10 @@ const BrandServices = () => {
       ],
     },
     {
-      title: "Email & SMS Marketing",
+      title: "Revenue Architecture",
       highlight: "Maximizing LTV",
       description:
-        "We build retention loops that turn one-time buyers into lifelong fans through high-intent automation.",
+        "We build Email & SMS loops with built in data-collection and personalization that turn one-time buyers into lifelong fans through high-intent automation.",
       items: ["Retention Flows", "Campaign Management", "List Growth"],
     },
   ];
