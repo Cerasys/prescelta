@@ -1,6 +1,91 @@
-.terms {
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    padding-bottom: 50px;
+/* Premium Architecture Dark Backdrop Canvas */
+.trms-hub-wrapper {
+  min-height: 100vh;
+  background-color: #0a0a0b;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 24px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background: radial-gradient(
+    circle at center,
+    #1c1c1f 0%,
+    #0d0d0e 40%,
+    #050505 100%
+  );
+  background-attachment: fixed;
+}
+
+.trms-hub-container {
+  max-width: 800px; /* Kept restricted for ideal text reading mechanics */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Context Formatting */
+.trms-header-block {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.trms-main-title {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.trms-main-subtitle {
+  font-size: 1.8rem;
+  color: #a1a1aa;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Document Body Glass Container */
+.trms-document-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 48px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.01);
+}
+
+/* Scoped Typography Configuration Engine */
+.trms-text-engine {
+  color: #d4d4d8;
+  font-size: 1.65rem;
+  line-height: 1.75;
+}
+
+.trms-text-engine p {
+  margin-bottom: 24px;
+}
+
+.trms-text-engine p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile Responsiveness Adaptations */
+@media (max-width: 768px) {
+  .trms-hub-wrapper {
+    padding: 56px 16px;
+  }
+
+  .trms-main-title {
+    font-size: 3.6rem;
+  }
+
+  .trms-document-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
 }
