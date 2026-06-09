@@ -130,7 +130,7 @@ const TestimonialsPage = () => {
 
   return (
     <div className="res-hub-wrapper">
-      {/* Segment 1: Case Metrics Grid */}
+      {/* SEGMENT 1: RESULTS CARDS (Stays at the Top) */}
       <section className="res-section-block res-border-bottom">
         <div className="res-hub-container">
           <h2 className="res-main-title">Results</h2>
@@ -167,7 +167,7 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
-      {/* Segment 2: Client Endorsements Carousel */}
+      {/* SEGMENT 2: SCROLLING TESTIMONIALS (Sits directly underneath Results) */}
       <section className="res-section-block">
         <div className="res-hub-container-marquee">
           <h2 className="res-main-title">What Our Clients Say</h2>
@@ -175,14 +175,12 @@ const TestimonialsPage = () => {
             Before engineering systems exclusively for high-growth e-commerce
             brands, these exact data architectures and scale strategies were
             stress-tested in highly competitive, trust-reliant sectors like
-            healthcare and mental health. Here is how those core systems
-            performed.
+            healthcare and mental health.
           </p>
 
-          {/* The Infinite Auto-Scrolling Track */}
           <div className="res-marquee-container">
             <div className="res-marquee-track">
-              {/* Track Loop 1 */}
+              {/* Loop 1 */}
               {testimonials.map((testimonial, index) => (
                 <div key={`loop1-${index}`} className="res-review-panel">
                   <div className="res-avatar-cluster">
@@ -205,8 +203,7 @@ const TestimonialsPage = () => {
                   </div>
                 </div>
               ))}
-
-              {/* Track Loop 2 (Exact duplicate for seamless infinite transition) */}
+              {/* Loop 2 */}
               {testimonials.map((testimonial, index) => (
                 <div key={`loop2-${index}`} className="res-review-panel">
                   <div className="res-avatar-cluster">
@@ -234,7 +231,7 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
-      {/* Global Portal Expanded Lightbox Screen Focus Modal */}
+      {/* Lightbox Focus Modal */}
       {selectedImg && (
         <div
           className="res-portal-lightbox"
@@ -249,8 +246,7 @@ const TestimonialsPage = () => {
           <img
             src={selectedImg}
             className="res-portal-focused-img"
-            onClick={(e) => e.stopPropagation()}
-            alt="Enlarged Result Viewport"
+            alt="Viewport"
           />
         </div>
       )}
