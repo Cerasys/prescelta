@@ -1,4 +1,4 @@
-### Part II: Progress?
+### Chapter II: Progress?
 
 <div class="image-right">
   <img src="/img/jailbird.gif" alt="Some of our early Instagram stories" />

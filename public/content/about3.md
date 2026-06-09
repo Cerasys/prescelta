@@ -1,4 +1,4 @@
-### Part III: Ads, Brands, and Emails _(OH MY!)_
+### Chapter III: Ads, Brands, and Emails _(OH MY!)_
 
 <div class="image-right">
   <img src="/img/jailbird4.jpg" alt="Some of our early Instagram stories" />
