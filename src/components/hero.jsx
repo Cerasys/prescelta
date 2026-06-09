@@ -1,89 +1,41 @@
 import React from "react";
-
-// const scrollingWords = [
-//   "low ROAS",
-//   "budget-breaking",
-//   "low ROI",
-//   "low-impact",
-//   "untracked",
-//   "uninspired",
-//   "off-brand",
-//   "spammy",
-//   "boosted posts",
-//   "AI",
-// ];
+import "./hero.css";
 
 export const Hero = () => {
-  // const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  // useEffect(() => {
-  //   // Set an interval to change the word
-  //   const intervalId = setInterval(() => {
-  //     setCurrentWordIndex(
-  //       (prevIndex) => (prevIndex + 1) % scrollingWords.length,
-  //     );
-  //   }, 2500); // Change word every 2 seconds (adjust this duration)
-
-  //   // Clean up the interval when the component unmounts
-  //   return () => clearInterval(intervalId);
-  // }, []); // Empty dependency array means this effect runs once on mount
-
   return (
-    <header id="header">
-      <div className="intro">
+    <header id="hro-section-canvas">
+      <div className="hro-hero-viewport">
+        {/* Deep Background Media Stream */}
         <video
-          autoPlay // Start playing automatically
-          loop // Loop the video
-          muted // Crucial for autoplay to work in most modern browsers
-          playsInline // Important for iOS Safari to play inline rather than fullscreen
-          className="creators-background-video" // CSS class for styling the video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hro-bg-video-asset"
           poster="/img/downtown-lite.jpg"
         >
           <source src="/img/downtown-lite.mp4" type="video/mp4" />
         </video>
-        <div className="overlay">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 intro-text">
-                {/* <h1>No more </h1>
-                <h1>
-                  <span className="scrolling-words-container highlight">
-                    <span
-                      key={scrollingWords[currentWordIndex]} // Key prop triggers re-render and animation
-                      className="scrolling-word-item highlight" // Apply class for animation
-                    >
-                      {scrollingWords[currentWordIndex]}
-                    </span>
-                  </span>{" "}
-                </h1>
-                <h1>Marketing Campaigns</h1> */}
-                <h1>
-                  <span className="highlight">
-                    We help brands build systems
-                  </span>{" "}
-                  that scale.
-                </h1>
-                <br />
-                <p>
-                  We help brands sell physical products online by building
-                  ecosystems that prioritise always on revenue.
-                  <br />
-                </p>
-                <a
-                  href="/brands"
-                  rel="noopener noreferrer"
-                  className="btn btn-brand btn-lg page-scroll shimmer-effect"
-                >
-                  <b>Show me How!</b>
-                </a>
-                {/* <a
-                  href="/creators"
-                  rel="noopener noreferrer"
-                  className="btn btn-custom btn-lg page-scroll shimmer-effect"
-                >
-                  <b>I'm a Creator, Show me How!</b>
-                </a>{" "} */}
-              </div>
+
+        {/* High-Fidelity Deep Dark Glass Tint Overlay */}
+        <div className="hro-glass-matrix-overlay">
+          <div className="hro-hero-text-frame">
+            <h1 className="hro-display-header">
+              We help brands build
+              <br />
+              <span className="hro-gradient-text">growth systems</span> that
+              scale.
+            </h1>
+
+            <p className="hro-display-paragraph">
+              We engineer ecosystems and revenue archietecture that prioritize
+              always-on cashflow and maximize customer lifetime value.
+            </p>
+
+            <div className="hro-btn-center-wrap">
+              <a href="/brands" className="hro-submit-btn">
+                Show me How!
+              </a>
             </div>
           </div>
         </div>

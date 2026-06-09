@@ -1,0 +1,155 @@
+/* Isolated Root Section Setup */
+#hro-section-canvas {
+  width: 100%;
+  background-color: #0a0a0b;
+  overflow: hidden;
+}
+
+/* Full-View Cinematic Viewport Matrix */
+.hro-hero-viewport {
+  position: relative;
+  width: 100%;
+  height: 85vh; /* Expansive layout for top-of-funnel impact */
+  min-height: 550px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Absolute Positioned Video Layer */
+.hro-bg-video-asset {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: transparent;
+  z-index: 2;
+}
+
+/* Dark Minimalist Glass Filter Lens Layer */
+.hro-glass-matrix-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 11, 0.5) 0%,
+    rgba(10, 10, 11, 0.75) 70%,
+    #0a0a0b 100%
+  );
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Max-Width Content Text Tracker Column */
+.hro-hero-text-frame {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Premium Main Headline Scale */
+.hro-display-header {
+  font-size: 5.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* Accent Highlight Typography Style */
+.hro-gradient-text {
+  background: linear-gradient(
+    to right,
+    var(--orange-light) 30%,
+    var(--orange-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* Sub-Headline Paragraph Text Tracking */
+.hro-display-paragraph {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  max-width: 620px;
+  margin: 0 auto 40px auto;
+}
+
+/* Button Layout Position Centering Wrapper */
+.hro-btn-center-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* Standardized Premium Conversion Button Architecture */
+.hro-submit-btn {
+  display: inline-block;
+  min-width: 260px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  padding: 18px 36px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition:
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s;
+  box-shadow: 0 10px 30px -5px rgba(255, 255, 255, 0.1);
+}
+
+.hro-submit-btn:hover {
+  transform: scale(1.02);
+  background-color: #f4f4f5;
+  color: #000000;
+}
+
+/* Responsive Structural Media Breaks */
+@media (max-width: 968px) {
+  .hro-hero-viewport {
+    height: 75vh;
+  }
+
+  .hro-display-header {
+    font-size: 3.8rem;
+    letter-spacing: -0.03em;
+  }
+
+  .hro-display-paragraph {
+    font-size: 1.75rem;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hro-hero-viewport {
+    height: 80vh;
+    min-height: 460px;
+  }
+
+  .hro-display-header {
+    font-size: 3.2rem;
+    line-height: 1.2;
+  }
+
+  .hro-submit-btn {
+    width: 100%;
+  }
+}
