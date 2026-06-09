@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./brands.css"; // Ensure your CSS file is imported
+import "./brands.css";
 import BrandServices from "./brandServices";
 
 const scrollingWords = [
@@ -20,49 +20,50 @@ export const Brands = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
-    // Set an interval to change the word
     const intervalId = setInterval(() => {
       setCurrentWordIndex(
         (prevIndex) => (prevIndex + 1) % scrollingWords.length,
       );
-    }, 2500); // Change word every 2 seconds (adjust this duration)
+    }, 2500);
 
-    // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []);
 
   return (
-    <div className="brand">
-      <div className="brand-video-container">
+    <div className="brnd-viewport-root">
+      {/* Background Video Glass Module Container */}
+      <div className="brnd-hero-viewport">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="brand-background-video"
+          className="brnd-bg-video-asset"
           poster="/img/whiteboard-lite.jpg"
         >
           <source src="/img/whiteboard.mp4" type="video/mp4" />
         </video>
-        <div className="brand-video-overlay">
-          <div className="row">
-            <div className="col-md-12 intro-text">
-              <h1>Say goodbye to</h1>
-              <h1>
-                <span className="scrolling-words-container highlight">
-                  <span
-                    key={scrollingWords[currentWordIndex]} // Key prop triggers re-render and animation
-                    className="scrolling-word-item highlight" // Apply class for animation
-                  >
-                    {scrollingWords[currentWordIndex]}
-                  </span>
-                </span>{" "}
-              </h1>
-              <h1>marketing campaigns</h1>
-            </div>
+
+        {/* Blended Glassmorphism Dark Layer Overlay */}
+        <div className="brnd-glass-matrix-overlay">
+          <div className="brnd-hero-text-frame">
+            <h1 className="brnd-display-header">
+              Say goodbye to
+              <span className="brnd-ticker-window">
+                <span
+                  key={scrollingWords[currentWordIndex]}
+                  className="brnd-animated-word-item"
+                >
+                  {scrollingWords[currentWordIndex]}
+                </span>
+              </span>
+              marketing campaigns
+            </h1>
           </div>
         </div>
       </div>
+
+      {/* Render the upgraded layout component directly below */}
       <BrandServices />
     </div>
   );

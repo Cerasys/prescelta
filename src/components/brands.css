@@ -1,89 +1,149 @@
-/* This is the main container that will define the area the video covers */
-.brand-video-container {
+/* Core Layout Elements */
+.brnd-viewport-root {
+  background-color: #0a0a0b;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Frame Component Settings */
+.brnd-hero-viewport {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 65vh;
+  min-height: 480px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* We establish a self-contained layout stacking context here */
+  z-index: 1;
+  background-color: #0a0a0b;
 }
 
-/* Style for the actual video element */
-.brand-background-video {
+/* Background Asset Control */
+.brnd-bg-video-asset {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   object-fit: cover;
-  /* It's good practice to ensure the video itself doesn't have a default background */
   background-color: transparent;
+  /* Pulled up to 2 so it sits cleanly on top of the container's background color */
+  z-index: 2;
 }
 
-/* Style for the overlay content (which will sit on top of the video) */
-.brand-video-overlay {
-  position: absolute; /* Position relative to .brand-video-container */
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
-  z-index: 0; /* Make sure it's above the video */
-
-  /* Optional: Styles to center content within the overlay */
+/* Advanced Blended Glassmorphic Film Overlay */
+.brnd-glass-matrix-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 11, 0.4) 0%,
+    rgba(10, 10, 11, 0.7) 60%,
+    #0a0a0b 100%
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* Placed at 3 so it overlays directly on top of the video layer */
+  z-index: 3;
   display: flex;
-  width: 100%;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white; /* Example text color */
-  text-align: center;
-  padding: 20px;
+  padding: 24px;
   box-sizing: border-box;
 }
 
-.brand-video-overlay h1 {
-  font-family: "Anton", sans-serif;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  color: #fff;
-  font-size: 80px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.brand-video-overlay p {
-  color: #fff;
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 30px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-}
-
-.brand-video-overlay h4 {
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 300;
-  line-height: 30px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-}
-
-.brand-video-overlay .intro-text {
-  padding-top: 170px;
-  padding-bottom: 150px;
+/* Layout Frame for Typography Tracking */
+.brnd-hero-text-frame {
+  max-width: 1000px;
+  width: 100%;
   text-align: center;
 }
 
-.brand-highlight {
-  color: #2890ad;
+/* Premium Display Typographic Scale */
+.brnd-display-header {
+  font-family:
+    "Anton",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: #ffffff;
+  font-size: 6.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-  .brand-video-overlay h1 {
-    font-size: 65px;
+/* Word Ticker Window Matrix */
+.brnd-ticker-window {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 8.5rem;
+  overflow: hidden;
+  padding: 0 16px;
+  margin: 4px 0;
+}
+
+/* Animated Active Word Styling */
+.brnd-animated-word-item {
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--orange-light) 30%,
+    var(--orange-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  animation: brndWordSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  white-space: nowrap;
+}
+
+/* Motion Dynamics Rule Mapping */
+@keyframes brndWordSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Media Query Adaptations for Tablet & Mobile Layouts */
+@media (max-width: 968px) {
+  .brnd-hero-viewport {
+    height: 55vh;
+    min-height: 400px;
+  }
+
+  .brnd-display-header {
+    font-size: 4.2rem;
+  }
+
+  .brnd-ticker-window {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brnd-display-header {
+    font-size: 3.4rem;
+    letter-spacing: -0.01em;
+  }
+
+  .brnd-ticker-window {
+    height: 5rem;
   }
 }

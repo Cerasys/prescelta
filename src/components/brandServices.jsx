@@ -44,51 +44,69 @@ const BrandServices = () => {
   ];
 
   return (
-    <div className="marketing-container">
-      <div className="marketing-content">
-        <div className="marketing-header">
-          <h3>
-            Say hello to your new growth operators,
-            <br />
-            who <span className="highlight">scale brands</span> in the{" "}
-            <span className="highlight">ecommerce</span> space
-          </h3>
-          <br />
+    <div className="srv-hub-wrapper">
+      <div className="srv-hub-container">
+        <div className="srv-header-block">
+          <h2 className="srv-main-subtitle">
+            Say hello to your new growth operators, who{" "}
+            <span className="srv-gradient-text">scale brands</span> in the{" "}
+            <span className="srv-gradient-text">ecommerce</span> space
+          </h2>
         </div>
 
-        <div className="services-grid">
+        {/* High-Fidelity Glassmorphism Grid */}
+        <div className="srv-cards-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <span className="service-accent">{service.highlight}</span>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
-              <ul className="service-list">
+            <div key={index} className="srv-glass-card">
+              <span className="srv-card-accent">{service.highlight}</span>
+              <h3 className="srv-card-title">{service.title}</h3>
+              <p className="srv-card-description">{service.description}</p>
+              <ul className="srv-pills-list">
                 {service.items.map((item, i) => (
-                  <li key={i}>• {item}</li>
+                  <li key={i} className="srv-pill-item">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
 
-        <div className="marketing-header">
-          <h1>
-            we are <span className="highlight">hoshino media</span>
+        {/* Agency Identity & Bottom Conversion Frame */}
+        <div className="srv-agency-outro">
+          <h1 className="srv-agency-title">
+            we are <span className="srv-brand-highlight">hoshino media</span>
           </h1>
-          <h4>Your bridge to authentic audiences</h4>
+          <h4 className="srv-agency-subtitle">
+            Your bridge to authentic audiences
+          </h4>
         </div>
-        <div className="marketing-header">
-          <h3>Ready for the smoothest marketing campaign ever?</h3>
-        </div>
-        <div className="marketing-footer">
-          <a
-            href={BOOKING_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-brand btn-lg page-scroll shimmer-effect"
-          >
-            Book a call!
-          </a>
+
+        <div className="srv-footer-callout">
+          <div className="srv-glow-effect" />
+          <div className="srv-callout-inner">
+            <h3
+              style={{
+                fontSize: "2.6rem",
+                fontWeight: 800,
+                color: "#ffffff",
+                marginBottom: "24px",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Ready for the smoothest marketing campaign ever?
+            </h3>
+            <div className="srv-btn-center-wrap">
+              <a
+                href={BOOKING_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="srv-submit-btn"
+              >
+                Book a call!
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
