@@ -2,7 +2,6 @@
 
 I post breaking strategic teardowns weekly on [YouTube](https://youtube.com/@nathanbelee). Check out the deep-dives below to grab the exact assets, frameworks, and architecture visual maps.
 
-***
 
 ### ⚡ Featured Funnels & Blueprints
 
@@ -12,13 +11,11 @@ I post breaking strategic teardowns weekly on [YouTube](https://youtube.com/@nat
 
 
 ***
-***
 
 # Resources for Ambitious Brands
 
 I've built highly specific tools in order to assess how the infrasturcture we've built is operating, both for ourselves and our clients. We use these internally and now they are available to you.
 
----
 
 ### Email Deliverability Calculator
 
