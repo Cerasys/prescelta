@@ -55,7 +55,14 @@ export const Resources = () => {
         {/* Main Content & Markdown Area */}
         <div className="res-content-layout">
           <div className="res-markdown-body">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ node, ...props }) => (
+                  <a {...props} target="_blank" rel="noopener noreferrer" />
+                ),
+              }}
+            >
               {markdownContent}
             </ReactMarkdown>
           </div>
