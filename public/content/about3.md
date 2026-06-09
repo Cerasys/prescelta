@@ -5,26 +5,22 @@
       <figcaption>Our work with influencers saved our brand...</figcaption>
 </div>
 
-Here's what I've learned about ecommerce in my 5 years of doing marketing:  
-**Most founders didn't start out expecting to run a business.**  
+When you build a loyal audience, you’ve already won the hardest battle in business: **Attention.**
 
-They set out to create something awesome, cool, fashionable, trendy, and _suddenly they got stuck learning all these random terms like ROI, ROAS, LTV, CTR, ER, and more._
+But attention without infrastructure is just a hobby.
 
-* Most founders don't realize that every click loses them 33% of their customers.  
-* Most founders don't know that email should be 30% of their revenue (at the very least!).  
-* Most founders don't know how ads work, and they don't know better than clicking that stupid **BOOST POST** button.
+What I’ve learned over the last 5 years scaling e-commerce brands is that most creators get stuck in a overwhelming trap. You set out to make incredible content, build communities, and design beautiful products. 
 
-**And the brands that are able to effectively leverage every platform they have available will scale.**
+Suddenly, you find yourself at 2 AM editing Shopify code, fighting with shipping logistics, and trying to figure out why your email flows aren't converting views into sales. You set out to create something awesome, cool, fashionable, trendy, and _suddenly they got stuck learning all these random terms like ROI, ROAS, LTV, CTR, ER, and more._
 
-Nowadays, I work to transform the digital marketing efforts of the brands I work with.  
+**And every broken link, slow page load, or un-optimized email flow is leaking the trust you worked years to build.**
 
-We do everything from:
-- Emails
-- Paid Ads (Meta, Google)
-- SMS Marketing
-- Influencers
-- Stores
-- CRO
-- And more
+We aren't an agency that hands you a slide deck and walks away. We are your backend operational engine. We take over the technical and operational architecture so you can stay in your zone of genius: Creating.
 
-I want to help you nail down every piece of your marketing, so you can focus on creating something amazing, something useful, and something beautiful that this world needs.
+We build an entire ecosystem for your brand:
+- Paid Amplification (Scaling your best content to new buyers)
+- Network Multipliers (Cross-pollinating peer creator audiences)
+- Storefront Architecture (Launch-ready, zero-friction web stores)
+- Revenue Architecture (Automated and personalized Email & SMS retention loops)
+
+I want to help you nail down every piece of your marketing, so you can focus on creating something amazing, something useful, and something beautiful that this world needs. Let's stop running a channel. Let's start building an enterprise.

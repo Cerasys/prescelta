@@ -21,17 +21,18 @@ export const Hero = () => {
         <div className="hro-glass-matrix-overlay">
           <div className="hro-hero-text-frame">
             <h1 className="hro-display-header">
-              We help brands build
+              We build
+              <span className="hro-gradient-text"> revenue architecture</span>
               <br />
-              <span className="hro-gradient-text">growth systems</span> that
-              scale.
+              for creators building
+              <span className="hro-gradient-text"> real brands.</span>
             </h1>
-
             <p className="hro-display-paragraph">
-              We engineer ecosystems and revenue archietecture that prioritize
-              always-on cashflow and maximize customer lifetime value.
+              You have the attention, and we'll build the engine. Hoshino Media
+              partners with creators to turn views into high-margin physical
+              products and take the operational chaos and logistics completely
+              off your plate.
             </p>
-
             <div className="hro-btn-center-wrap">
               <a href="/brands" className="hro-submit-btn">
                 Show me How!

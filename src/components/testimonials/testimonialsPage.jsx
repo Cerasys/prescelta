@@ -6,17 +6,23 @@ import { BOOKING_LINK } from "../../data/constants";
 const testimonials = [
   {
     quote:
-      "Nathan is extremely knowledgable and has helped us identify exactly what we needed to improve.",
-    name: "Jennifer A.",
-    title: "Founder, Jimani Collections",
-    image: "/img/results/jimani.jpg",
-  },
-  {
-    quote:
       "There is no one else I really get to have such in-depth conversations with about business. It's completely different when you work side-by-side with someone and you're building something together. I deeply appreciate your direction, your opinions, and how you perceive what we are building. Having your expertise is very valuable.",
     name: "Nick R.",
     title: "Founder, Obsidian Forged",
     image: "/img/results/obsidian.png",
+  },
+  {
+    quote:
+      "I am so grateful to have found Nathan who helped me realize there are ways to gain freedom and they are so readily accessible. I am now less burned out and more passionate about my work than I've ever been before. This is the best thing that has ever happened to me.",
+    name: "Jessica W",
+    image: "/img/testimonials/jessica.jpg",
+  },
+  {
+    quote:
+      "Nathan is extremely knowledgable and has helped us identify exactly what we needed to improve.",
+    name: "Jennifer A.",
+    title: "Founder, Jimani Collections",
+    image: "/img/results/jimani.jpg",
   },
   {
     quote:
@@ -32,12 +38,6 @@ const testimonials = [
   },
   {
     quote:
-      "I am so grateful to have found Nathan who helped me realize there are ways to gain freedom and they are so readily accessible. I am now less burned out and more passionate about my work than I've ever been before. This is the best thing that has ever happened to me.",
-    name: "Jessica W",
-    image: "/img/testimonials/jessica.jpg",
-  },
-  {
-    quote:
       "Nathan's guidance was transformative for my business. His insights into digital marketing are unparalleled, and he genuinely cares about his clients' success. Highly recommend!",
     name: "Isaiah M.",
     image: "/img/testimonials/isaiah.jpg",
@@ -48,13 +48,13 @@ const caseStudies = [
   {
     id: 1,
     title:
-      "450% Revenue Growth: Scaling a Luxury Jewelry Brand Custom Ads Architecture",
+      "450% Revenue Scale: Deploying High-Margin Offers & Ad Architecture for Premium E-Commerce",
     image: "/img/results/results1.png",
   },
   {
     id: 2,
     title:
-      "Lead-Gen Architecture: Cutting Acquisition Cost & Building Automation Systems",
+      "Lead-Gen Architecture: Reducing Customer Acquisition Costs & Automating Retention Infrastructures",
     image: "/img/results/lead results.png",
   },
 ];
@@ -136,8 +136,9 @@ const TestimonialsPage = () => {
         <div className="res-hub-container">
           <h2 className="res-main-title">Results</h2>
           <h4 className="res-main-subtitle">
-            I've had the experience of consulting and running ad campaigns for
-            companies in ecommerce, healthcare, security, and more.
+            Before deploying revenue architecture for creators, our
+            infrastructure were stress-tested in the most data-strict,
+            high-security medical and ecommerce environments in the world.
           </h4>
 
           <div className="res-cards-grid">
@@ -263,7 +264,7 @@ const TestimonialsPage = () => {
               letterSpacing: "-0.02em",
             }}
           >
-            Ready for the smoothest marketing campaign ever?
+            Ready to turn your views into a predictable enterprise?
           </h3>
           <div className="srv-btn-center-wrap">
             <a
@@ -272,7 +273,7 @@ const TestimonialsPage = () => {
               rel="noopener noreferrer"
               className="srv-submit-btn"
             >
-              Book a call!
+              Book an operational audit!
             </a>
           </div>
         </div>

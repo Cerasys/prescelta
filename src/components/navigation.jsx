@@ -57,12 +57,12 @@ export const Navigation = (props) => {
             </li>
             <li>
               <Link to="/brands" onClick={handleLinkClick}>
-                Services
+                The Operator Framework
               </Link>
             </li>
             <li>
               <Link to="/testimonials" onClick={handleLinkClick}>
-                Results
+                Case Studies
               </Link>
             </li>
             <li>

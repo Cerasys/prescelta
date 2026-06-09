@@ -5,29 +5,33 @@ import { BOOKING_LINK } from "../data/constants";
 const BrandServices = () => {
   const services = [
     {
-      title: "Paid Media",
-      highlight: "Scaling things up",
+      title: "Paid Amplicifcation",
+      highlight: "Scaling beyond organic algorithms",
       description:
-        "We overhaul your paid media approach, writing and testing magnetic creatives for Meta and Google Platforms.",
+        "We turn your highest-performing content into an asset. We engineer, test, and scale paid acquisition systems across Meta and Google without wearing out your core audience.",
       items: [
-        "Creative Testing",
-        "Media Buying",
-        "Ad Copywriting",
-        "Full Campaign",
+        "Asset Scaling",
+        "Algorithmic Leverage",
+        "AI Optimization",
+        "Omnichannel Growth",
       ],
     },
     {
-      title: "Influencer & Storytelling",
-      highlight: "Finding your perfect match",
+      title: "Network Multipliers",
+      highlight: "Cross-pollinating communities",
       description:
-        "No more boring content. We source creators who align with your values and handle all negotiations and reviews.",
-      items: ["Creator Sourcing", "Contract Negotiation", "Content Review"],
+        "We position your brand inside the ecosystems of peer creators. We manage the relationships, whitelisting, and community-first integrations that drive compounding organic growth.",
+      items: [
+        "Peer Creator Whitelisting",
+        "Ecosystem Integration",
+        "Co-Branded Collabs",
+      ],
     },
     {
-      title: "Webstore & CRO",
-      highlight: "Stopping the leaks",
+      title: "Storefront Architecture",
+      highlight: "High-velocity conversion",
       description:
-        "A fast site is a high-converting site. We audit your infrastructure to ensure traffic doesn't go to waste.",
+        "We build custom digital storefronts engineered to survive viral traffic spikes.",
       items: [
         "Infrastructure Audits",
         "UX/UI Optimization",
@@ -36,10 +40,14 @@ const BrandServices = () => {
     },
     {
       title: "Revenue Architecture",
-      highlight: "Maximizing LTV",
+      highlight: "Always-on monetization",
       description:
-        "We build Email & SMS loops with built in data-collection and personalization that turn one-time buyers into lifelong fans through high-intent automation.",
-      items: ["Retention Flows", "Campaign Management", "List Growth"],
+        "We build Email & SMS ecosystems built for retention. Tracking high-intent customers allows for personalization that turn casual viewers into lifetime buyers while you sleep.",
+      items: [
+        "Retention Infrastructure",
+        "Data-Driven Personalization",
+        "Predictable Cashflow Loops",
+      ],
     },
   ];
 
@@ -48,9 +56,10 @@ const BrandServices = () => {
       <div className="srv-hub-container">
         <div className="srv-header-block">
           <h2 className="srv-main-subtitle">
-            Say hello to your new growth operators, who{" "}
-            <span className="srv-gradient-text">scale brands</span> in the{" "}
-            <span className="srv-gradient-text">ecommerce</span> space
+            Say hello to your new growth operators. We help{" "}
+            <span className="srv-gradient-text">world-class creators</span>
+            <br />
+            build <span className="srv-gradient-text">high-yield brands.</span>
           </h2>
         </div>
 
@@ -78,7 +87,7 @@ const BrandServices = () => {
             we are <span className="srv-brand-highlight">hoshino media</span>
           </h1>
           <h4 className="srv-agency-subtitle">
-            Your bridge to authentic audiences
+            The backend operational engine for your unfair advantage.
           </h4>
         </div>
 
@@ -94,7 +103,7 @@ const BrandServices = () => {
                 letterSpacing: "-0.02em",
               }}
             >
-              Ready for the smoothest marketing campaign ever?
+              Ready to stop running a channel and start building an enterprise?
             </h3>
             <div className="srv-btn-center-wrap">
               <a
@@ -103,7 +112,7 @@ const BrandServices = () => {
                 rel="noopener noreferrer"
                 className="srv-submit-btn"
               >
-                Book a call!
+                Apply for an operational audit!
               </a>
             </div>
           </div>

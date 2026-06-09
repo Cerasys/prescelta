@@ -3,17 +3,15 @@ import "./brands.css";
 import BrandServices from "./brandServices";
 
 const scrollingWords = [
-  "ineffective",
-  "unpredictable",
-  "time-wasting",
-  "budget-draining",
-  "scattershot",
-  "low-return",
-  "off-brand",
-  "untracked",
-  "low-ROI",
-  "'ads-that-don't-convert'",
-  "fatigued creatives",
+  "creative burnout",
+  "operational chaos",
+  "ugly storefronts",
+  "dead email lists",
+  "overwhelm",
+  "unpredictable cashflow",
+  "messy fulfillment",
+  "audience fatigue",
+  "amateur tech setups",
 ];
 
 export const Brands = () => {
@@ -57,7 +55,6 @@ export const Brands = () => {
                   {scrollingWords[currentWordIndex]}
                 </span>
               </span>
-              marketing campaigns
             </h1>
           </div>
         </div>

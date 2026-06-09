@@ -61,6 +61,11 @@ We raised **[$9,628 from the Kickstarter](https://www.kickstarter.com/projects/j
 
 I knew that I wanted to learn everything about these things that I had known so little about, and since then I've gone all in on marketing, influencers, emails, and ads.
 
-First I learned it just so the company could survive survive, then I started helping therapists grow their own private practices (they were lovely people who didn't know how to grow), and finally I am where I am today, doing work for ecommerce brands.
+First, I learned marketing just so our company could survive. But along the way, I realized something bigger.
+
+The secret wasn't the ads. The secret was the ecosystem. 
+
+When we combined authentic creator storytelling with product launches and revenue architecture, revenue became predictable. And I realized that thousands of brilliant creators were out there making incredible things, but drowning in the exact same operational chaos I had just survived.
+
 
 ***

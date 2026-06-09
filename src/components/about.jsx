@@ -34,8 +34,7 @@ export const About = () => {
                 letterSpacing: "-0.03em",
               }}
             >
-              So if you're ready to leverage Growth Marketing to help scale your
-              Brand...
+              Ready to build your brand's operational engine?
             </h3>
             <div className="abt-btn-center-wrap">
               <a
@@ -44,7 +43,7 @@ export const About = () => {
                 rel="noopener noreferrer"
                 className="abt-submit-btn"
               >
-                Book a call!
+                Book an operational audit!
               </a>
             </div>
           </div>
