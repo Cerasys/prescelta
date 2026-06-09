@@ -1,50 +1,44 @@
 // TestimonialsPage.jsx
 import React, { useRef, useEffect, useState } from "react";
-import "./testimonials.css"; // Ensure your CSS file is imported
+import "./testimonials.css";
 
-// Define the testimonials data outside the component if it's static
-// or inside if it truly needs to be within the component's scope (less common for static data)
 const testimonials = [
   {
     quote:
       "Nathan is extremely knowledgable and has helped us identify exactly what we needed to improve.",
     name: "Jennifer A.",
-    title: "Jewelry",
-    image: "/img/testimonials/anon.png",
+    title: "Founder, Jimani Collections",
+    image: "/img/results/jimani.jpg",
   },
   {
     quote:
-      "I was struggling with my online presence, but Nathan provided a clear roadmap and the tools I needed to thrive. My engagement has skyrocketed!",
-    name: "Cindy A.",
-    title: "Beauty",
-    image: "/img/testimonials/anon.png",
+      "There is no one else I really get to have such in-depth conversations with about business. It's completely different when you work side-by-side with someone and you're building something together. I deeply appreciate your direction, your opinions, and how you perceive what we are building. Having your expertise is very valuable.",
+    name: "Nick R.",
+    title: "Founder, Obsidian Forged",
+    image: "/img/results/obsidian.png",
   },
   {
     quote:
       "The value add is really good. There are programs out there that kind of do false advertising— like once you get into it you realize it's not what you paid for. And it becomes this program you paid for but you don't get the results. But I'm already seeing results and that comes from Nathan's expertise and how well he supports my work.",
     name: "Nitish M",
-    title: "Mental Health",
     image: "/img/testimonials/nitish.jpg",
   },
   {
     quote:
       "Nathan, I wish I had met you 20 years ago! Consulting with Nathan helped clarify the most strategic options for me! He was very patient, intentional and knowledgeable. He took the time to listen about my business, and he put in the work to generate solutions. I heartily recommend his help to others!",
-    name: "Pretti Shah", // Replace with actual name
-    title: "Mental Health", // Replace with actual title
+    name: "Pretti Shah",
     image: "/img/testimonials/pretti.jpg",
   },
   {
     quote:
       "I am so grateful to have found Nathan who helped me realize there are ways to gain freedom and they are so readily accessible. I am now less burned out and more passionate about my work than I've ever been before. This is the best thing that has ever happened to me.",
-    name: "Jessica W", // Replace with actual name
-    title: "Mental Health", // Replace with actual title
+    name: "Jessica W",
     image: "/img/testimonials/jessica.jpg",
   },
   {
     quote:
       "Nathan's guidance was transformative for my business. His insights into digital marketing are unparalleled, and he genuinely cares about his clients' success. Highly recommend!",
     name: "Isaiah M.",
-    title: "Mental Health",
     image: "/img/testimonials/isaiah.jpg",
   },
 ];
@@ -52,38 +46,36 @@ const testimonials = [
 const caseStudies = [
   {
     id: 1,
-    title: "450% Revenue Growth for a Jewelry Brand",
+    title:
+      "450% Revenue Growth: Scaling a Luxury Jewelry Brand Custom Ads Architecture",
     image: "/img/results/results1.png",
-    // client: "Jewelry Brand",
   },
   {
-    id: 1,
-    title: "Shema Christian Counseling",
+    id: 2,
+    title:
+      "Lead-Gen Architecture: Cutting Acquisition Cost & Building Automation Systems",
     image: "/img/results/lead results.png",
-    /// client: "Shema Christian Counseling",
   },
 ];
 
 const TestimonialsPage = () => {
-  const scrollRef = useRef(null); // Ref to the scrollable div
-  const scrollIntervalRef = useRef(null); // Ref to hold the interval ID
-  const [isMobile, setIsMobile] = useState(false); // State to track mobile status
+  const scrollRef = useRef(null);
+  const scrollIntervalRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  // Function to check if it's a mobile device based on your CSS breakpoint
   const checkIsMobile = () => {
     return window.matchMedia("(max-width: 1023px)").matches;
   };
 
   useEffect(() => {
-    setIsMobile(checkIsMobile()); // Set initial mobile status
+    setIsMobile(checkIsMobile());
 
     const handleResize = () => {
       setIsMobile(checkIsMobile());
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -92,15 +84,14 @@ const TestimonialsPage = () => {
   useEffect(() => {
     const scrollContainer = scrollRef.current;
 
-    // Only enable auto-scrolling on mobile
     if (!scrollContainer || !isMobile) {
-      clearInterval(scrollIntervalRef.current); // Clear any existing interval
+      clearInterval(scrollIntervalRef.current);
       return;
     }
 
-    const scrollStep = 1; // Pixels to scroll per interval
-    const scrollSpeed = 50; // Milliseconds per step (lower = faster)
-    const pauseAtEndDuration = 2000; // Milliseconds to pause at the end before looping
+    const scrollStep = 1;
+    const scrollSpeed = 50;
+    const pauseAtEndDuration = 2000;
 
     const startScrolling = () => {
       scrollIntervalRef.current = setInterval(() => {
@@ -108,11 +99,10 @@ const TestimonialsPage = () => {
           scrollContainer.scrollLeft + scrollContainer.clientWidth >=
           scrollContainer.scrollWidth
         ) {
-          // Reached the end, reset to start after a pause
           clearInterval(scrollIntervalRef.current);
           setTimeout(() => {
-            scrollContainer.scrollLeft = 0; // Jump to the beginning
-            startScrolling(); // Restart scrolling
+            scrollContainer.scrollLeft = 0;
+            startScrolling();
           }, pauseAtEndDuration);
         } else {
           scrollContainer.scrollLeft += scrollStep;
@@ -120,7 +110,6 @@ const TestimonialsPage = () => {
       }, scrollSpeed);
     };
 
-    // Pause scrolling when user interacts (hover/touch)
     const handleMouseEnter = () => clearInterval(scrollIntervalRef.current);
     const handleMouseLeave = () => startScrolling();
     const handleTouchStart = () => clearInterval(scrollIntervalRef.current);
@@ -129,91 +118,143 @@ const TestimonialsPage = () => {
     scrollContainer.addEventListener("mouseleave", handleMouseLeave);
     scrollContainer.addEventListener("touchstart", handleTouchStart);
 
-    startScrolling(); // Initial start
+    startScrolling();
 
-    // Cleanup: Clear the interval when the component unmounts or isMobile changes to false
     return () => {
       clearInterval(scrollIntervalRef.current);
       scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
       scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
       scrollContainer.removeEventListener("touchstart", handleTouchStart);
     };
-  }, [isMobile]); // Re-run effect if mobile status or number of testimonials changes
+  }, [isMobile]);
 
   return (
-    <section className="testimonials-section">
-      <div className="testimonials-container">
-        <h2 className="testimonials-heading">Results</h2>
-        <h4>
-          I've had the experience of consulting and running ad campaigns for
-          companies in ecommerce, healthcare, security, and more.
-        </h4>
-        <div className="results-grid">
-          {caseStudies.map((study) => (
-            <div
-              key={study.id}
-              className="result-card"
-              onClick={() => setSelectedImg(study.image)}
-            >
-              <div className="result-image-wrapper">
-                <img src={study.image} alt={study.title} />
-                <div className="result-overlay">
-                  <span>Click to Expand</span>
-                </div>
-              </div>
-              <h5 className="result-title">{study.title}</h5>
-            </div>
-          ))}
-        </div>
-        <h5 className="section-subheading">
-          <i>Click the images to see more.</i>
-        </h5>
-        <br /> <br />
-      </div>
-      <div className="testimonials-container">
-        <h2 className="testimonials-heading">What Our Clients Say</h2>
-        <p className="testimonials-subheading">
-          I used to work largely in Mental Health doing marketing for therapists
-          before moving towards ecommerce. Here are what my past clients have
-          said.
-        </p>
+    <div className="res-hub-wrapper">
+      {/* Segment 1: Case Metrics Grid */}
+      <section className="res-section-block res-border-bottom">
+        <div className="res-hub-container">
+          <h2 className="res-main-title">Results</h2>
+          <h4 className="res-main-subtitle">
+            I've had the experience of consulting and running ad campaigns for
+            companies in ecommerce, healthcare, security, and more.
+          </h4>
 
-        {/* Horizontal scroll container */}
-        <div className="testimonials-scroll-wrapper" ref={scrollRef}>
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              {testimonial.image && (
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="testimonial-avatar"
-                />
-              )}
-              <blockquote className="testimonial-quote">
-                "{testimonial.quote}"
-              </blockquote>
-              <div className="testimonial-meta">
-                <p className="testimonial-name">- {testimonial.name}</p>
-                {testimonial.title && (
-                  <p className="testimonial-title">{testimonial.title}</p>
-                )}
+          <div className="res-cards-grid">
+            {caseStudies.map((study) => (
+              <div
+                key={study.id}
+                className="res-glass-card"
+                onClick={() => setSelectedImg(study.image)}
+              >
+                <div className="res-media-frame">
+                  <img
+                    src={study.image}
+                    alt={study.title}
+                    className="res-asset-img"
+                  />
+                  <div className="res-hover-lens">
+                    <span className="res-lens-text">Click to Expand</span>
+                  </div>
+                </div>
+                <h5 className="res-card-label">{study.title}</h5>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <h5 className="res-action-caption">
+            <i>Click the images to see more.</i>
+          </h5>
         </div>
-      </div>
+      </section>
+
+      {/* Segment 2: Client Endorsements Carousel */}
+      <section className="res-section-block">
+        <div className="res-hub-container-marquee">
+          <h2 className="res-main-title">What Our Clients Say</h2>
+          <p className="res-main-paragraph">
+            Before engineering systems exclusively for high-growth e-commerce
+            brands, these exact data architectures and scale strategies were
+            stress-tested in highly competitive, trust-reliant sectors like
+            healthcare and mental health. Here is how those core systems
+            performed.
+          </p>
+
+          {/* The Infinite Auto-Scrolling Track */}
+          <div className="res-marquee-container">
+            <div className="res-marquee-track">
+              {/* Track Loop 1 */}
+              {testimonials.map((testimonial, index) => (
+                <div key={`loop1-${index}`} className="res-review-panel">
+                  <div className="res-avatar-cluster">
+                    {testimonial.image && (
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="res-avatar-thumb"
+                      />
+                    )}
+                  </div>
+                  <blockquote className="res-review-quote">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="res-review-meta">
+                    <p className="res-meta-name">- {testimonial.name}</p>
+                    {testimonial.title && (
+                      <p className="res-meta-tag">{testimonial.title}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+
+              {/* Track Loop 2 (Exact duplicate for seamless infinite transition) */}
+              {testimonials.map((testimonial, index) => (
+                <div key={`loop2-${index}`} className="res-review-panel">
+                  <div className="res-avatar-cluster">
+                    {testimonial.image && (
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="res-avatar-thumb"
+                      />
+                    )}
+                  </div>
+                  <blockquote className="res-review-quote">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="res-review-meta">
+                    <p className="res-meta-name">- {testimonial.name}</p>
+                    {testimonial.title && (
+                      <p className="res-meta-tag">{testimonial.title}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Portal Expanded Lightbox Screen Focus Modal */}
       {selectedImg && (
-        <div className="lightbox" onClick={() => setSelectedImg(null)}>
-          <button className="close-lightbox">&times;</button>
+        <div
+          className="res-portal-lightbox"
+          onClick={() => setSelectedImg(null)}
+        >
+          <button
+            className="res-portal-close"
+            onClick={() => setSelectedImg(null)}
+          >
+            &times;
+          </button>
           <img
             src={selectedImg}
-            style={{ objectFit: "contain" }}
+            className="res-portal-focused-img"
             onClick={(e) => e.stopPropagation()}
-            alt="Enlarged Result"
+            alt="Enlarged Result Viewport"
           />
         </div>
       )}
-    </section>
+    </div>
   );
 };
 

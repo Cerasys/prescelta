@@ -1,301 +1,461 @@
-/* Base section styles */
-.testimonials-section {
-  padding-top: 4rem; /* py-16 */
-  padding-bottom: 4rem; /* py-16 */
-  background: linear-gradient(
-    to bottom right,
-    var(--tw-gradient-stops)
-  ); /* bg-gradient-to-br */
-  --tw-gradient-stops:
-    var(--tw-gradient-from), var(--tw-gradient-to); /* Default for bg-gradient */
-  --tw-gradient-from: #eff6ff; /* from-blue-50 */
-  --tw-gradient-to: #e0e7ff; /* to-indigo-100 */
-  overflow: hidden; /* Ensures no content overflows the section itself */
+/* Core Layout Wrapper System */
+.res-hub-wrapper {
+  min-height: 100vh;
+  background-color: #0a0a0b;
+  color: #ffffff;
+  padding: 60px 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Fixed syntax typo here from 100__ to 100% */
+  background: radial-gradient(
+    circle at center,
+    #1c1c1f 0%,
+    #0d0d0e 40%,
+    #050505 100%
+  );
+  background-attachment: fixed;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-/* Container for text alignment and max width */
-.testimonials-container {
-  max-width: 84rem; /* max-w-7xl */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem; /* px-4 */
-  padding-right: 1rem; /* px-4 */
+/* Isolated Block Sections to Prevent Clipping */
+.res-section-block {
+  width: 100%;
+  padding: 80px 24px;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+/* Premium Divider Line Between Case Studies and Reviews */
+.res-border-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.res-hub-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
-@media (min-width: 640px) {
-  /* sm */
-  .testimonials-container {
-    padding-left: 1.5rem; /* sm:px-6 */
-    padding-right: 1.5rem; /* sm:px-6 */
-  }
-}
-@media (min-width: 1024px) {
-  /* lg */
-  .testimonials-container {
-    padding-left: 2rem; /* lg:px-8 */
-    padding-right: 2rem; /* lg:px-8 */
-  }
+
+/* Container that clips the overflow so it doesn't break page width */
+.res-hub-container-marquee {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* Main heading */
-.testimonials-heading {
-  font-size: 2.25rem; /* text-4xl */
-  font-weight: 800; /* font-extrabold */
-  color: #1a202c; /* text-gray-900 */
-}
-@media (min-width: 640px) {
-  /* sm */
-  .testimonials-heading {
-    font-size: 3rem; /* sm:text-5xl */
-  }
+.res-hub-container-marquee {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  /* Added absolute layout isolation hooks */
+  position: relative;
+  display: block;
 }
 
-/* Sub-headline */
-.testimonials-subheading {
-  margin-top: 1rem; /* mt-4 */
-  font-size: 1.25rem; /* text-xl */
-  color: #4a5568; /* text-gray-700 */
-}
-
-/* Horizontal scroll wrapper for cards */
-.testimonials-scroll-wrapper {
-  margin-top: 3rem; /* mt-12 */
+/* Outer wrapper providing mask fades on left and right edges */
+.res-marquee-container {
+  position: relative;
+  width: 100%;
+  margin-top: 48px;
+  padding: 16px 0;
   display: flex;
-  gap: 1.5rem; /* space-x-6 */
-  padding-bottom: 1rem; /* pb-4 - space for potential scrollbar */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  /* Crucial: Prevents this wrapper from expanding the parent element layout */
+  overflow: hidden;
 
-  /* IMPORTANT: Do NOT use justify-content: center here for mobile/scrollable states.
-     It causes items on the left to become unreachable by scrolling.
-     Items will naturally align to flex-start (default). */
-
-  /* Add consistent padding to the scrollable area itself,
-     so the first/last card isn't against the edge */
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  /* Use pseudo-elements to create the visual centering effect on mobile
-     while maintaining scrollability. These act as flexible "padding" within the flex container. */
-  position: relative; /* Needed for pseudo-elements if you were to use absolute positioning, good practice */
+  /* Creates a subtle fade lens on the edges so cards smoothly appear/disappear */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
 }
 
-/* Hide native scrollbar for Webkit browsers (Chrome, Safari) */
-.testimonials-scroll-wrapper::-webkit-scrollbar {
+/* The actual moving strip holding both card sets */
+.res-marquee-track {
+  display: flex;
+  gap: 24px;
+  /* Forces the inner track to compute its own width independently of the page flow */
+  width: max-content;
+  flex-shrink: 0;
+  animation: res-marquee-scroll 45s linear infinite;
+  /* Hardware acceleration shift */
+  will-change: transform;
+}
+
+/* Pauses the auto-scroll instantly when a potential client hovers to read closely */
+.res-marquee-container:hover .res-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Individual Endorsement Panel Architectures */
+.res-review-panel {
+  flex-shrink: 0;
+  width: 36rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 36px;
+  border-radius: 24px;
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 32rem;
+  box-sizing: border-box;
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Clean scale effect on individual card hover */
+.res-review-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Hardware-Accelerated Smooth Motion Engine */
+@keyframes res-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves exactly half the width of the combined tracks for an infinite illusion */
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+/* Responsive adjust for smaller card boxes on tiny mobile screens */
+@media (max-width: 480px) {
+  .res-review-panel {
+    width: 28rem;
+    padding: 24px;
+    min-height: 28rem;
+  }
+  .res-marquee-track {
+    animation-duration: 30s; /* Moves slightly faster relative to size on small viewports */
+  }
+}
+
+/* Responsive adjustment for cleaner mobile separation */
+@media (max-width: 768px) {
+  .res-section-block {
+    padding: 48px 16px;
+  }
+}
+
+/* Global Typography Hierarchy Components */
+.res-main-title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.res-main-subtitle {
+  font-size: 2rem;
+  color: #a1a1aa;
+  max-width: 720px;
+  margin: 0 auto 48px auto;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.res-main-paragraph {
+  font-size: 1.65rem;
+  color: #a1a1aa;
+  max-width: 600px;
+  margin: 16px auto 0 auto;
+  line-height: 1.6;
+}
+
+/* Results Showcase Dash Grid Layout */
+.res-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .res-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* High-Fidelity Interactive Dashboard Panels */
+.res-glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 24px;
+  cursor: pointer;
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.01);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    background 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.res-glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Asset Viewport Frame System */
+.res-media-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #121214;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.res-asset-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* High-Gloss Interaction Overlay Film */
+.res-hover-lens {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 11, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.res-glass-card:hover .res-hover-lens {
+  opacity: 1;
+}
+
+.res-lens-text {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.res-card-label {
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 20px 0 0 0;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.res-action-caption {
+  font-size: 1.4rem;
+  color: #71717a;
+  margin-top: 32px;
+  font-weight: 400;
+}
+
+/* Fixed Row Window Architecture to Stop Row Expansion */
+.res-carousel-window {
+  margin-top: 48px;
+  display: flex;
+  gap: 24px;
+  padding-bottom: 24px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 100%;
+}
+
+.res-carousel-window::-webkit-scrollbar {
   display: none;
 }
 
-/* Pseudo-elements for centering effect on scrollable container */
-.testimonials-scroll-wrapper::before,
-.testimonials-scroll-wrapper::after {
+/* Responsive Structural Centering Hooks */
+.res-carousel-window::before,
+.res-carousel-window::after {
   content: "";
-  flex-shrink: 0; /* Ensures these don't shrink */
-  /* This width pushes the actual content towards the center initially.
-     Adjust this value if you want more or less initial push.
-     A common approach is to make it fill the remaining space on a small viewport
-     to truly center the first visible card. For example, calc(50% - (card_width / 2) - (gap / 2))
-     A simpler approach for general "push" is a fixed amount or a percentage of the viewport. */
-  width: calc(
-    50vw - 10rem - 0.75rem
-  ); /* Roughly 50% of viewport width minus half card width (20rem/2=10rem) and half gap */
-  min-width: 1rem; /* Ensure they have at least some width */
+  flex-shrink: 0;
+  width: calc(50vw - 18rem - 12px);
+  min-width: 16px;
 }
 
-/* Specific adjustments for very small screens if needed, e.g., 320px */
-@media (max-width: 320px) {
-  .testimonials-scroll-wrapper::before,
-  .testimonials-scroll-wrapper::after {
-    width: calc(30vw - 8rem - 0.75rem);
-  }
-  .testimonial-card {
-    width: 16rem; /* Example: make cards slightly smaller on tiny screens */
-    min-height: 20rem; /* Adjust min-height accordingly */
-  }
-}
-
-/* Media query for larger screens (e.g., desktop) */
 @media (min-width: 1024px) {
-  /* lg */
-  .testimonials-scroll-wrapper {
-    overflow-x: visible; /* Make items fully visible on large screens */
-    justify-content: center; /* Now it's safe to center, as no overflow scrolling is expected */
-    padding-left: 0; /* Remove horizontal padding if content is fully centered and visible */
+  .res-carousel-window {
+    /* Fixed: Changed visible to auto with full container containment wrap */
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-left: 0;
     padding-right: 0;
   }
-  /* Hide pseudo-elements when they are no longer needed for the scroll-centering trick */
-  .testimonials-scroll-wrapper::before,
-  .testimonials-scroll-wrapper::after {
+  .res-carousel-window::before,
+  .res-carousel-window::after {
     display: none;
   }
 }
 
-.results-grid {
-  margin-top: 3rem;
-  display: grid;
-  /* Mobile: 1 column, but limited width so it doesn't swallow the screen */
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  justify-items: center; /* Centers the cards if they are narrower than the screen */
+/* Individual Endorsement Panel Architectures */
+.res-review-panel {
+  flex-shrink: 0;
+  width: 36rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 36px;
+  border-radius: 24px;
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 32rem;
+  box-sizing: border-box;
+  text-align: left;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
 }
 
-/* Tablet: 2 columns */
-@media (min-width: 768px) {
-  .results-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+.res-review-panel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 480px) {
+  .res-review-panel {
+    width: 28rem;
+    padding: 24px;
   }
 }
 
-/* Desktop: 3 columns */
-@media (min-width: 1024px) {
-  .results-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.result-card {
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.3s ease;
-  /* LIMIT THE SIZE HERE */
-  width: 100%;
-  max-width: 400px; /* This prevents the cards from being "full screen" on mobile */
-  font-size: 16px;
-}
-
-.result-image-wrapper {
-  position: relative;
-  background: #ffffff;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  /* This ensures the slide maintains its shape regardless of screen width */
-  aspect-ratio: 16 / 9;
-  border: 1px solid rgba(224, 231, 255, 0.5); /* Light indigo border to define edges */
-}
-
-.result-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Changed from 'cover' to 'contain' to ensure no data is cut off in the preview */
-  background-color: #f8fafc; /* Adds a light neutral background for the 'contain' letterboxing */
+/* Interior Panel Elements */
+.res-avatar-cluster {
   display: block;
+  margin-bottom: 20px;
 }
 
-.lightbox {
+.res-avatar-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.res-review-quote {
+  font-size: 1.55rem;
+  color: #e4e4e7;
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.res-review-meta {
+  margin-top: 28px;
+  text-align: right;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+.res-meta-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 2px 0;
+}
+
+.res-meta-tag {
+  font-size: 1.3rem;
+  color: #71717a;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Screen Portal Lightbox Module Overlay */
+.res-portal-lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   height: 100dvh;
-  background: rgba(15, 23, 42, 0.9); /* slate-900 with opacity */
+  background: rgba(5, 5, 6, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  padding: 1.5rem;
+  z-index: 99999;
+  padding: 24px;
   cursor: zoom-out;
 }
 
-.lightbox img {
+.res-portal-focused-img {
   max-width: 100%;
-  max-height: 90vh;
-  border-radius: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  object-fit: contain;
   cursor: default;
 }
 
-.close-lightbox {
+.res-portal-close {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  color: white;
-  font-size: 2.5rem;
+  top: 24px;
+  right: 24px;
+  color: #a1a1aa;
+  font-size: 3.6rem;
   background: none;
   border: none;
   cursor: pointer;
   line-height: 1;
+  transition: color 0.2s;
 }
 
-/* Individual testimonial card */
-.testimonial-card {
-  flex-shrink: 0; /* Prevents cards from shrinking below their defined width */
-  width: 20rem; /* Base width for cards */
-  background-color: #ffffff; /* bg-white */
-  padding: 2rem; /* p-8 */
-  border-radius: 0.75rem; /* rounded-xl */
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
-  transition-property: box-shadow, transform; /* transition-shadow, transform */
-  transition-duration: 300ms; /* duration-300 */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distributes space between items, pushing meta to bottom */
+.res-portal-close:hover {
+  color: #ffffff;
+}
 
-  /* ADDED: Manage card height to prevent extreme stretching/squishing */
-  min-height: 22rem; /* A reasonable minimum height for your cards */
-  /* max-height: 28rem; */ /* OPTIONAL: Uncomment and adjust if you want to cap card height */
-}
-.testimonial-card:hover {
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
-  transform: translateY(-0.25rem); /* hover:-translate-y-1 */
-}
-@media (min-width: 640px) {
-  /* sm breakpoint */
-  .testimonial-card {
-    width: 24rem; /* sm:w-96 - Wider cards for tablet and up */
+/* Mobile Media Viewport Scale Fixes */
+@media (max-width: 768px) {
+  .res-hub-wrapper {
+    padding: 64px 0;
   }
-}
-
-/* Blockquote for testimonial text */
-.testimonial-quote {
-  font-size: 1.125rem; /* text-lg */
-  color: #4a5568; /* text-gray-700 */
-  font-weight: 500; /* font-medium */
-  line-height: 1.625; /* leading-relaxed */
-
-  /* OPTIONAL: Uncomment and adjust if quotes get too long and you want to truncate or scroll them internally */
-  /* max-height: 10rem; */ /* Example: Limit quote height */
-  /* overflow-y: auto; */ /* Add scrollbar for long quotes */
-}
-
-/* Name and title container */
-.testimonial-meta {
-  margin-top: 1.5rem; /* mt-6 */
-  text-align: right;
-}
-
-/* Testimonial name */
-.testimonial-name {
-  font-size: 1.125rem; /* Corrected to match text-lg, assuming this was the intent as 2rem is huge for name */
-  font-weight: 600; /* font-semibold */
-  color: #1a202c; /* text-gray-900 */
-}
-
-/* Testimonial title */
-.testimonial-title {
-  font-size: 0.875rem; /* Corrected to match text-sm */
-  color: #4a5568; /* text-gray-600 */
-}
-
-.testimonial-avatar {
-  width: 64px; /* Adjust size as needed */
-  height: 64px; /* Adjust size as needed */
-  border-radius: 50%; /* Makes it a circle */
-  object-fit: cover; /* Ensures image covers the area without distortion */
-  margin-bottom: 1rem; /* Space between image and quote */
-  margin-left: auto; /* Center the image in the card if desired */
-  margin-right: auto; /* Center the image in the card if desired */
-  display: block; /* Ensures margin auto works for centering */
-}
-
-/* Adjust quote margin if image is present */
-/* This rule is correct and good to keep if needed, but ensure its specificity is right */
-.testimonial-card .testimonial-quote {
-  margin-top: 0.5rem; /* Reduce top margin if image is above */
+  .res-main-title {
+    font-size: 3.4rem;
+  }
+  .res-main-subtitle {
+    font-size: 1.7rem;
+    margin-bottom: 32px;
+  }
 }
