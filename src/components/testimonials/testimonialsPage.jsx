@@ -1,6 +1,7 @@
 // TestimonialsPage.jsx
 import React, { useRef, useEffect, useState } from "react";
 import "./testimonials.css";
+import { BOOKING_LINK } from "../../data/constants";
 
 const testimonials = [
   {
@@ -250,6 +251,32 @@ const TestimonialsPage = () => {
           />
         </div>
       )}
+      <div className="srv-footer-callout">
+        <div className="srv-glow-effect" />
+        <div className="srv-callout-inner">
+          <h3
+            style={{
+              fontSize: "2.6rem",
+              fontWeight: 800,
+              color: "#ffffff",
+              marginBottom: "24px",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Ready for the smoothest marketing campaign ever?
+          </h3>
+          <div className="srv-btn-center-wrap">
+            <a
+              href={BOOKING_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="srv-submit-btn"
+            >
+              Book a call!
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
