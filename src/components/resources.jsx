@@ -58,8 +58,10 @@ export const Resources = () => {
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
-                a: ({ node, ...props }) => (
-                  <a {...props} target="_blank" rel="noopener noreferrer" />
+                a: ({ node, children, ...props }) => (
+                  <a {...props} target="_blank" rel="noopener noreferrer">
+                    {children}
+                  </a>
                 ),
               }}
             >
