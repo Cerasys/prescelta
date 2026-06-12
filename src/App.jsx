@@ -26,6 +26,9 @@ import TestimonialsPage from "./components/testimonials/testimonialsPage";
 import LeadMagnetHero from "./components/lead magnet/leadMagnetHero";
 import { SuccessPage } from "./components/lead magnet/successPage";
 import { NotFound } from "./components/404";
+import { leadMagnetsData } from "./components/lead magnet/leadMagnets";
+import { igFunnelData } from "./components/instagram funnel/instagramFunnelData";
+import InstagramFunnel from "./components/instagram funnel/instagramFunnel";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -70,58 +73,37 @@ const App = () => {
             path="/onboarding/*"
             element={<Navigate to="/laf-onboarding/step-1" replace />}
           />
-          <Route
-            path="email-flows-you-need"
-            element={
-              <LeadMagnetHero
-                title="Top Email Flows for 2026"
-                description="Download my private list of email flows that you need to install in your business"
-                creatorName="Nathan Lee"
-                imageSrc="/img/jailbird.jpg"
-                magnetId="email-flows-lead"
-                buttonText="GET IT FREE"
-              />
-            }
-          ></Route>
-          <Route
-            path="ecom-offers-2026"
-            element={
-              <LeadMagnetHero
-                title="Ecom Offer Frameworks"
-                description="Download my PDF copy of the frameworks we use to build evergreen promotional offers for our clients for FREE"
-                creatorName="Nathan Lee"
-                imageSrc="/img/offers-thumb.png"
-                magnetId="offer-creation"
-                buttonText="GET IT FREE"
-              />
-            }
-          ></Route>{" "}
-          <Route
-            path="drop-day-blueprint"
-            element={
-              <LeadMagnetHero
-                title="Drop Day / Seasonal Sales Blueprint"
-                description="Download my PDF copy of the blueprint we use to build drop day funnels for our clients for FREE"
-                creatorName="Nathan Lee"
-                imageSrc="/img/drop-day-thumb.png"
-                magnetId="drop-day"
-                buttonText="GET IT FREE"
-              />
-            }
-          ></Route>
-          <Route
-            path="true-classic-blueprint"
-            element={
-              <LeadMagnetHero
-                title="True Classic's $250M Blueprint"
-                description="Download my breakdown of True Classic's funnel for FREE"
-                creatorName="Nathan Lee"
-                imageSrc="/img/true-classic-thumb.png"
-                magnetId="true-classic"
-                buttonText="GET IT FREE"
-              />
-            }
-          ></Route>
+          {leadMagnetsData.map((magnet) => (
+            <Route
+              key={magnet.path}
+              path={magnet.path}
+              element={
+                <LeadMagnetHero
+                  title={magnet.title}
+                  description={magnet.description}
+                  creatorName={magnet.creatorName}
+                  imageSrc={magnet.imageSrc}
+                  magnetId={magnet.magnetId}
+                  buttonText="GET IT FREE"
+                />
+              }
+            />
+          ))}
+          {igFunnelData.map((magnet) => (
+            <Route
+              key={magnet.path}
+              path={magnet.path}
+              element={
+                <InstagramFunnel
+                  title={magnet.title}
+                  description={magnet.description}
+                  videoEmbedUrl={magnet.videoEmbedUrl}
+                  downloadUrl={magnet.downloadUrl}
+                  downloadButtonText={magnet.downloadButtonText}
+                />
+              }
+            />
+          ))}
           <Route path="success" element={<SuccessPage />} />
           {smmOnboardingSteps.map((step, index) => (
             <Route
