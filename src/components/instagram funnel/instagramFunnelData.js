@@ -6,4 +6,11 @@ export const igFunnelData = [
     downloadUrl:
       "https://drive.google.com/file/d/1l23NUpZ3Ii1dUy28_qvvKkAYtgiLBO5z/view?usp=sharing",
   },
+  {
+    path: "5-phase-launch",
+    title: "Why the Prime Model is Broken for Most Creators",
+    videoEmbedUrl: "https://www.youtube.com/embed/fFNICn8wIbw",
+    downloadUrl:
+      "https://drive.google.com/file/d/1ODRKhMg--p_EXFgLOb17BGefcpvisNr1/view?usp=sharing",
+  },
 ];
