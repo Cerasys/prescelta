@@ -125,6 +125,11 @@ const App = () => {
           ))}
           <Route exact path="/privacy" element={<Privacy />}></Route>
           <Route exact path="/terms" element={<Terms />}></Route>
+          <Route
+            exact
+            path="/ig-story"
+            element={<Navigate to="https://www.youtube.com/@nathanbelee" />}
+          ></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
