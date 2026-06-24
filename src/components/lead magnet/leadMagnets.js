@@ -34,4 +34,13 @@ export const leadMagnetsData = [
     imageSrc: "/img/true-classic-thumb.png",
     magnetId: "true-classic",
   },
+  {
+    path: "meg-squats-breakdown",
+    title: "@megsquats $3M Breakdown",
+    description:
+      "Download my full PDF breakdown of @megsquats's funnel for FREE",
+    creatorName: "Nathan Lee",
+    imageSrc: "/img/meg-squats-thumb.png",
+    magnetId: "meg-squats",
+  },
 ];
