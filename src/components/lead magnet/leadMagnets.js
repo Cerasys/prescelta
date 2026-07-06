@@ -43,4 +43,13 @@ export const leadMagnetsData = [
     imageSrc: "/img/meg-squats-thumb.png",
     magnetId: "meg-squats",
   },
+  {
+    path: "small-budget-campaign",
+    title: "Meta Ads Framework: Scaling Small & Tiny Budgets",
+    description:
+      "Download my full PDF breakdown of how to scale a Meta Campaign on a small or tiny budget for FREE",
+    creatorName: "Nathan Lee",
+    imageSrc: "/img/small-budget-campaign.png",
+    magnetId: "small-budget-campaign",
+  },
 ];
