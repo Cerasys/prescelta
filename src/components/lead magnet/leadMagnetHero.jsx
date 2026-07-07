@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./leadMagnetHero.css";
 import { useNavigate } from "react-router-dom";
 
@@ -13,11 +13,12 @@ const LeadMagnetHero = ({
 }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const previousTitle = document.title; // Save the old title
-    document.title = title; // Set it to "Top Email Flows for 2026"
+  const [errorMessage, setErrorMessage] = useState("");
 
-    // This runs when the component disappears/unmounts
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = title;
+
     return () => {
       document.title = previousTitle;
     };
@@ -25,6 +26,27 @@ const LeadMagnetHero = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Grab elements directly from the form target safely
+    const formElements = e.target.elements;
+    const nameValue = formElements.name.value.trim();
+    const emailValue = formElements.email.value.trim();
+    const honeypotValue = formElements.bfield.value.trim();
+
+    // 1. Hard Safeguard: Kill submission if HTML5 validation was bypassed
+    if (!nameValue || !emailValue) {
+      setErrorMessage("Please fill out all required fields.");
+      return;
+    }
+
+    // 2. Honeypot Safeguard: If filled, fake a success so the bot thinks it won
+    if (honeypotValue) {
+      console.warn("Spam submission detected.");
+      navigate(onSuccessPath, { state: { title: title } });
+      return;
+    }
+
+    // 3. Safe, clean submission payload matching Netlify's exact expectations
     const formData = new FormData(e.target);
 
     fetch("/", {
@@ -33,7 +55,6 @@ const LeadMagnetHero = ({
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        // We pass the 'title' inside the 'state' object so the next page can read it
         navigate(onSuccessPath, { state: { title: title } });
       })
       .catch((error) => console.error(error));
@@ -68,6 +89,20 @@ const LeadMagnetHero = ({
               <div hidden>
                 <input name="bfield" />
               </div>
+
+              {/* Renders the error message if it exists */}
+              {errorMessage && (
+                <p
+                  className="lm-error-msg"
+                  style={{
+                    color: "#ff4d4d",
+                    marginBottom: "1rem",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  {errorMessage}
+                </p>
+              )}
 
               <div className="lm-input-group">
                 <input
