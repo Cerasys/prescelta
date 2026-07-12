@@ -52,4 +52,13 @@ export const leadMagnetsData = [
     imageSrc: "/img/small-budget-campaign.png",
     magnetId: "small-budget-campaign",
   },
+  {
+    path: "klaviyo-sop",
+    title: "Klaviyo SOP: Setting up the Core 6 Flows to Scale Your Brand",
+    description:
+      "Download literally the Hoshino Media Team's SOP on how to setup Klaviyo for FREE",
+    creatorName: "Nathan Lee",
+    imageSrc: "/img/klaviyo-sop-thumb.png",
+    magnetId: "klaviyo-sop",
+  },
 ];
