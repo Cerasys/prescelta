@@ -61,4 +61,13 @@ export const leadMagnetsData = [
     imageSrc: "/img/klaviyo-sop-thumb.png",
     magnetId: "klaviyo-sop",
   },
+  {
+    path: "brand-pos-matrix",
+    title: "Brand Positioning Matrix: Developing your brand's voice",
+    description:
+      "Being consistent makes for a great brand that people cling to.",
+    creatorName: "Nathan Lee",
+    imageSrc: "/img/brand-pos-thumb.png",
+    magnetId: "brand-pos-matrix",
+  },
 ];
