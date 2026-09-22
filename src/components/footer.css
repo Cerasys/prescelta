@@ -42,3 +42,20 @@
 #footer a:hover {
   border-bottom: 2px solid var(--orange-light);
 }
+
+.klaviyo-badge-wrapper {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.klaviyo-badge {
+  max-height: 50px; /* Adjust height based on your preferred design size */
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.klaviyo-badge:hover {
+  opacity: 0.85;
+}
