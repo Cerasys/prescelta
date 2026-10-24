@@ -65,7 +65,7 @@ export default function LinkedInLanding() {
           </a>
 
           <a
-            href={BOOKING_LINK}
+            href={BOOKING_LINK + "li"}
             target="_blank"
             rel="noopener noreferrer"
             className="lp-card-link"
