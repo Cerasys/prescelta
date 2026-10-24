@@ -6,7 +6,7 @@ import {
   Route,
   Routes,
   Navigate,
-  useLocation,
+  Outlet,
 } from "react-router-dom";
 
 import Home from "./components/home/home";
@@ -29,6 +29,7 @@ import { NotFound } from "./components/404";
 import { leadMagnetsData } from "./components/lead magnet/leadMagnets";
 import { igFunnelData } from "./components/instagram funnel/instagramFunnelData";
 import InstagramFunnel from "./components/instagram funnel/instagramFunnel";
+import LinkedInLanding from "./components/linkedin lp/linkedInLanding";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -36,8 +37,6 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const location = useLocation();
-
   useEffect(() => {
     // Check if the current site is prescelta.com
     if (window.location.hostname === "prescelta.com") {
@@ -46,22 +45,39 @@ const App = () => {
     }
   }, []);
 
-  // Check if the current path is part of the onboarding routes
-  const isOnboardingPath =
-    location.pathname.startsWith("/smm-onboarding") ||
-    location.pathname.startsWith("/laf-onboarding");
+  function MainLayout() {
+    return (
+      <div className="page-wrapper">
+        <Navigation />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  function LandingPageLayout() {
+    return (
+      <>
+        <main>
+          <Outlet />
+        </main>
+      </>
+    );
+  }
 
   return (
     <div>
       <ScrollToAnchor />
-      {!isOnboardingPath && <Navigation />}
-      <div className="page-wrapper">
-        <Routes>
+      <Routes>
+        <Route element={<MainLayout />}>
           <Route exact path="/" element={<Home />}></Route>
           {/* <Route exact path="/creators" element={<Creators />}></Route> */}
           <Route exact path="/brands" element={<Brands />}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/faq" element={<FAQ />}></Route>
+
           <Route
             exact
             path="/testimonials"
@@ -69,10 +85,7 @@ const App = () => {
           ></Route>
           <Route exact path="/services" element={<FAQ />}></Route>
           <Route exact path="/resources" element={<Resources />}></Route>
-          <Route
-            path="/onboarding/*"
-            element={<Navigate to="/laf-onboarding/step-1" replace />}
-          />
+
           {leadMagnetsData.map((magnet) => (
             <Route
               key={magnet.path}
@@ -137,9 +150,19 @@ const App = () => {
             }
           ></Route>
           <Route path="*" element={<NotFound />}></Route>
-        </Routes>
-      </div>
-      {!isOnboardingPath && <Footer />}
+        </Route>
+        <Route element={<LandingPageLayout />}>
+          <Route
+            exact
+            path="/linkedin-lp"
+            element={<LinkedInLanding />}
+          ></Route>
+          <Route
+            path="/onboarding/*"
+            element={<Navigate to="/laf-onboarding/step-1" replace />}
+          />
+        </Route>
+      </Routes>
     </div>
   );
 };
