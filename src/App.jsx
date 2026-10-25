@@ -29,7 +29,7 @@ import { NotFound } from "./components/404";
 import { leadMagnetsData } from "./components/lead magnet/leadMagnets";
 import { igFunnelData } from "./components/instagram funnel/instagramFunnelData";
 import InstagramFunnel from "./components/instagram funnel/instagramFunnel";
-import LinkedInLanding from "./components/linkedin lp/linkedInLanding";
+import SocialLandingPage from "./components/lps/landingPage";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -155,7 +155,22 @@ const App = () => {
           <Route
             exact
             path="/linkedin-lp"
-            element={<LinkedInLanding />}
+            element={
+              <SocialLandingPage
+                platform="LINKEDIN CONNECTIONS"
+                platformURI="li"
+              />
+            }
+          ></Route>
+          <Route
+            exact
+            path="/instagram-lp"
+            element={
+              <SocialLandingPage
+                platform="INSTA CONNECTIONS"
+                platformURI="ig"
+              />
+            }
           ></Route>
           <Route
             path="/onboarding/*"

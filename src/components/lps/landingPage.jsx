@@ -1,8 +1,8 @@
 import React from "react";
-import "./linkedInLanding.css";
+import "./landingPage.css";
 import { BOOKING_LINK } from "../../data/constants";
 
-export default function LinkedInLanding() {
+export default function SocialLandingPage(props) {
   const youtubeUrl = "https://www.youtube.com/@nathanbelee";
   // Tip: Replace with specific video URL if desired, e.g. "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
 
@@ -11,7 +11,7 @@ export default function LinkedInLanding() {
       <div className="lp-container">
         {/* Hero Section */}
         <header className="lp-hero">
-          <span className="lp-badge">EXCLUSIVE FOR LINKEDIN CONNECTIONS</span>
+          <span className="lp-badge">EXCLUSIVE FOR {props.platform}</span>
           <h1 className="lp-title">Level Up Your Brain and Your Wallet</h1>
           <p className="lp-subtitle"></p>
         </header>
@@ -65,7 +65,7 @@ export default function LinkedInLanding() {
           </a>
 
           <a
-            href={BOOKING_LINK + "li"}
+            href={BOOKING_LINK + props.platformURI}
             target="_blank"
             rel="noopener noreferrer"
             className="lp-card-link"
