@@ -159,6 +159,7 @@ const App = () => {
               <SocialLandingPage
                 platform="LINKEDIN CONNECTIONS"
                 platformURI="li"
+                youtubeUrl="https://openup.to/9uale7wo"
               />
             }
           ></Route>
@@ -169,6 +170,7 @@ const App = () => {
               <SocialLandingPage
                 platform="INSTA CONNECTIONS"
                 platformURI="ig"
+                youtubeUrl="https://openup.to/bbsxtqqg"
               />
             }
           ></Route>

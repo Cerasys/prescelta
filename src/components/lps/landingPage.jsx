@@ -3,7 +3,6 @@ import "./landingPage.css";
 import { BOOKING_LINK } from "../../data/constants";
 
 export default function SocialLandingPage(props) {
-  const youtubeUrl = "https://www.youtube.com/@nathanbelee";
   // Tip: Replace with specific video URL if desired, e.g. "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
 
   return (
@@ -20,7 +19,7 @@ export default function SocialLandingPage(props) {
         <div className="lp-grid">
           {/* Card 1: YouTube / Video Breakdown */}
           <a
-            href={youtubeUrl}
+            href={props.youtubeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="lp-card-link"
