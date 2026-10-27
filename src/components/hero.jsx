@@ -21,17 +21,20 @@ export const Hero = () => {
         <div className="hro-glass-matrix-overlay">
           <div className="hro-hero-text-frame">
             <h1 className="hro-display-header">
-              We build
-              <span className="hro-gradient-text"> revenue architecture</span>
+              We help you get
+              <span className="hro-gradient-text"> more customers</span>, who
+              <span className="hro-gradient-text"> buy more</span> of your
+              stuff, and{" "}
+              <span className="hro-gradient-text">
+                {" "}
+                buy from you more often
+              </span>
               <br />
-              for creators building
-              <span className="hro-gradient-text"> real brands.</span>
             </h1>
             <p className="hro-display-paragraph">
-              You have the attention, and we'll build the engine. Hoshino Media
-              partners with creators to turn views into high-margin physical
-              products and take the operational chaos and logistics completely
-              off your plate.
+              Hoshino Media is a growth agency for scaling DTC brands. We
+              design, build, and optimize high-converting paid media and
+              retention marketing systems (Email/SMS/Klaviyo).
             </p>
             <div className="hro-btn-center-wrap">
               <a href="/brands" className="hro-submit-btn">
