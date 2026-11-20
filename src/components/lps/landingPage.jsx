@@ -11,7 +11,7 @@ export default function SocialLandingPage(props) {
         {/* Hero Section */}
         <header className="lp-hero">
           <span className="lp-badge">EXCLUSIVE FOR {props.platform}</span>
-          <h1 className="lp-title">Level Up Your Brain and Your Wallet</h1>
+          <h1 className="lp-title">Level Up Your Brand</h1>
           <p className="lp-subtitle"></p>
         </header>
 
@@ -53,12 +53,9 @@ export default function SocialLandingPage(props) {
                 <div className="lp-card-tag">YouTube</div>
                 <h3 className="lp-card-title">🧠 Feed your mind</h3>
                 <p className="lp-card-desc">
-                  Explore full breakdowns, organic distribution strategies, and
-                  high-converting video systems on YouTube.
+                  Full brand breakdowns, strategies, and playbooks on YouTube.
                 </p>
-                <span className="lp-btn lp-btn-yt">
-                  Explore Nathan's YouTube
-                </span>
+                <span className="lp-btn lp-btn-yt">Nathan's YouTube</span>
               </div>
             </div>
           </a>
@@ -103,14 +100,12 @@ export default function SocialLandingPage(props) {
                 <div className="lp-card-tag lp-tag-accent">
                   BOOK A STRATEGY CALL
                 </div>
-                <h3 className="lp-card-title">💵 Feed your wallet</h3>
+                <h3 className="lp-card-title">💵 Grow your business</h3>
                 <p className="lp-card-desc">
-                  Schedule a call with Nathan to discuss how we can revamp your
+                  Schedule a call with Nathan to discuss how we can help your
                   offers, paid media, retention marketing, and more.
                 </p>
-                <span className="lp-btn lp-btn-primary">
-                  Book Nathan's Calendar
-                </span>
+                <span className="lp-btn lp-btn-primary">Nathan's Calendar</span>
               </div>
             </div>
           </a>
