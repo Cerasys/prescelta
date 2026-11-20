@@ -3,9 +3,9 @@ export const leadMagnetsData = [
     path: "email-flows-you-need",
     title: "Top Email Flows for 2026",
     description:
-      "Download my private list of email flows that you need to install in your business",
+      "Download my list of email flows that you need to install in your business",
     creatorName: "Nathan Lee",
-    imageSrc: "/img/jailbird.jpg",
+    imageSrc: "/img/working2.jpg",
     magnetId: "email-flows-lead",
   },
   {

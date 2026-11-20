@@ -23,18 +23,15 @@ export const Hero = () => {
             <h1 className="hro-display-header">
               We help you get
               <span className="hro-gradient-text"> more customers</span>, who
-              <span className="hro-gradient-text"> buy more</span> of your
-              stuff, and{" "}
-              <span className="hro-gradient-text">
-                {" "}
-                buy from you more often
-              </span>
+              <span className="hro-gradient-text"> spend more</span> on your
+              stuff, and who buy from you
+              <span className="hro-gradient-text"> more often</span>
               <br />
             </h1>
             <p className="hro-display-paragraph">
-              Hoshino Media is a growth agency for scaling DTC brands. We
-              design, build, and optimize high-converting paid media and
-              retention marketing systems (Email/SMS/Klaviyo).
+              Hoshino Media is a growth agency for scaling DTC brands. <br />
+              We design, build, and optimize high-converting paid media, offers,
+              and retention marketing systems (Email/SMS/Klaviyo).
             </p>
             <div className="hro-btn-center-wrap">
               <a href="/brands" className="hro-submit-btn">
